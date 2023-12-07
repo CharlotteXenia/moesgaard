@@ -1,0 +1,95 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+/* HELE FUNKTIONEN */
+#loadingPage{
+    display: flex;
+}
+
+
+
+
+/* DEN RØDE OG DEN BLÅ DIV */
+#left, #right {
+    animation: none; /* Reset animation initially */
+    }
+
+    #left{
+        width: 960px;
+        height:945px;
+        background-color: red;
+        /* z-index: 1; */
+
+    }
+
+    #right{
+        width: 960px;
+        height:945px;
+        background-color: blue;
+        /* z-index: 1; */
+
+    }
+
+
+    #nilen{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      
+    }
+
+    #nilen img{
+        width: 1120px;
+        height: 956px;
+        margin-top: -49%;
+    }
+
+
+
+/* TRYK HER KNAPPEN */
+    #trykHer{
+        text-align: center;
+        position: relative;
+        margin-top: -50px;
+        z-index: 2;
+    }
+
+
+
+/* HVOR LANGT DIV'ERNE SPLITTER SIG FRA HINANDEN - HJÆLP FRA CHAT GPT */
+    @keyframes slideIn {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-550px); /* Adjust the distance as needed */
+        }
+    }
+
+    @keyframes slideOut {
+        from {
+            transform: translateX(0);
+        }
+        to {
+        
+            transform: translateX(550px); /* Adjust the distance as needed */
+            width: 400px;
+        }
+    }
+
+#alleIKONER{
+    margin-top: -1100px;
+    margin-left: 550px;
+   
+}
+
+
+
+
+
+
+
