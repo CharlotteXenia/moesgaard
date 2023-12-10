@@ -2,8 +2,7 @@
 let start = document.getElementById("trykHer");
 let venstre = document.getElementById("left");
 let højer = document.getElementById("right");
-
-// VARIABLER (NAVNGIVNING) AF ID'ER FRA HTML - HJÆLP FRA CHATGPT
+let nilen = document.getElementById("nilen");
 
 start.addEventListener("click", function(){
 
@@ -14,6 +13,8 @@ start.addEventListener("click", function(){
   højer.style.animation = "slideOut 2s ease-in-out forwards";
 
 
-  // TrykHer knappen forsvinder når dørene åbner
+  // TrykHer knappen forsvinder + Nilen-billedet kommer frem.
   start.style.display = "none";
+  nilen.style.display = "flex";
+
 });

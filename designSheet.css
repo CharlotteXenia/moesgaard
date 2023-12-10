@@ -1,27 +1,37 @@
+/* OBS! MANGLER AT OMSKRIVE NOGLE PX OM TIL % */
+
+
+
+
+
+
+
+
+
+
 *{
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
+    background-color: #DDBEA1;
 }
 
 
-/* HELE FUNKTIONEN */
+/* HELE SEKTIONEN */
 #loadingPage{
+    /* SÅ DE 2 DIVER ER VED SIDEN AF HINANDEN */
     display: flex;
 }
 
 
 
-
-/* DEN RØDE OG DEN BLÅ DIV */
-#left, #right {
-    animation: none; /* Reset animation initially */
-    }
+/* "VENSTRE" & "HØJRE" DIV */
 
     #left{
         width: 960px;
         height:945px;
-        background-color: red;
+        background-color:#DDBEA1;
+        border:2px black solid;
         /* z-index: 1; */
 
     }
@@ -29,14 +39,15 @@
     #right{
         width: 960px;
         height:945px;
-        background-color: blue;
+        background-color:#DDBEA1;
+        border:2px black solid;
         /* z-index: 1; */
 
     }
 
 
     #nilen{
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: center;
       
@@ -46,6 +57,7 @@
         width: 1120px;
         height: 956px;
         margin-top: -49%;
+
     }
 
 
@@ -66,7 +78,7 @@
             transform: translateX(0);
         }
         to {
-            transform: translateX(-550px); /* Adjust the distance as needed */
+            transform: translateX(-550px); 
         }
     }
 
@@ -76,16 +88,14 @@
         }
         to {
         
-            transform: translateX(550px); /* Adjust the distance as needed */
-            width: 400px;
+            transform: translateX(550px);
+            width: 390px;
         }
     }
 
-#alleIKONER{
-    margin-top: -1100px;
-    margin-left: 550px;
-   
-}
+
+
+
 
 
 
