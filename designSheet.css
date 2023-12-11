@@ -56,7 +56,6 @@
     #nilen img{
         width: 1120px;
         height: 956px;
-        margin-top: -49%;
 
     }
 
@@ -66,7 +65,6 @@
     #trykHer{
         text-align: center;
         position: relative;
-        margin-top: -50px;
         z-index: 2;
     }
 

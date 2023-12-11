@@ -115,3 +115,78 @@ footer img{
     }
 }
 
+
+
+
+
+/* HELE SEKTIONEN */
+#loadingPage{
+    /* SÅ DE 2 DIVER ER VED SIDEN AF HINANDEN */
+    display: flex;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+/* "VENSTRE" & "HØJRE" DIV */
+
+    #left{
+        width: 50%;
+        height:100vh;
+        background-color:green;
+        border:2px red solid;
+        /* z-index: 1; */
+
+    }
+
+    #right{
+        width: 50%;
+        height:100vh;
+        background-color:blue;
+        border:2px red solid;
+        /* z-index: 1; */
+
+    }
+
+
+    #nilen{
+        width: 100vw;
+        height: 100vh
+        display: none;
+        z-index: 2;
+    }
+
+
+
+/* TRYK HER KNAPPEN */
+    #trykHer{
+        text-align: center;
+        position: relative;
+        top: 50vh;
+        z-index: 2;
+    }
+
+
+
+/* HVOR LANGT DIV'ERNE SPLITTER SIG FRA HINANDEN - HJÆLP FRA CHAT GPT */
+    @keyframes slideIn {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-550px); 
+        }
+    }
+
+    @keyframes slideOut {
+        from {
+            transform: translateX(0);
+        }
+        to {
+        
+            transform: translateX(550px);
+            width: 390px;
+        }
+    }
+
+
