@@ -67,29 +67,5 @@ if (sideNu == 5) {
 
 
 
-// OSIRISSIDEN - SLIDE - SKFIT AF TEXT 
 
 
-
-// Idéen er at når man trykker på en knap,
-// så kommer der en ny tekst frem - gerne med transition eller fade osv.
-// PÅ ALLE KNAPPERNE
-
-let prik1 = document.getElementById("knap1");
-let prik2 = document.getElementById("knap1");
-let prik3 = document.getElementById("knap1");
-let prik4 = document.getElementById("knap1");
-let prik5 = document.getElementById("knap1");
-
-let Slide1 = document.getElementById("Slide1");
-let Slide2 = document.getElementById("Slide2");
-let Slide3 = document.getElementById("Slide3");
-let Slide4 = document.getElementById("Slide4");
-let Slide5 = document.getElementById("Slide5");
-
-
-addEventListener("click", SkiftText1);
-
-function SkiftText1(){
-  Slide1.style.display = "block";
-}
