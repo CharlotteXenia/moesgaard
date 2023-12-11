@@ -20,7 +20,8 @@ font-style: normal;
     
 }
 body{
-    background-color: bisque;
+    background-image: url(media/img/sandBackdrop.png);
+    background-repeat: no-repeat;
 }
 p{
     font-family: "museo-sans", sans-serif;
@@ -197,3 +198,93 @@ footer img{
 
 
 
+
+/* OSIRIS-SIDEN */
+
+#osiris{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}
+
+#osirisOVERSKRIFT{
+    width: 15%;
+    margin-top: -5%;
+    margin-left: 6%;
+}
+
+#osirisTEXT{
+    width: 35%;
+    text-align: center;
+}
+
+#osiris img{
+    width: 8%;
+    height: fit-content;
+}
+
+
+#osirisVIDEO{
+    width: 200px;
+    height: 500px;
+    background-color: black;
+    margin-right: 20%;
+}
+
+#osirisPrikker{
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 20%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* HELE CLASS'enr */
+#osirisSlideshow {
+    position: relative;
+    background: #f1f1f1f1;
+  }
+  
+  /* Slides */
+  #Slide1,#Slide2,#Slide3,#Slide4,#Slide5 {
+    display: none;
+    text-align: center;
+  }
+  
+  /* PRIKKERNE */
+  #prik-INDHOLD {
+    text-align: center;
+    background: transparent;
+  }
+  
+  /* STYLING AF SELVE PRIKKERNE */
+  #prik1, #prik2, #prik3, #prik4,#prik5 {
+    display: inline-block;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    margin: 20px 2px;
+    background-color: green;
+    border-radius: 50%;
+    transition: 0.9s ease;
+  }
+  
+  /* Add a background color to the active dot/circle */
+  #active, #prik1:hover,#prik2:hover ,#prik3:hover ,#prik4:hover ,#prik5:hover  {
+    background-color: red;
+  }
+  
