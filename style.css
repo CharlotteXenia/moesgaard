@@ -54,7 +54,15 @@ header img{
 }
 #tilbagePil, #fremadPil{
     width: 7.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+#tilbagePil img, #fremadPil img{
+    width: 50%;
+    
+}
+
 
 /* Streger i siden */
 #streger{
@@ -132,7 +140,17 @@ nav img{
         z-index: 2;
     }
 
+/* mumificering */
+#mumificering{
+    display: flex;
+    justify-content: space-around;
+}
+#firkant{
 
+}
+#trekant{
+
+}
 
 /* Footer */
 footer img{
