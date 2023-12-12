@@ -356,3 +356,90 @@ footer img{
         opacity: 0;
     }
 }
+/* UNDERVERDEN */
+
+  #underverden{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+/* Section left */
+.UV_left{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    
+    width: 40%;
+    
+    /* background-color: aqua; */
+}
+
+.UV_vaagt{
+  width: 40%;
+
+  margin-top: 4%;
+}
+
+/* Section right */
+.UV_h2{
+    display: flex;
+    align-self: start;
+
+    margin-bottom: 50px;
+    
+    color: white;
+}
+
+.UV_tekst{
+color: white;
+}
+
+.UV_right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    width: 40%;
+
+    /* background-color: aquamarine; */
+}
+
+.UV_video{
+    height: 400px;
+    width: 80%;
+
+    border-radius: 25px;
+    
+    background-color: azure;
+}
+
+.UV_cirkel{
+    display: flex;
+    align-self: end;
+    position: relative;
+    z-index: -1;
+
+    bottom: 500px;
+
+    height: 300px;
+    width: 300px;
+
+    border-radius: 1000px;
+
+    background-color: rgb(122, 130, 65);
+}
+
+.UV_fjer{
+    display: flex;
+    align-self: flex-end;
+    width: 20%;
+}
+
+.UV_right .UV_tekst{
+    display: flex;
+    justify-self: start;
+    width: 80%;
+}
