@@ -425,14 +425,22 @@ footer img{
     flex-direction: column;
     
     width: 40%;
-    
-    /* background-color: rgb(42, 64, 64); */
 }
 
 .UV_vaagt{
   width: 40%;
 
   margin-top: 4%;
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* Section right */
@@ -456,8 +464,6 @@ color: white;
     flex-direction: column;
     
     width: 40%;
-
-    /* background-color: rgb(47, 68, 61); */
 }
 
 .UV_video{
@@ -506,6 +512,25 @@ color: white;
     margin-top: 150px;
 
     transform: rotate(30deg);
+    animation: vippe 4s;
+}
+
+@keyframes vippe { /* Animation Keyfram */
+    0% {
+        transform: rotate(10deg);
+      }
+
+    25% {
+        transform: rotate(30deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+      100% {
+        transform: rotate(30deg);
+      }
 }
 
 .UV_right .UV_tekst{
