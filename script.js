@@ -36,7 +36,7 @@ if (sideNu == 0) {
   });
 }
 
-
+// intro skærm
 if (sideNu == 1) {
   startIndhold.addEventListener("click", function(){
     
