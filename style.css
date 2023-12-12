@@ -317,18 +317,14 @@ footer img{
 }
 
 #osiris img{
-    width: 10%;
+    width: 80%;
     height: fit-content;
-    margin-left: -3%;
-    margin-top: -7%;
+    /* margin-left: -3%;
+    margin-top: -7%; */
 }
 
 
 #osirisVIDEO{
-    width: 200px;
-    height: 500px;
-    background-color: black;
-    margin-right: 20%;
 }
 
 
