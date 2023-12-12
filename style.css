@@ -409,7 +409,7 @@ footer img{
         opacity: 0;
     }
 }
-/* UNDERVERDEN */
+/* UNDERVERDEN */ /* Mads */
 
   #underverden{
     display: flex;
@@ -426,7 +426,7 @@ footer img{
     
     width: 40%;
     
-    /* background-color: aqua; */
+    /* background-color: rgb(42, 64, 64); */
 }
 
 .UV_vaagt{
@@ -457,7 +457,7 @@ color: white;
     
     width: 40%;
 
-    /* background-color: aquamarine; */
+    /* background-color: rgb(47, 68, 61); */
 }
 
 .UV_video{
@@ -472,23 +472,40 @@ color: white;
 .UV_cirkel{
     display: flex;
     align-self: end;
-    position: relative;
+    position: absolute;
     z-index: -1;
 
     bottom: 500px;
 
-    height: 300px;
-    width: 300px;
+    height: clamp(100px, 25vw, 300px); /* clamp er en størrelses-værdi: clamp(Mindste elementet må blive, procent af skærmen eksembel givet. 25vw(view witch), største elementet må blive) Eksempel: width: clamp(100px, 25vw, 300px);*/
+    width: clamp(100px, 25vw, 300px);
 
     border-radius: 1000px;
 
-    background-color: rgb(122, 130, 65);
+    background: rgb(88,64,42);
+    background: linear-gradient(35deg, rgba(88,64,42,1) 0%, rgba(125,78,30,1) 29%, rgba(211,153,84,0.39959733893557425) 100%);
+    /* Den er drejet 35deg til at starte med */
+    transform: rotate(180deg); /*Den er nu blevet roteret med 180deg*/
+
+    animation: rotateOnLoad 2s;
+}
+
+@keyframes rotateOnLoad { /* Animation Keyfram */
+    0% {
+        transform: rotate(35deg);
+      }
+      100% {
+        transform: rotate(180deg);
+      }
 }
 
 .UV_fjer{
     display: flex;
     align-self: flex-end;
     width: 20%;
+    margin-top: 150px;
+
+    transform: rotate(30deg);
 }
 
 .UV_right .UV_tekst{
