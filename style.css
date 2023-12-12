@@ -25,6 +25,12 @@ font-style: normal;
 body{
     background-image: url(media/img/Baugrunde/osiris_baugrund.png);
     background-repeat: no-repeat;
+    z-index: -1;
+}
+h1{
+    position: relative;
+    top: 5vh;
+    text-align: center;
 }
 p{
     font-family: "museo-sans", sans-serif;
@@ -35,7 +41,7 @@ p{
 main{
     display: flex;
     align-items: center;
-    height: 90vh;
+    height: 80vh;
 }
 /* Header */
 header{
@@ -58,12 +64,18 @@ header img{
 }
 #tilbagePil, #fremadPil{
     width: 7.5%;
+    height: 6.5vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 }
 #tilbagePil img, #fremadPil img{
     width: 50%;
+}
+#tilbagePil img:first-of-type, #fremadPil img:first-of-type  {
+    width: 2vw;
+    height: 2vw;
 }
 
 
@@ -93,12 +105,15 @@ nav{
 }
 nav img{
     width: 3vw;
+    height: 3vw;
     padding: 3%;
     background-color: white;
     border-radius: 50%;
     border: black solid 1px;
     transition: .5s ease-in-out 0s;
 }
+
+
 
 nav img:hover{
     cursor: pointer;
@@ -129,6 +144,10 @@ nav img:hover{
         background-color:bisque;
         /* z-index: 1; */
         overflow: hidden;
+        background-image: url(media/img/Mumificering_andet_lys_img.png);
+        background-position:right; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover;
         
     }
 
@@ -137,6 +156,10 @@ nav img:hover{
         height:100vh;
         background-color:bisque;
         /* z-index: 1; */
+        background-image: url(media/img/Mumificering_andet_lys_img.png);
+        background-position:left; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover;
     }
 
 
@@ -162,12 +185,39 @@ nav img:hover{
     display: flex;
     justify-content: space-around;
 }
+
+.mumiestoerelse{
+    width: 35%;
+}
+.mumiestoerelse img{
+    position: relative;
+    width: 100%;
+    z-index: 2;
+
+}
+.mumiestoerelse:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+#krukker{
+    width: 7.5vw;
+    align-self: flex-end;
+}   
+
 #firkant{
-
+    z-index: 0;
+    position: relative;
+    bottom: 250px;
+    width: 30vw;
+    height: 20vh;
+    background: linear-gradient(109deg, #584C3F 30.31%, rgba(196, 196, 196, 0.00) 95.84%);
+    rotate: 12.5deg;
+    animation: rotate 2s ease;
 }
-#trekant{
 
-}
 
 /* Footer */
 footer img{
@@ -201,7 +251,14 @@ footer img{
         margin-top: 10px;
     }
 }
-
+@keyframes rotate {
+    from {
+        rotate: 50deg;
+    }
+    to {
+        rotate: 12.5deg;
+    }
+}
 
 /* HVOR LANGT DIV'ERNE SPLITTER SIG FRA HINANDEN - HJÆLP FRA CHAT GPT */
     @keyframes slideOut {
