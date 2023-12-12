@@ -1,4 +1,5 @@
 @import url("https://use.typekit.net/jra5qrh.css");
+@import url('https://fonts.googleapis.com/css2?family=Aladin&family=Quicksand:wght@300;400;500;600;700&display=swap');
 /* 
 Museo Sans 300 - Brødtekst
 font-family: "museo-sans", sans-serif;
@@ -12,6 +13,8 @@ font-style: normal;
 
 */
 
+
+
 /* Generelle regler */
 *{
     box-sizing: border-box;
@@ -20,13 +23,14 @@ font-style: normal;
     
 }
 body{
-    background-image: url(media/img/sandBackdrop.png);
+    background-image: url(media/img/Baugrunde/osiris_baugrund.png);
     background-repeat: no-repeat;
 }
 p{
     font-family: "museo-sans", sans-serif;
     font-weight: 300;
     font-style: normal;
+    font-size: 1.8vh;
 }
 main{
     display: flex;
@@ -60,8 +64,8 @@ header img{
 }
 #tilbagePil img, #fremadPil img{
     width: 50%;
-    
 }
+
 
 
 /* Streger i siden */
@@ -89,10 +93,23 @@ nav{
 }
 nav img{
     width: 3vw;
+    padding: 3%;
     background-color: white;
     border-radius: 50%;
     border: black solid 1px;
+    transition: .5s ease-in-out 0s;
 }
+
+nav img:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: 1s;
+}
+
+
+
+
+
 
 /* HELE SEKTIONEN */
 #loadingPage{
@@ -230,16 +247,23 @@ footer img{
     width: 15%;
     margin-top: -5%;
     margin-left: 6%;
+
+    font-size: 5vh;
+    font-family:'Aladin';
+    font-weight: 200;
 }
 
 #osirisTEXT{
     width: 35%;
     text-align: center;
+    
 }
 
 #osiris img{
-    width: 8%;
+    width: 10%;
     height: fit-content;
+    margin-left: -3%;
+    margin-top: -7%;
 }
 
 
@@ -250,10 +274,9 @@ footer img{
     margin-right: 20%;
 }
 
-#osirisPrikker{
-    width: 30%;
-    margin-left: 35%;
-    margin-top: 20%;
+
+#osirisSlideshow{
+    height: 100px;
 }
 
 
@@ -271,22 +294,30 @@ footer img{
 
 
 
-/* HELE CLASS'enr */
+
+/* HELE TEKST-SLIDE */
 #osirisSlideshow {
     position: relative;
-    background: #f1f1f1f1;
+    background: transparent;
   }
   
   /* Slides */
   #Slide1,#Slide2,#Slide3,#Slide4,#Slide5 {
     display: none;
     text-align: center;
+
+    font-size: 1.8vh;
+    font-family: "museo-sans", sans-serif;
+    font-style: bold;
+
+
   }
   
   /* PRIKKERNE */
   #prik-INDHOLD {
     text-align: center;
     background: transparent;
+    margin-top: 15%;
   }
   
   /* STYLING AF SELVE PRIKKERNE */
@@ -296,13 +327,32 @@ footer img{
     width: 20px;
     height: 20px;
     margin: 20px 2px;
-    background-color: green;
+    background-color: #aa865d;
     border-radius: 50%;
     transition: 0.9s ease;
   }
   
   /* Add a background color to the active dot/circle */
   #active, #prik1:hover,#prik2:hover ,#prik3:hover ,#prik4:hover ,#prik5:hover  {
-    background-color: red;
+    background-color: white;
   }
   
+
+
+  @keyframes fadeUD {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIND {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
