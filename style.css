@@ -144,7 +144,7 @@ nav img:hover{
         background-color:bisque;
         /* z-index: 1; */
         overflow: hidden;
-        background-image: url(media/img/Mumificering_andet_lys_img.png);
+        background-image: url(media/img/doorLeft.png);
         background-position:right; /* Center the image */
         background-repeat: no-repeat; /* Do not repeat the image */
         background-size: cover;
@@ -156,7 +156,7 @@ nav img:hover{
         height:100vh;
         background-color:bisque;
         /* z-index: 1; */
-        background-image: url(media/img/Mumificering_andet_lys_img.png);
+        background-image: url(media/img/doorRight.png);
         background-position:left; /* Center the image */
         background-repeat: no-repeat; /* Do not repeat the image */
         background-size: cover;
