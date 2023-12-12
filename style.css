@@ -27,6 +27,9 @@ body{
     background-repeat: no-repeat;
     z-index: -1;
 }
+
+
+
 h1{
     position: relative;
     top: 5vh;
@@ -107,9 +110,9 @@ nav img{
     width: 3vw;
     height: 3vw;
     padding: 3%;
-    background-color: white;
+    background-color: #F6DABF;
     border-radius: 50%;
-    border: black solid 1px;
+    border: white solid 1px;
     transition: .5s ease-in-out 0s;
 }
 
@@ -295,9 +298,9 @@ footer img{
 
 #osiris{
     display: flex;
-    justify-content: space-between;
-    width: 90%;
-    margin: auto;
+    justify-content: space-around;
+    width: 100%;
+    margin-left: -5%;
 }
 
 #osirisOVERSKRIFT{
@@ -319,12 +322,19 @@ footer img{
 #osiris img{
     width: 80%;
     height: fit-content;
-    /* margin-left: -3%;
-    margin-top: -7%; */
+    margin-top: -100%;
 }
 
 
-#osirisVIDEO{
+
+#osirisVIDEO video {
+    max-width: 700px;
+    width: 100%;
+    max-height: 800px;
+    height: 700px;
+    margin-top: -45%; /* Adjust the top margin as needed */
+    border-radius: 6px;
+    
 }
 
 
@@ -352,6 +362,7 @@ footer img{
 #osirisSlideshow {
     position: relative;
     background: transparent;
+    margin-left: 8%;
   }
   
   /* Slides */
