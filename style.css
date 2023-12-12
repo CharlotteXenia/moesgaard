@@ -462,6 +462,7 @@ color: white;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
     
     width: 40%;
 }
@@ -481,7 +482,7 @@ color: white;
     position: absolute;
     z-index: -1;
 
-    bottom: 500px;
+    bottom: 400px;
 
     height: clamp(100px, 25vw, 300px); /* clamp er en størrelses-værdi: clamp(Mindste elementet må blive, procent af skærmen eksembel givet. 25vw(view witch), største elementet må blive) Eksempel: width: clamp(100px, 25vw, 300px);*/
     width: clamp(100px, 25vw, 300px);
