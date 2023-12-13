@@ -189,6 +189,7 @@ function visMumificering() {
 // så kommer der en ny tekst frem - gerne med transition eller fade osv.
 // PÅ ALLE KNAPPERNE
 
+//Osiris
 let prik1 = document.getElementById("prik1");
 let prik2 = document.getElementById("prik2");
 let prik3 = document.getElementById("prik3");
@@ -201,9 +202,25 @@ let Slide3 = document.getElementById("Slide3");
 let Slide4 = document.getElementById("Slide4");
 let Slide5 = document.getElementById("Slide5");
 
-//ARRAY med teksterne
+
+//Mumificering
+let prik1mum = document.getElementById("prik1mum");
+let prik2mum = document.getElementById("prik2mum");
+let prik3mum = document.getElementById("prik3mum");
+let prik4mum = document.getElementById("prik4mum");
+
+let Slide1mum = document.getElementById("Slide1mum");
+let Slide2mum = document.getElementById("Slide2mum");
+let Slide3mum = document.getElementById("Slide3mum");
+let Slide4mum = document.getElementById("Slide4mum");
+
+
+
+
+//ARRAY med teksterne OSIRIS
 let tekster = [Slide1, Slide2, Slide3, Slide4, Slide5];
 tekster[0].style.display = "block";
+
 
 //Eventlistener'en + funktionen når man trykker på én af de runde knapper
 prik1.addEventListener("click", function () {
@@ -246,6 +263,56 @@ prik5.addEventListener("click", function () {
   }
   tekster[4].style.display = "block";
 });
+
+
+
+
+//ARRAY med teksterne MUMIFICERING
+let tekstermum = [Slide1mum, Slide2mum, Slide3mum, Slide4mum];
+tekstermum[0].style.display = "block";
+
+
+prik1mum.addEventListener("click", function () {
+  for (let index = 0; index < tekstermum.length; index++) {
+    tekstermum[index].style.display = "none";
+  }
+  tekstermum[0].style.display = "block";
+});
+
+prik2mum.addEventListener("click", function () {
+  for (let index = 0; index < tekstermum.length; index++) {
+    tekstermum[index].style.display = "none";
+  }
+
+  tekstermum[1].style.display = "block";
+});
+
+prik3mum.addEventListener("click", function () {
+  for (let index = 0; index < tekstermum.length; index++) {
+    tekstermum[index].style.display = "none";
+  }
+
+  tekstermum[2].style.display = "block";
+});
+
+prik4mum.addEventListener("click", function () {
+  for (let index = 0; index < tekstermum.length; index++) {
+    tekstermum[index].style.display = "none";
+  }
+
+  tekstermum[3].style.display = "block";
+});
+
+prik5mum.addEventListener("click", function () {
+  for (let index = 0; index < tekstermum.length; index++) {
+    tekstermum[index].style.display = "none";
+  }
+  tekstermum[4].style.display = "block";
+});
+
+
+
+
 
 // Play knappen på Osiris-siden
 
