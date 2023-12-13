@@ -432,7 +432,6 @@ footer img {
 
 #osirisVIDEO video {
     width: 51%;
-    cursor: pointer;
     border-radius: 30px;
 
 }
@@ -444,6 +443,8 @@ footer img {
 
     top: 45%;
     right: 37%;
+    cursor: pointer;
+
     
 }
 
@@ -498,8 +499,78 @@ footer img {
 }
 
 
+
 /****************** UNDERVERDEN ******************/
 /* Mads */
+
+
+
+
+
+/* HELE TEKST-SLIDE UNDERVERDEN */
+#TEXTUV {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+    text-align: center;
+}
+
+#SlideshowUV{
+    height: 10vh;
+}
+/* Slides UNDERVERDEN */
+#Slide1UV,
+#Slide2UV
+{
+    display: none;
+    text-align: center;
+
+    font-size: 1.8vh;
+    font-family: "museo-sans", sans-serif;
+    font-style: bold;
+
+
+}
+
+/* PRIKKERNE UNDERVERDEN */
+#prik-INDHOLDUV{
+    display: flex;
+}
+/* STYLING AF SELVE PRIKKERNE - UNDERVERDEN */
+#prik1UV,
+#prik2UV
+{
+    display: block;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    margin: 20px 2px;
+    background-color: #aa865d;
+    border-radius: 50%;
+    transition: 0.9s ease;
+}
+
+#active,
+#prik1UV:hover,
+#prik2UV:hover
+{
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #underverden {
     display: flex;

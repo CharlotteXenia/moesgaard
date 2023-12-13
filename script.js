@@ -186,8 +186,7 @@ function visMumificering() {
 }
 
 // Idéen er at når man trykker på en knap,
-// så kommer der en ny tekst frem - gerne med transition eller fade osv.
-// PÅ ALLE KNAPPERNE
+// så kommer der en ny tekst frem (skifter).
 
 //Osiris
 let prik1 = document.getElementById("prik1");
@@ -213,6 +212,15 @@ let Slide1mum = document.getElementById("Slide1mum");
 let Slide2mum = document.getElementById("Slide2mum");
 let Slide3mum = document.getElementById("Slide3mum");
 let Slide4mum = document.getElementById("Slide4mum");
+
+
+
+//Underverden
+let prik1UV = document.getElementById("prik1UV");
+let prik2UV = document.getElementById("prik2UV");
+
+let Slide1UV = document.getElementById("Slide1UV");
+let Slide2UV = document.getElementById("Slide2UV");
 
 
 
@@ -303,12 +311,34 @@ prik4mum.addEventListener("click", function () {
   tekstermum[3].style.display = "block";
 });
 
-prik5mum.addEventListener("click", function () {
-  for (let index = 0; index < tekstermum.length; index++) {
-    tekstermum[index].style.display = "none";
+
+
+
+
+
+//ARRAY med teksterne UNDERVERDEN
+let teksterUV = [Slide1UV, Slide2UV];
+teksterUV[0].style.display = "block";
+
+//Eventlistener'en + funktionen når man trykker på én af de runde knapper
+prik1UV.addEventListener("click", function () {
+ 
+  for (let index = 0; index < teksterUV.length; index++) {
+    teksterUV[index].style.display = "none";
   }
-  tekstermum[4].style.display = "block";
+  teksterUV[0].style.display = "block";
 });
+
+prik2UV.addEventListener("click", function () {
+  for (let index = 0; index < teksterUV.length; index++) {
+    teksterUV[index].style.display = "none";
+  }
+
+  teksterUV[1].style.display = "block";
+});
+
+
+
 
 
 
