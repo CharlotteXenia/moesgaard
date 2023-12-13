@@ -98,3 +98,22 @@ prik5.addEventListener("click",function(){
 //     sideNu = 1;
 //   });
 // }
+
+
+
+
+// Play knappen på Osiris-siden
+
+let play = document.getElementById("playKnappen");
+let videoDIV = document.getElementById("osirisVIDEO");
+let videoOsiris = document.getElementById("videoOsiris");
+
+
+play.addEventListener("click", afspilVideo);
+
+function afspilVideo() { 
+  videoOsiris.play(); 
+
+  play.style.display = 'none';
+
+} 
