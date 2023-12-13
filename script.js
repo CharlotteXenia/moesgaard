@@ -23,7 +23,6 @@ let body = document.querySelector("body");
 // Tæller for at holde styr på nuværende side
 let sideNu = 0;
 
-let siderne = [osiris, mumificering, underverden];
 // sikre at koden bliver ved med at tjekke hvilken side man er på
 setInterval(nuSide, 1);
 
@@ -68,7 +67,8 @@ function nuSide() {
     osiris.style.animation = "fadeIn 2s ease-in-out forwards";
 
     //Fordi det er den første skal alt vises sig
-    altIndhold.style.display = "block"; //osiris ligger vist her under fordi det er den første
+    altIndhold.style.display = "block"; 
+    osiris.style.display = "flex";
     header.style.display = "flex";
     main.style.display = "flex";
     h1.style.display = "block";
@@ -82,10 +82,8 @@ function nuSide() {
     tilbagePil.style.opacity = "0";
     højreIkon.src = "media/img/indgang1_mumie.svg";
     body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/osirisBaggrund.png")';
-    
     //lytter til om man går videre
     fremadPil.addEventListener("click", function () {
-      console.log(sideNu);
       //starter fade ud
       // osiris.style.animation = "fadeOut 2s ease-in-out forwards";
       
@@ -108,10 +106,56 @@ function nuSide() {
     body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/mumificeringBaggrund.png")';
 
     mumificering.style.animation = "fadeIn 2s ease-in-out forwards";
+    
+    //lytter til om man går videre
+    fremadPil.addEventListener("click", function () {
+      //starter fade ud
+      // osiris.style.animation = "fadeOut 2s ease-in-out forwards";
+      
+      setTimeout(() => {
+        mumificering.style.display = "none";
+        sideNu = 4;
+      }, 2000);
 
+    });
+    tilbagePil.addEventListener("click", function () {
+      //starter fade ud
+      // osiris.style.animation = "fadeOut 2s ease-in-out forwards";
+      
+      setTimeout(() => {
+        mumificering.style.display = "none";
+        sideNu = 2;
+      }, 2000);
+
+    });
   }
 
   if (sideNu == 4) {
+    underverden.style.display = "flex"
+    h1.innerHTML = "Underverdenen";
+    midtIkon.src = "media/img/indgang2_scarab.svg";
+    tilbagePil.style.opacity = "1";
+    højreIkon.src = "media/img/indgang3_oeje.svg";
+    venstreIkon.src = "media/img/indgang1_mumie.svg";
+
+    body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/underverdenBaggrund.png")';
+
+    underverden.style.animation = "fadeIn 2s ease-in-out forwards";
+    
+    //lytter til om man går videre, Denne bliver stående for ikke at kunne klikke så langt
+    fremadPil.addEventListener("click", function () {
+      sideNu = 4;
+    });
+    tilbagePil.addEventListener("click", function () {
+      //starter fade ud
+      // osiris.style.animation = "fadeOut 2s ease-in-out forwards";
+      
+      setTimeout(() => {
+        underverden.style.display = "none";
+        sideNu = 3;
+      }, 2000);
+
+    });
   }
 
   if (sideNu == 5) {
