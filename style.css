@@ -588,22 +588,29 @@ footer img {
     width: 40%;
 }
 
-.UV_video {
-    height: 400px;
+.UV_video{
+    height: 50vh;
     width: 80%;
-
+    
     border-radius: 25px;
 
     background-color: azure;
 }
 
-.UV_cirkel {
+
+.UV_right .UV_tekst{
+    display: flex;
+    justify-self: start;
+    width: 80%;
+}
+
+.UV_cirkel{
     display: flex;
     align-self: end;
     position: absolute;
     z-index: -1;
 
-    bottom: 400px;
+    bottom: 65%;
 
     height: clamp(100px, 25vw, 300px);
     /* clamp er en størrelses-værdi: clamp(Mindste elementet må blive, procent af skærmen eksembel givet. 25vw(view witch), største elementet må blive) Eksempel: width: clamp(100px, 25vw, 300px);*/
@@ -660,10 +667,4 @@ footer img {
     100% {
         transform: rotate(30deg);
     }
-}
-
-.UV_right .UV_tekst {
-    display: flex;
-    justify-self: start;
-    width: 80%;
 }
