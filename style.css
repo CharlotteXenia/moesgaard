@@ -1,53 +1,5 @@
 @import url("https://use.typekit.net/jra5qrh.css");
-@import url('https://fonts.googleapis.com/css2?family=Aladin&family=Quicksand:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Aladin&family=Josefin+Slab:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Quicksand:wght@300;400;500;600;700&display=swap');
-
-
-
-@font-face {
-    font-family: 'MuseoSans-normal';
-    src: url(fonts/MuseoSans-100.otf);
-}
-@font-face {
-    font-family: 'MuseoSans-italic';
-    src: url(fonts/MuseoSans-100.otf);
-}
-@font-face {
-    font-family: 'MuseoSans-300';
-    src: url(fonts/MuseoSans-300.otf);
-}
-@font-face {
-    font-family: 'MuseoSans-300-italic';
-    src: url(fonts/MuseoSans-100.otf);
-}
-@font-face {
-    font-family: 'MuseoSans-500';
-    src: url(fonts/MuseoSans_500.otf);
-}
-
-@font-face {
-    font-family: 'MuseoSans-500-italic';
-    src: url(fonts/MuseoSans_500_Italic.otf);
-}
-@font-face {
-    font-family: 'MuseoSans-700';
-    src: url(fonts/MuseoSans_700.otf);
-}
-@font-face {
-    font-family: 'MuseoSans-700-italic';
-    src: url(fonts/MuseoSans-700Italic.otf);
-}
-@font-face {
-    font-family: 'MuseoSans-900';
-    src: url(fonts/MuseoSans_900.otf);
-}
-@font-face {
-    font-family: 'MuseoSans-900-italic';
-    src: url(fonts/MuseoSans-900Italic.otf);
-}
-
-
-
 
 
 /* 
@@ -76,7 +28,7 @@ font-style: normal;
 
 
 body {
-    background-image: url(media/img/Baugrunde/osiris_baugrund.png);
+    background-image: url(media/img/nyeBaggrundsbilleder/osirisBaggrund.png);
     background-repeat: no-repeat;
     z-index: -1;
 }
@@ -87,6 +39,9 @@ h1 {
     position: relative;
     top: 5vh;
     text-align: center;
+    font-family: 'Josefin Slab';
+    font-weight: 300;
+    height: 5vh;
 }
 
 p {
@@ -150,7 +105,7 @@ header img {
 /* Streger i siden */
 #streger {
     width: 80%;
-    height: 50vh;
+    height: 65vh;
     /*FIKS SENERE*/
 
     border-left: 3px black solid;
@@ -258,9 +213,14 @@ nav img:hover {
 #mumificering {
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 .mumiestoerelse {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 35%;
 }
 
@@ -379,47 +339,37 @@ footer img {
 #osiris {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     width: 100%;
-    margin-left: -5%;
-}
-
-#osirisOVERSKRIFT {
-    width: 20%;
-    margin-left: 42%;
-    margin-top: -5%;
-
-    font-size: 5vh;
-    font-family: 'Josefin Slab';
-    font-weight: 300;
-
 }
 
 #osirisTEXT {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 35%;
     text-align: center;
 
 }
 
-#osiris img {
-    width: 60%;
+#alleGuderne {
+    width: 8.5%;
     height: fit-content;
-    margin-top: -40%;
-}
-
-
-
-#osirisVIDEO video {
-    max-width: 700px;
-    width: 100%;
-    max-height: 800px;
-    height: 600px;
-    margin-top: -40%;
-    border-radius: 20px;
 }
 
 #osirisVIDEO{
-        position: relative;
-        cursor: pointer;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 35%;
+}
+
+#osirisVIDEO video {
+    width: 51%;
+    cursor: pointer;
+    border-radius: 30px;
+
 }
 
 #osirisVIDEO img{
@@ -427,36 +377,15 @@ footer img {
     position: absolute;
     z-index: 1;
 
-    top: 55%;
+    top: 45%;
     right: 37%;
     
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* HELE TEKST-SLIDE */
-#osirisSlideshow {
-    position: relative;
-    background: transparent;
-    margin-left: 8%;
-    height: 7%;
+#osirisSlideshow{
+    height: 10vh;
 }
-
 /* Slides */
 #Slide1,
 #Slide2,
@@ -474,21 +403,16 @@ footer img {
 }
 
 /* PRIKKERNE */
-#prik-INDHOLD {
-
-    background: transparent;
-    margin-top: 15%;
-    margin-left: 8%;
-
+#prik-INDHOLD{
+    display: flex;
 }
-
 /* STYLING AF SELVE PRIKKERNE */
 #prik1,
 #prik2,
 #prik3,
 #prik4,
 #prik5 {
-    display: inline-block;
+    display: block;
     cursor: pointer;
     width: 20px;
     height: 20px;
@@ -508,27 +432,6 @@ footer img {
     background-color: white;
 }
 
-
-
-@keyframes fadeUD {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeIND {
-    from {
-        opacity: 1;
-    }
-
-    to {
-        opacity: 0;
-    }
-}
 
 /* UNDERVERDEN */
 /* Mads */
@@ -556,15 +459,6 @@ footer img {
     animation: fadeIn 2s;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
 
 /* Section right */
 .UV_h2 {
@@ -672,9 +566,3 @@ footer img {
 }
 
 
-
-/* STYLING AF GRAVKAMMER */
-
-#gravkammerBODY{
-    background-image: url(media/img/gravkammerFOTO.png);
-}
