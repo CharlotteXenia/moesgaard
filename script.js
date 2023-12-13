@@ -83,16 +83,13 @@ function nuSide() {
     højreIkon.src = "media/img/indgang1_mumie.svg";
     body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/osirisBaggrund.png")';
     //lytter til om man går videre
-    fremadPil.addEventListener("click", function () {
-      //starter fade ud
-      // osiris.style.animation = "fadeOut 2s ease-in-out forwards";
-      
-      setTimeout(() => {
-        osiris.style.display = "none";
-        sideNu = 3;
-      }, 2000);
+    fremadPil.addEventListener("click", skjulOsiris);
 
-    });
+    fremadPil.removeEventListener("click", skjulMumificering);
+    tilbagePil.removeEventListener("click", visMumificering);
+    tilbagePil.removeEventListener("click", visOsiris);
+
+
   }
 
   if (sideNu == 3) {
@@ -108,26 +105,11 @@ function nuSide() {
     mumificering.style.animation = "fadeIn 2s ease-in-out forwards";
     
     //lytter til om man går videre
-    fremadPil.addEventListener("click", function () {
-      //starter fade ud
-      // osiris.style.animation = "fadeOut 2s ease-in-out forwards";
-      
-      setTimeout(() => {
-        mumificering.style.display = "none";
-        sideNu = 4;
-      }, 2000);
+    fremadPil.addEventListener("click", skjulMumificering);
+    tilbagePil.addEventListener("click", visOsiris);
 
-    });
-    tilbagePil.addEventListener("click", function () {
-      //starter fade ud
-      // osiris.style.animation = "fadeOut 2s ease-in-out forwards";
-      
-      setTimeout(() => {
-        mumificering.style.display = "none";
-        sideNu = 2;
-      }, 2000);
-
-    });
+    fremadPil.removeEventListener("click", skjulOsiris);
+    tilbagePil.removeEventListener("click", visMumificering);
   }
 
   if (sideNu == 4) {
@@ -146,16 +128,11 @@ function nuSide() {
     fremadPil.addEventListener("click", function () {
       sideNu = 4;
     });
-    tilbagePil.addEventListener("click", function () {
-      //starter fade ud
-      // osiris.style.animation = "fadeOut 2s ease-in-out forwards";
-      
-      setTimeout(() => {
-        underverden.style.display = "none";
-        sideNu = 3;
-      }, 2000);
+    tilbagePil.addEventListener("click", visMumificering);
 
-    });
+    fremadPil.removeEventListener("click", skjulOsiris);
+    fremadPil.removeEventListener("click", skjulMumificering);
+    tilbagePil.removeEventListener("click", visOsiris);
   }
 
   if (sideNu == 5) {
@@ -166,14 +143,47 @@ function gemForside() {
   startIndhold.style.display = "none";
   sideNu = 2;
 }
-function gemSide(side){
-  siderne[side].style.display = "none";
+function skjulOsiris() {
+  //starter fade ud
+  // osiris.style.animation = "fadeOut 2s ease-in-out forwards";
+  
+  setTimeout(() => {
+    osiris.style.display = "none";
+    sideNu = 3;
+  }, 2000);
+
 }
-function visSide(side){
-  siderne[side].style.display = "block";
+function skjulMumificering() {
+  //starter fade ud
+  // osiris.style.animation = "fadeOut 2s ease-in-out forwards";
+  
+  setTimeout(() => {
+    mumificering.style.display = "none";
+    sideNu = 4;
+  }, 2000);
+
 }
 
+function visOsiris() {
+  //starter fade ud
+  // osiris.style.animation = "fadeOut 2s ease-in-out forwards";
+  
+  setTimeout(() => {
+    mumificering.style.display = "none";
+    sideNu = 2;
+  }, 2000);
 
+}
+function visMumificering() {
+  //starter fade ud
+  // osiris.style.animation = "fadeOut 2s ease-in-out forwards";
+  
+  setTimeout(() => {
+    underverden.style.display = "none";
+    sideNu = 3;
+  }, 2000);
+
+}
 
 // Idéen er at når man trykker på en knap,
 // så kommer der en ny tekst frem - gerne med transition eller fade osv.
