@@ -106,7 +106,7 @@ prik5.addEventListener("click",function(){
 
 let play = document.getElementById("playKnappen");
 let videoDIV = document.getElementById("osirisVIDEO");
-let videoOsiris = document.getElementById("videoOsiris");
+let videoOsiris = document.getElementById("selvevideoOsiris");
 
 
 play.addEventListener("click", afspilVideo);
@@ -117,3 +117,18 @@ function afspilVideo() {
   play.style.display = 'none';
 
 } 
+
+
+videoOsiris.addEventListener("click", pauseVideo);
+
+function pauseVideo(){
+  videoOsiris.pause();
+
+  play.style.display = "block";
+
+
+}
+
+
+
+
