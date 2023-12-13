@@ -645,7 +645,7 @@ footer img {
     width: 20%;
     margin-top: 150px;
 
-    transform: rotate(30deg);
+    transform: rotate(-30deg);
     animation: vippe 4s;
 }
 
@@ -653,18 +653,18 @@ footer img {
 
     /* Animation Keyfram */
     0% {
-        transform: rotate(10deg);
+        transform: rotate(-10deg);
     }
 
     25% {
-        transform: rotate(30deg);
+        transform: rotate(-30deg);
     }
 
     50% {
-        transform: rotate(10deg);
+        transform: rotate(-10deg);
     }
 
     100% {
-        transform: rotate(30deg);
+        transform: rotate(-30deg);
     }
 }
