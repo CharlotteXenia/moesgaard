@@ -94,6 +94,9 @@ function nuSide() {
     tilbagePil.style.opacity = "0";
     højreIkon.src = "media/img/indgang1_mumie.svg";
     body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/osirisBaggrund.png")';
+
+    tilOsiris.style.backgroundColor = "#ffffff"
+    tilOsiris.style.scale = "1.3"
     //lytter til om man går videre
 
     fremadPil.addEventListener("click", skjulOsiris);
