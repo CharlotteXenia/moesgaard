@@ -83,9 +83,12 @@ function nuSide() {
     højreIkon.src = "media/img/indgang1_mumie.svg";
     body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/osirisBaggrund.png")';
     //lytter til om man går videre
+
     fremadPil.addEventListener("click", skjulOsiris);
 
+
     fremadPil.removeEventListener("click", skjulMumificering);
+    
     tilbagePil.removeEventListener("click", visMumificering);
     tilbagePil.removeEventListener("click", visOsiris);
 
@@ -105,6 +108,9 @@ function nuSide() {
     mumificering.style.animation = "fadeIn 2s ease-in-out forwards";
     
     //lytter til om man går videre
+    
+    
+    
     fremadPil.addEventListener("click", skjulMumificering);
     tilbagePil.addEventListener("click", visOsiris);
 
@@ -125,9 +131,6 @@ function nuSide() {
     underverden.style.animation = "fadeIn 2s ease-in-out forwards";
     
     //lytter til om man går videre, Denne bliver stående for ikke at kunne klikke så langt
-    fremadPil.addEventListener("click", function () {
-      sideNu = 4;
-    });
     tilbagePil.addEventListener("click", visMumificering);
 
     fremadPil.removeEventListener("click", skjulOsiris);
@@ -163,6 +166,7 @@ function skjulMumificering() {
   }, 2000);
 
 }
+
 
 function visOsiris() {
   //starter fade ud
