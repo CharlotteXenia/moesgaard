@@ -87,6 +87,7 @@ header img {
 
 #tilbagePil,
 #fremadPil {
+    cursor: pointer;
     width: 7.5%;
     height: 6.5vh;
     display: flex;
@@ -158,6 +159,9 @@ nav img:hover {
 
 
 /* HELE SEKTIONEN */
+#start{
+    cursor: pointer;
+}
 #loadingPage {
     /* SÅ DE 2 DIVER ER VED SIDEN AF HINANDEN */
     display: flex;

@@ -95,8 +95,12 @@ function nuSide() {
     højreIkon.src = "media/img/indgang1_mumie.svg";
     body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/osirisBaggrund.png")';
 
-    tilOsiris.style.backgroundColor = "#ffffff"
+    tilOsiris.style.backgroundColor = "#ffffff80"
     tilOsiris.style.scale = "1.3"
+    tilMumie.style.backgroundColor = "#ffffff33"
+    tilMumie.style.scale = "1"
+    tilUnderV.style.backgroundColor = "#ffffff33"
+    tilUnderV.style.scale = "1"
     //lytter til om man går videre
 
     fremadPil.addEventListener("click", skjulOsiris);
@@ -123,6 +127,14 @@ function nuSide() {
 
     mumificering.style.animation = "fadeIn 2s ease-in-out forwards";
     
+    tilOsiris.style.backgroundColor = "#ffffff33"
+    tilOsiris.style.scale = "1"
+    tilMumie.style.backgroundColor = "#ffffff80"
+    tilMumie.style.scale = "1.3"
+    tilUnderV.style.backgroundColor = "#ffffff33"
+    tilUnderV.style.scale = "1"
+
+
     //lytter til om man går videre
     
     
@@ -147,6 +159,14 @@ function nuSide() {
 
     underverden.style.animation = "fadeIn 2s ease-in-out forwards";
     
+    tilOsiris.style.backgroundColor = "#ffffff33"
+    tilOsiris.style.scale = "1"
+    tilMumie.style.backgroundColor = "#ffffff33"
+    tilMumie.style.scale = "1"
+    tilUnderV.style.backgroundColor = "#ffffff80"
+    tilUnderV.style.scale = "1.3"
+
+
     //lytter til om man går videre, Denne bliver stående for ikke at kunne klikke så langt
     tilbagePil.addEventListener("click", visMumificering);
 
@@ -155,8 +175,6 @@ function nuSide() {
     tilbagePil.removeEventListener("click", visOsiris);
   }
 
-  if (sideNu == 5) {
-  }
 }
 
 function gemForside() {
