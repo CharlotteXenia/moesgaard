@@ -25,12 +25,14 @@ const header = document.querySelector("header");
 const main = document.querySelector("main");
 const h1 = document.querySelector("h1");
 const body = document.querySelector("body");
+const nav = document.querySelector("nav");
+const footer = document.querySelector("footer");
 
 // Tæller for at holde styr på nuværende side
 let sideNu = 0;
 
 // sikre at koden bliver ved med at tjekke hvilken side man er på
-setInterval(nuSide, 1);
+setInterval(nuSide, 300);
 
 //overgangen mellem siderne (tjekket mellem siderne) er stat i funktion for at kunne opdateres forevigt
 function nuSide() {
@@ -41,7 +43,7 @@ function nuSide() {
     main.style.display = "none";
     h1.style.display = "none";
 
-    start.addEventListener("click", function () {
+    startIndhold.addEventListener("click", function () {
 
       // Den tid det tager for venstre div om at flytte sig
       venstre.style.animation = "slideOut 2s ease-in-out forwards";
@@ -78,12 +80,16 @@ function nuSide() {
     header.style.display = "flex";
     main.style.display = "flex";
     h1.style.display = "block";
+    nav.style.display = "flex";
+    footer.style.display = "block";
+
     //skal slukkes for fordi de ikke før har været slukket og først nu ville være "synlige"
     mumificering.style.display = "none";
     underverden.style.display = "none";
 
     //sikre alle ikoner og indhold passer til osiris
     h1.innerHTML = "Osiris-myten";
+    h1.style.color = "black";
     midtIkon.src = "media/img/osiris.svg";
     tilbagePil.style.opacity = "0";
     højreIkon.src = "media/img/indgang1_mumie.svg";
@@ -104,6 +110,7 @@ function nuSide() {
   if (sideNu == 3) {
     mumificering.style.display = "flex"
     h1.innerHTML = "Mumificering";
+    h1.style.color = "black";
     midtIkon.src = "media/img/indgang1_mumie.svg";
     tilbagePil.style.opacity = "1";
     højreIkon.src = "media/img/indgang2_scarab.svg";
@@ -127,6 +134,7 @@ function nuSide() {
   if (sideNu == 4) {
     underverden.style.display = "flex"
     h1.innerHTML = "Underverdenen";
+    h1.style.color = "white";
     midtIkon.src = "media/img/indgang2_scarab.svg";
     tilbagePil.style.opacity = "1";
     højreIkon.src = "media/img/indgang3_oeje.svg";
@@ -153,23 +161,14 @@ function gemForside() {
   sideNu = 2;
 }
 function skjulOsiris() {
-  //starter fade ud
-  // osiris.style.animation = "fadeOut 2s ease-in-out forwards";
+  osiris.style.display = "none";
+  sideNu = 3;
   
-  setTimeout(() => {
-    osiris.style.display = "none";
-    sideNu = 3;
-  }, 2000);
 
 }
 function skjulMumificering() {
-  //starter fade ud
-  // osiris.style.animation = "fadeOut 2s ease-in-out forwards";
-  
-  setTimeout(() => {
     mumificering.style.display = "none";
     sideNu = 4;
-  }, 2000);
 
 }
 
@@ -178,20 +177,16 @@ function visOsiris() {
   //starter fade ud
   // osiris.style.animation = "fadeOut 2s ease-in-out forwards";
   
-  setTimeout(() => {
     mumificering.style.display = "none";
     sideNu = 2;
-  }, 2000);
 
 }
 function visMumificering() {
   //starter fade ud
   // osiris.style.animation = "fadeOut 2s ease-in-out forwards";
   
-  setTimeout(() => {
     underverden.style.display = "none";
     sideNu = 3;
-  }, 2000);
 
 }
 
