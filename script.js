@@ -1,24 +1,30 @@
 // VARIABLER (NAVNGIVNING) AF ID'ER FRA HTML
-let start = document.getElementById("trykHer");
-let venstre = document.getElementById("left");
-let højer = document.getElementById("right");
-let nilen = document.getElementById("nilen");
-let altIndhold = document.getElementById("streger");
-let startIndhold = document.getElementById("start");
-let osiris = document.getElementById("osiris");
-let mumificering = document.getElementById("mumificering");
-let underverden = document.getElementById("underverden");
-let midtIkon = document.getElementById("midtIkon");
-let venstreIkon = document.getElementById("venstreIkon");
-let højreIkon = document.getElementById("højreIkon");
-let tilbagePil = document.getElementById("tilbagePil");
-let fremadPil = document.getElementById("fremadPil");
+const start = document.getElementById("trykHer");
+const venstre = document.getElementById("left");
+const højer = document.getElementById("right");
+const nilen = document.getElementById("nilen");
+const altIndhold = document.getElementById("streger");
+const startIndhold = document.getElementById("start");
+const osiris = document.getElementById("osiris");
+const mumificering = document.getElementById("mumificering");
+const underverden = document.getElementById("underverden");
+const midtIkon = document.getElementById("midtIkon");
+const venstreIkon = document.getElementById("venstreIkon");
+const højreIkon = document.getElementById("højreIkon");
+const tilbagePil = document.getElementById("tilbagePil");
+const fremadPil = document.getElementById("fremadPil");
+
+const tilOsiris = document.getElementById("tilOsiris");
+const tilMumie = document.getElementById("tilMumie");
+const tilUnderV = document.getElementById("tilUnderV");
+
+
 
 //bruger querySelector frem for getElementsByTagName for at undgå array. Det er ikke nødvendigt med et array når der kun er en header og en nav
-let header = document.querySelector("header");
-let main = document.querySelector("main");
-let h1 = document.querySelector("h1");
-let body = document.querySelector("body");
+const header = document.querySelector("header");
+const main = document.querySelector("main");
+const h1 = document.querySelector("h1");
+const body = document.querySelector("body");
 
 // Tæller for at holde styr på nuværende side
 let sideNu = 0;
@@ -189,42 +195,68 @@ function visMumificering() {
 
 }
 
+//NAV barens(prikkernes navigation) funktioner til at skifte
+function tilOsirisFunk(){
+  mumificering.style.display = "none";
+  underverden.style.display = "none";
+  osiris.style.display = "flex";
+  sideNu = 2;
+
+}
+function tilMumieFunk(){
+  mumificering.style.display = "flex";
+  underverden.style.display = "none";
+  osiris.style.display = "none";
+  sideNu = 3;
+}
+function tilUnderVFunk(){
+  mumificering.style.display = "none";
+  underverden.style.display = "flex";
+  osiris.style.display = "none";
+  sideNu = 4;
+}
+//funktionerne bliver kaldt ved tryk
+tilOsiris.addEventListener("click",tilOsirisFunk);
+tilMumie.addEventListener("click",tilMumieFunk);
+tilUnderV.addEventListener("click",tilUnderVFunk);
+
+
 // Idéen er at når man trykker på en knap,
 // så kommer der en ny tekst frem (skifter).
 
 //Osiris
-let prik1 = document.getElementById("prik1");
-let prik2 = document.getElementById("prik2");
-let prik3 = document.getElementById("prik3");
-let prik4 = document.getElementById("prik4");
-let prik5 = document.getElementById("prik5");
+const prik1 = document.getElementById("prik1");
+const prik2 = document.getElementById("prik2");
+const prik3 = document.getElementById("prik3");
+const prik4 = document.getElementById("prik4");
+const prik5 = document.getElementById("prik5");
 
-let Slide1 = document.getElementById("Slide1");
-let Slide2 = document.getElementById("Slide2");
-let Slide3 = document.getElementById("Slide3");
-let Slide4 = document.getElementById("Slide4");
-let Slide5 = document.getElementById("Slide5");
+const Slide1 = document.getElementById("Slide1");
+const Slide2 = document.getElementById("Slide2");
+const Slide3 = document.getElementById("Slide3");
+const Slide4 = document.getElementById("Slide4");
+const Slide5 = document.getElementById("Slide5");
 
 
 //Mumificering
-let prik1mum = document.getElementById("prik1mum");
-let prik2mum = document.getElementById("prik2mum");
-let prik3mum = document.getElementById("prik3mum");
-let prik4mum = document.getElementById("prik4mum");
+const prik1mum = document.getElementById("prik1mum");
+const prik2mum = document.getElementById("prik2mum");
+const prik3mum = document.getElementById("prik3mum");
+const prik4mum = document.getElementById("prik4mum");
 
-let Slide1mum = document.getElementById("Slide1mum");
-let Slide2mum = document.getElementById("Slide2mum");
-let Slide3mum = document.getElementById("Slide3mum");
-let Slide4mum = document.getElementById("Slide4mum");
+const Slide1mum = document.getElementById("Slide1mum");
+const Slide2mum = document.getElementById("Slide2mum");
+const Slide3mum = document.getElementById("Slide3mum");
+const Slide4mum = document.getElementById("Slide4mum");
 
 
 
 //Underverden
-let prik1UV = document.getElementById("prik1UV");
-let prik2UV = document.getElementById("prik2UV");
+const prik1UV = document.getElementById("prik1UV");
+const prik2UV = document.getElementById("prik2UV");
 
-let Slide1UV = document.getElementById("Slide1UV");
-let Slide2UV = document.getElementById("Slide2UV");
+const Slide1UV = document.getElementById("Slide1UV");
+const Slide2UV = document.getElementById("Slide2UV");
 
 
 
@@ -350,9 +382,9 @@ prik2UV.addEventListener("click", function () {
 
 // Play knappen på Osiris-siden
 
-let play = document.getElementById("playKnappen");
-let videoDIV = document.getElementById("osirisVIDEO");
-let videoOsiris = document.getElementById("selvevideoOsiris");
+const play = document.getElementById("playKnappen");
+const videoDIV = document.getElementById("osirisVIDEO");
+const videoOsiris = document.getElementById("selvevideoOsiris");
 
 play.addEventListener("click", afspilVideo);
 
