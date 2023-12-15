@@ -250,8 +250,6 @@ nav img:hover {
 
     font-size: 1.8vh;
     font-family: "museo-sans", sans-serif;
-    font-style: bold;
-
 
 }
 
@@ -320,10 +318,15 @@ nav img:hover {
 }
 
 #krukker {
-    width: 7.5vw;
-    align-self: flex-end;
+    width: 15vw;
+    display: flex;
+    justify-content: space-between;
     position: absolute;
     top: 100%;
+}
+
+#krukker img {
+width: 3vw;
 }
 
 #firkant {
@@ -332,14 +335,14 @@ nav img:hover {
     width: 30vw;
     height: 20vh;
     background: linear-gradient(109deg, #584C3F 30.31%, rgba(196, 196, 196, 0.00) 95.84%);
-    rotate: 12.5deg;
+    transform: rotate(12.5deg);
     animation: rotate 2s ease;
     
 }
 
 
 /* Footer */
-footer{
+footer {
     display: none;
 }
 footer img {
@@ -377,11 +380,11 @@ footer img {
 
 @keyframes rotate {
     from {
-        rotate: 50deg;
+       transform: rotate(50deg);
     }
 
     to {
-        rotate: 12.5deg;
+        transform: rotate(12.5deg);
     }
 }
 
@@ -418,11 +421,11 @@ footer img {
 
 @keyframes pulse {
     from {
-        scale: 1
+        transform: scale(1);
     }
 
     to {
-        scale: 1.1;
+        transform: scale(1.1);
     }
 }
 
@@ -491,7 +494,6 @@ footer img {
 
     font-size: 1.8vh;
     font-family: "museo-sans", sans-serif;
-    font-style: bold;
 
 
 }
@@ -558,7 +560,6 @@ footer img {
 
     font-size: 1.8vh;
     font-family: "museo-sans", sans-serif;
-    font-style: bold;
 
 
 }
@@ -650,6 +651,7 @@ iframe{
     border-radius: 25px;
     width: 100%;
     height: 48%;
+    border: none;
 }
 
 
