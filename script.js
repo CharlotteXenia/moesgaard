@@ -107,8 +107,13 @@ function nuSide() {
 
 
     fremadPil.removeEventListener("click", skjulMumificering);
+<<<<<<< Updated upstream
     
     tilbagePil.removeEventListener("click", visMumificering);
+=======
+    // fremadPil.removeEventListener("click", skjulUnderverden)
+    // tilbagePil.removeEventListener("click", visMumificering);
+>>>>>>> Stashed changes
     tilbagePil.removeEventListener("click", visOsiris);
 
 
@@ -211,6 +216,7 @@ function visMumificering() {
 
 }
 
+<<<<<<< Updated upstream
 //NAV barens(prikkernes navigation) funktioner til at skifte
 function tilOsirisFunk(){
   mumificering.style.display = "none";
@@ -235,6 +241,8 @@ function tilUnderVFunk(){
 tilOsiris.addEventListener("click",tilOsirisFunk);
 tilMumie.addEventListener("click",tilMumieFunk);
 tilUnderV.addEventListener("click",tilUnderVFunk);
+=======
+>>>>>>> Stashed changes
 
 
 // Idéen er at når man trykker på en knap,
