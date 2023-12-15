@@ -284,8 +284,6 @@ tekster[0].style.display = "block";
 
 //Eventlistener'en + funktionen når man trykker på én af de runde knapper
 prik1.addEventListener("click", function () {
-  //FOR-loop: Visning af arrayet, hvor rækkefølgen ikke har nogle indfyldelse på det viste.
-  //Block & NONE: Den nuværende tekst vises (BLOCK), mens den forrige skjules (NONE).
 
   for (let index = 0; index < tekster.length; index++) {
     tekster[index].style.display = "none";
