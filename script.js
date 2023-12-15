@@ -82,6 +82,9 @@ function nuSide() {
   }
 
   //osiris siden
+  //denne sides kode gentages for de to følgende sider også, da det
+  // er det samme der sker, den skifter kun indholdet
+  // derfor har dette lagt grobund for de andre
   if (sideNu == 2) {
     //osiris fader ind
     osiris.style.animation = "fadeIn 2s ease-in-out forwards";
