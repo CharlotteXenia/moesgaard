@@ -392,10 +392,6 @@ prik2UV.addEventListener("click", function () {
 
 
 
-
-
-
-
 // Play knappen på Osiris-siden
 
 const play = document.getElementById("playKnappen");
