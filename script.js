@@ -296,6 +296,8 @@ const Slide2UV = document.getElementById("Slide2UV");
 
 //ARRAY med teksterne OSIRIS
 let tekster = [Slide1, Slide2, Slide3, Slide4, Slide5];
+let prikkerO = [prik1, prik2, prik3, prik4, prik5];
+
 tekster[0].style.display = "block";
 
 
@@ -304,39 +306,54 @@ prik1.addEventListener("click", function () {
 
   for (let index = 0; index < tekster.length; index++) {
     tekster[index].style.display = "none";
+    prikkerO[index].style.backgroundColor = "#aa865d";
   }
   tekster[0].style.display = "block";
+  prik1.style.backgroundColor = "#ffffff";
+
 });
 
 prik2.addEventListener("click", function () {
   for (let index = 0; index < tekster.length; index++) {
     tekster[index].style.display = "none";
+    prikkerO[index].style.backgroundColor = "#aa865d";
   }
 
   tekster[1].style.display = "block";
+
+  prik2.style.backgroundColor = "#ffffff";
 });
 
 prik3.addEventListener("click", function () {
   for (let index = 0; index < tekster.length; index++) {
     tekster[index].style.display = "none";
+    prikkerO[index].style.backgroundColor = "#aa865d";
   }
 
   tekster[2].style.display = "block";
+  prik3.style.backgroundColor = "#ffffff";
+
 });
 
 prik4.addEventListener("click", function () {
   for (let index = 0; index < tekster.length; index++) {
     tekster[index].style.display = "none";
+    prikkerO[index].style.backgroundColor = "#aa865d";
   }
 
   tekster[3].style.display = "block";
+  prik4.style.backgroundColor = "#ffffff";
+
 });
 
 prik5.addEventListener("click", function () {
   for (let index = 0; index < tekster.length; index++) {
     tekster[index].style.display = "none";
+    prikkerO[index].style.backgroundColor = "#aa865d";
   }
   tekster[4].style.display = "block";
+  prik5.style.backgroundColor = "#ffffff";
+
 });
 
 
@@ -344,38 +361,54 @@ prik5.addEventListener("click", function () {
 
 //ARRAY med teksterne MUMIFICERING
 let tekstermum = [Slide1mum, Slide2mum, Slide3mum, Slide4mum];
+let prikkerM = [prik1mum, prik2mum, prik3mum, prik4mum];
 tekstermum[0].style.display = "block";
 
 
 prik1mum.addEventListener("click", function () {
   for (let index = 0; index < tekstermum.length; index++) {
     tekstermum[index].style.display = "none";
+  prikkerM[index].style.backgroundColor = "#aa865d";
+
   }
   tekstermum[0].style.display = "block";
+  prik1mum.style.backgroundColor = "#ffffff";
+
 });
 
 prik2mum.addEventListener("click", function () {
   for (let index = 0; index < tekstermum.length; index++) {
     tekstermum[index].style.display = "none";
+  prikkerM[index].style.backgroundColor = "#aa865d";
+
   }
 
   tekstermum[1].style.display = "block";
+  prik2mum.style.backgroundColor = "#ffffff";
+
 });
 
 prik3mum.addEventListener("click", function () {
   for (let index = 0; index < tekstermum.length; index++) {
     tekstermum[index].style.display = "none";
+  prikkerM[index].style.backgroundColor = "#aa865d";
+
   }
 
   tekstermum[2].style.display = "block";
+  prik3mum.style.backgroundColor = "#ffffff";
+
 });
 
 prik4mum.addEventListener("click", function () {
   for (let index = 0; index < tekstermum.length; index++) {
     tekstermum[index].style.display = "none";
+    prikkerM[index].style.backgroundColor = "#aa865d";
+
   }
 
   tekstermum[3].style.display = "block";
+  prik4mum.style.backgroundColor = "#ffffff";
 });
 
 
@@ -385,6 +418,8 @@ prik4mum.addEventListener("click", function () {
 
 //ARRAY med teksterne UNDERVERDEN
 let teksterUV = [Slide1UV, Slide2UV];
+let prikkerUV = [prik1UV, prik2UV];
+
 teksterUV[0].style.display = "block";
 
 //Eventlistener'en + funktionen når man trykker på én af de runde knapper
@@ -392,16 +427,24 @@ prik1UV.addEventListener("click", function () {
  
   for (let index = 0; index < teksterUV.length; index++) {
     teksterUV[index].style.display = "none";
+    prikkerUV[index].style.backgroundColor = "#aa865d";
+
   }
   teksterUV[0].style.display = "block";
+  prik1UV.style.backgroundColor = "#ffffff";
+
 });
 
 prik2UV.addEventListener("click", function () {
   for (let index = 0; index < teksterUV.length; index++) {
     teksterUV[index].style.display = "none";
+    prikkerUV[index].style.backgroundColor = "#aa865d";
+
   }
 
   teksterUV[1].style.display = "block";
+  prik2UV.style.backgroundColor = "#ffffff";
+
 });
 
 
