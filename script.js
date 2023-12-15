@@ -1,24 +1,32 @@
-// VARIABLER (NAVNGIVNING) AF ID'ER FRA HTML
+// VARIABLER (NAVNGIVNING) AF ID'ER FRA HTML- Henter det meste af hvad der skal bruges
+//splash screen elementer
 const start = document.getElementById("trykHer");
 const venstre = document.getElementById("left");
 const højer = document.getElementById("right");
 const nilen = document.getElementById("nilen");
+
+//Indhold efter splash
 const altIndhold = document.getElementById("streger");
 const startIndhold = document.getElementById("start");
+
+//indholdsektioner
 const osiris = document.getElementById("osiris");
 const mumificering = document.getElementById("mumificering");
 const underverden = document.getElementById("underverden");
+
+//ikoner i header
 const midtIkon = document.getElementById("midtIkon");
 const venstreIkon = document.getElementById("venstreIkon");
 const højreIkon = document.getElementById("højreIkon");
+
+//pile i header
 const tilbagePil = document.getElementById("tilbagePil");
 const fremadPil = document.getElementById("fremadPil");
 
+//nav i siden
 const tilOsiris = document.getElementById("tilOsiris");
 const tilMumie = document.getElementById("tilMumie");
 const tilUnderV = document.getElementById("tilUnderV");
-
-
 
 //bruger querySelector frem for getElementsByTagName for at undgå array. Det er ikke nødvendigt med et array når der kun er en header og en nav
 const header = document.querySelector("header");
@@ -28,39 +36,43 @@ const body = document.querySelector("body");
 const nav = document.querySelector("nav");
 const footer = document.querySelector("footer");
 
-// Tæller for at holde styr på nuværende side
+// Variabel der holder øje med hvilken side man er på
 let sideNu = 0;
 
 // sikre at koden bliver ved med at tjekke hvilken side man er på
-setInterval(nuSide, 300);
+setInterval(nuSide, 500);
 
-//overgangen mellem siderne (tjekket mellem siderne) er stat i funktion for at kunne opdateres forevigt
+//overgangen mellem siderne (tjekket mellem siderne) er sat i funktion for at kunne opdateres forevigt
 function nuSide() {
   // Splash screen
+  // starter på 0
   if (sideNu == 0) {
+
+    //skjuler alt normalt indhold
     altIndhold.style.display = "none";
     header.style.display = "none";
     main.style.display = "none";
     h1.style.display = "none";
 
+    // venter på at man trykker
     startIndhold.addEventListener("click", function () {
 
-      // Den tid det tager for venstre div om at flytte sig
+      // Animation på dørene
       venstre.style.animation = "slideOut 2s ease-in-out forwards";
-
-      // Den tid det tager for højre div om at flytte sig
       højer.style.animation = "slideOut 2s ease-in-out forwards";
 
       // TrykHer knappen forsvinder + Nilen-billedet kommer frem.
       start.style.display = "none";
       nilen.style.display = "block";
+
+      //skifter til intro siden
       sideNu = 1;
     });
   }
 
   // intro skærm
   if (sideNu == 1) {
-    // kigger om man trykker uanset hvor
+    // Venter på man trykker igen
     startIndhold.addEventListener("click", function () {
       //start animationen
       startIndhold.style.animation = "fadeOut 2s ease-in-out forwards";
@@ -83,7 +95,8 @@ function nuSide() {
     nav.style.display = "flex";
     footer.style.display = "block";
 
-    //skal slukkes for fordi de ikke før har været slukket og først nu ville være "synlige"
+    //skal fjernes fordi de ikke før har været slukket og først nu ville være "synlige"
+    //dette er også en sikkerhed når man skifter mellem siderne
     mumificering.style.display = "none";
     underverden.style.display = "none";
 
@@ -95,25 +108,33 @@ function nuSide() {
     højreIkon.src = "media/img/indgang1_mumie.svg";
     body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/osirisBaggrund.png")';
 
+    //nav baren i siden markere hvilken side man er på.
+    // her er det også nødvendigt at reset de andre prikker, hvis man kommer der fra
     tilOsiris.style.backgroundColor = "#ffffff80"
     tilOsiris.style.scale = "1.3"
     tilMumie.style.backgroundColor = "#ffffff33"
     tilMumie.style.scale = "1"
     tilUnderV.style.backgroundColor = "#ffffff33"
     tilUnderV.style.scale = "1"
-    //lytter til om man går videre
-
+    
+    
+    //lytter til om man går videre og skjuler siden man er på
+    //Mumificering viser sig selv efterfølgende, derfor skal den kun skjule sig selv
     fremadPil.addEventListener("click", skjulOsiris);
 
 
+    //Når man skifter mellem siderne bliver der tilføjet flere eventlisterner på samme div
+    // dette giver problemer fordi at flere ting vil vises af gangen
+    //derfor er det nødvendigt at fjerne de andre eventlistenere igen.
     fremadPil.removeEventListener("click", skjulMumificering);
-    
+
     tilbagePil.removeEventListener("click", visMumificering);
     tilbagePil.removeEventListener("click", visOsiris);
 
 
   }
 
+  //Mumificering
   if (sideNu == 3) {
     mumificering.style.display = "flex"
     h1.innerHTML = "Mumificering";
@@ -136,16 +157,13 @@ function nuSide() {
 
 
     //lytter til om man går videre
-    
-    
-    
     fremadPil.addEventListener("click", skjulMumificering);
     tilbagePil.addEventListener("click", visOsiris);
-
+    //fjerner forrige
     fremadPil.removeEventListener("click", skjulOsiris);
     tilbagePil.removeEventListener("click", visMumificering);
   }
-
+  //underverdenen
   if (sideNu == 4) {
     underverden.style.display = "flex"
     h1.innerHTML = "Underverdenen";
@@ -177,41 +195,36 @@ function nuSide() {
 
 }
 
+//skjuler forsiden og skifter til osiris
 function gemForside() {
   startIndhold.style.display = "none";
   sideNu = 2;
 }
+
+//skjuler osiris og skifter til mumificering
 function skjulOsiris() {
   osiris.style.display = "none";
   sideNu = 3;
-  
-
 }
+//skjuler mumificering og skifter til underverden
 function skjulMumificering() {
     mumificering.style.display = "none";
     sideNu = 4;
-
 }
 
-
-function visOsiris() {
-  //starter fade ud
-  // osiris.style.animation = "fadeOut 2s ease-in-out forwards";
-  
+//skjuler mumificering og skifter til osiris
+function visOsiris() {  
     mumificering.style.display = "none";
     sideNu = 2;
-
 }
+//skjuler underverden og skifter til mumificering
 function visMumificering() {
-  //starter fade ud
-  // osiris.style.animation = "fadeOut 2s ease-in-out forwards";
-  
     underverden.style.display = "none";
     sideNu = 3;
-
 }
 
 //NAV barens(prikkernes navigation) funktioner til at skifte
+//alle disse er ens i funktion. De slukker for de andre sider og viser kun den man har trykket på
 function tilOsirisFunk(){
   mumificering.style.display = "none";
   underverden.style.display = "none";
@@ -231,7 +244,8 @@ function tilUnderVFunk(){
   osiris.style.display = "none";
   sideNu = 4;
 }
-//funktionerne bliver kaldt ved tryk
+
+//funktionerne bliver kaldt ved tryk på nav baren
 tilOsiris.addEventListener("click",tilOsirisFunk);
 tilMumie.addEventListener("click",tilMumieFunk);
 tilUnderV.addEventListener("click",tilUnderVFunk);
