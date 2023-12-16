@@ -1,21 +1,6 @@
 @import url("https://use.typekit.net/jra5qrh.css");
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Josefin+Slab&display=swap');
 
-/* 
-Museo Sans 300 - Brødtekst
-font-family: "museo-sans", sans-serif;
-font-weight: 300;
-font-style: normal;
-
-Museo Sans 700 - Overskrifter
-font-family: "museo-sans", sans-serif;
-font-weight: 700;
-font-style: normal;
-
-*/
-
-
-
 /* Generelle regler */
 * {
     box-sizing: border-box;
@@ -41,7 +26,7 @@ h1 {
     position: relative;
     top: 5vh;
     text-align: center;
-    font-family: 'Josefin Slab';
+    font-family: 'Josefin Slab', sans-serif;
     
     height: 5vh;
 }
@@ -685,11 +670,9 @@ iframe{
         justify-content: center;
     }
 
-    #placeholderTELEFON {
-        background-color: black;
+    #vendSkaerm img {
         width: 75px;
         height: 75px;
-        margin-top: 10px;
     }
 
     footer{
