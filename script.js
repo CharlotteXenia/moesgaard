@@ -109,7 +109,7 @@ function nuSide() {
     midtIkon.src = "media/img/osiris.svg";
     tilbagePil.style.opacity = "0";
     højreIkon.src = "media/img/indgang1_mumie.svg";
-    body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/osirisBaggrund.png")';
+    body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/osirisBaggrund.jpg")';
 
     //nav baren i siden markere hvilken side man er på.
     // her er det også nødvendigt at reset de andre prikker, hvis man kommer der fra
@@ -142,7 +142,7 @@ function nuSide() {
     højreIkon.src = "media/img/indgang2_scarab.svg";
     venstreIkon.src = "media/img/osiris.svg";
 
-    body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/mumificeringBaggrund.png")';
+    body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/mumificeringBaggrund.jpg")';
 
     mumificering.style.animation = "fadeIn 2s ease-in-out forwards";
     
@@ -171,7 +171,7 @@ function nuSide() {
     højreIkon.src = "media/img/indgang3_oeje.svg";
     venstreIkon.src = "media/img/indgang1_mumie.svg";
 
-    body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/underverdenBaggrund.png")';
+    body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/underverdenBaggrund.jpg")';
 
     underverden.style.animation = "fadeIn 2s ease-in-out forwards";
     

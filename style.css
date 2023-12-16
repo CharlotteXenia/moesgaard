@@ -27,7 +27,7 @@ font-style: normal;
 
 
 body {
-    background-image: url(media/img/nyeBaggrundsbilleder/osirisBaggrund.png);
+    background-image: url(media/img/nyeBaggrundsbilleder/osirisBaggrund.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -56,7 +56,7 @@ p {
     font-family: "museo-sans", sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 1vw;
+    font-size: 1.8vh;
 }
 
 main {
@@ -181,7 +181,7 @@ nav img:hover {
     background-color: bisque;
     /* z-index: 1; */
     overflow: hidden;
-    background-image: url(media/img/doorLeft.png);
+    background-image: url(media/img/doorLeft.jpg);
     background-position: right;
     /* Center the image */
     background-repeat: no-repeat;
@@ -195,7 +195,7 @@ nav img:hover {
     height: 100vh;
     background-color: bisque;
     /* z-index: 1; */
-    background-image: url(media/img/doorRight.png);
+    background-image: url(media/img/doorRight.jpg);
     background-position: left;
     /* Center the image */
     background-repeat: no-repeat;
@@ -239,7 +239,7 @@ nav img:hover {
 
 /* HELE TEKST-SLIDE MUMIFICERING */
 #mumieSlideshow{
-    height: 16vh;
+    height: 17vh;
 }
 /* Slides */
 #Slide1mum,
@@ -249,10 +249,6 @@ nav img:hover {
 #Slide5mum {
     display: none;
     text-align: center;
-
-    font-size: 1.8vh;
-    font-family: "museo-sans", sans-serif;
-
 }
 
 /* PRIKKERNE */
@@ -534,11 +530,6 @@ footer img {
 {
     display: none;
     text-align: center;
-
-    font-size: 1.8vh;
-    font-family: "museo-sans", sans-serif;
-
-
 }
 
 /* PRIKKERNE UNDERVERDEN */
@@ -567,19 +558,6 @@ footer img {
 {
     background-color: white;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #underverden {
     display: none;
@@ -728,62 +706,5 @@ iframe{
     }
     header{
         display: none;
-    }
-}
-
-@media screen and (max-width:915px) {
-    p{
-        font-size: 1.7vw;
-    }
-
-    #prik1,
-    #prik2,
-    #prik3,
-    #prik4,
-    #prik5 {
-        width: 15px;
-        height: 15px;
-        margin: 0px 2px;
-}
-
-    #osirisSlideshow{
-        height: 30vh;
-    }
-    #osirisTEXT{
-        justify-content: space-evenly;
-        height: 65vh;
-    }
-
-
-    #prik1mum,
-    #prik2mum,
-    #prik3mum,
-    #prik4mum,
-    #prik5mum {
-        width: 15px;
-        height: 15px;
-        margin: 0px 2px;
-    }
-    #mumieSlideshow{
-        height: 30vh;
-    }
-    #mumieTEXT{
-        justify-content: space-evenly;
-        height: 65vh;
-    }
-
-    #prik1UV,
-    #prik2UV{
-        width: 15px;
-        height: 15px;
-        margin: 0px 2px;
-    }
-
-    #SlideshowUV{
-        height: 30vh;
-    }
-    #TEXTUV{
-        justify-content: space-evenly;
-        height: 65vh;
     }
 }
