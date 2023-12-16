@@ -70,6 +70,10 @@ function nuSide() {
     });
   }
 
+
+  //************ SPLASHSCREEN = CHARLOTTE & SAFA ************//
+  // Inkl. tilhørende HTML & CSS kode
+
   // intro skærm
   if (sideNu == 1) {
     // Venter på man trykker igen
@@ -80,6 +84,15 @@ function nuSide() {
       setTimeout(gemForside, 2000);
     });
   }
+
+
+
+
+
+
+
+    //************ NAVIGATION = JULIE & MADS ************//
+    // Inkl. tilhørende HTML & CSS kode
 
   //osiris siden
   //denne sides kode gentages for de to følgende sider også, da det
@@ -247,6 +260,15 @@ function tilUnderVFunk(){
 tilOsiris.addEventListener("click",tilOsirisFunk);
 tilMumie.addEventListener("click",tilMumieFunk);
 tilUnderV.addEventListener("click",tilUnderVFunk);
+
+
+
+
+
+  //************ TEKSTKARUSSELLEN = SAFA & JULIE ************//
+  // Inkl. tilhørende HTML & CSS kode
+
+
 
 
 // Idéen er at når man trykker på en knap,
@@ -443,13 +465,14 @@ prik2UV.addEventListener("click", function () {
 });
 
 
-
+  //************ PLAYKNAP = MADS & CHARLOTTE  ************//
+  // Inkl. tilhørende HTML & CSS kode
 
 // Play knappen på Osiris-siden
-
 const play = document.getElementById("playKnappen");
 const videoDIV = document.getElementById("osirisVIDEO");
 const videoOsiris = document.getElementById("selvevideoOsiris");
+
 
 play.addEventListener("click", afspilVideo);
 
