@@ -120,21 +120,16 @@ function nuSide() {
     tilUnderV.style.backgroundColor = "#ffffff33"
     tilUnderV.style.scale = "1"
     
-    
     //lytter til om man går videre og skjuler siden man er på
     //Mumificering viser sig selv efterfølgende, derfor skal den kun skjule sig selv
     fremadPil.addEventListener("click", skjulOsiris);
-
 
     //Når man skifter mellem siderne bliver der tilføjet flere eventlisterner på samme div
     // dette giver problemer fordi at flere ting vil vises af gangen
     //derfor er det nødvendigt at fjerne de andre eventlistenere igen.
     fremadPil.removeEventListener("click", skjulMumificering);
-
     tilbagePil.removeEventListener("click", visMumificering);
     tilbagePil.removeEventListener("click", visOsiris);
-
-
   }
 
   //Mumificering
