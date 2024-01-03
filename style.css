@@ -106,6 +106,7 @@ header img {
     border-left: 3px black solid;
     border-right: 3px black solid;
 
+    overflow: visible;
 }
 
 nav,
@@ -122,8 +123,7 @@ nav {
     justify-content: space-between;
     align-items: center;
 
-    padding-top: 0.8vw;
-    padding-bottom: 0.8vw;
+    overflow: visible;
 }
 
 nav img {
@@ -287,6 +287,8 @@ nav img:hover {
     align-items: center;
     position: relative;
     width: 35%;
+
+    overflow: visible;
 }
 
 .mumiestoerelse img {
@@ -553,6 +555,8 @@ footer img {
     justify-content: space-around;
     width: 100%;
     height: 100%;
+
+    overflow: visible;
 }
 
 /* Section left */
@@ -589,6 +593,8 @@ footer img {
     position: relative;
     height: 100%;
     width: 35%;
+
+    overflow: visible;
 }
 
 iframe{
@@ -628,6 +634,7 @@ justify-content: center;
 align-items: center;
 
 position: absolute;
+z-index: 3;
 
 background-color: #C83E30;
 text-decoration: none;
@@ -697,6 +704,12 @@ transition: right 0.5s ease-in-out; /* Tilføjer overgang for breddeændring */
 
     100% {
         transform: rotate(-30deg);
+    }
+}
+
+@media screen and (max-width:900px) {
+    h1{
+        overflow: visible;
     }
 }
 
