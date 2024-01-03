@@ -630,7 +630,7 @@ iframe{
 
 #billet{
 display: flex;
-justify-content: center;
+justify-content: space-evenly;
 align-items: center;
 
 position: absolute;
@@ -639,7 +639,7 @@ z-index: 3;
 background-color: #C83E30;
 text-decoration: none;
 width: 8vw;
-height: 3vw;
+height: 2.5vw;
 top: 11vw;
 right: -5.6vw;
 
@@ -648,8 +648,7 @@ transition: right 0.5s ease-in-out; /* Tilføjer overgang for breddeændring */
 
 #billet p {
     color: white;
-    margin-left: 10px;
-    /* display: none; Starter med at skjule teksten */
+    margin-left: 5px;
 }
 
 #billet:hover p {
