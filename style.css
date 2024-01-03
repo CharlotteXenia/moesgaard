@@ -7,6 +7,7 @@
     padding: 0;
     margin: 0;
 
+    overflow: hidden; /* Skjuler teksten, der ikke er synlig */
 }
 
 
@@ -120,6 +121,9 @@ nav {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
+    padding-top: 0.8vw;
+    padding-bottom: 0.8vw;
 }
 
 nav img {
@@ -616,6 +620,44 @@ iframe{
 
     animation: rotateOnLoad 6s;
 }
+
+
+#billet{
+display: flex;
+justify-content: center;
+align-items: center;
+
+position: absolute;
+
+background-color: #C83E30;
+text-decoration: none;
+width: 8vw;
+height: 3vw;
+top: 11vw;
+right: -5.6vw;
+
+transition: right 0.5s ease-in-out; /* Tilføjer overgang for breddeændring */
+}
+
+#billet p {
+    color: white;
+    margin-left: 10px;
+    /* display: none; Starter med at skjule teksten */
+}
+
+#billet:hover p {
+    display: block; /* Viser teksten, når der hoveres over #billet */
+}
+
+#billet:hover{
+    right: 0vw;
+    width: 8vw;
+}
+
+#billet:hover p {
+    opacity: 1; /* Viser teksten ved hover */
+}
+
 
 @keyframes rotateOnLoad {
 
