@@ -30,6 +30,8 @@ h1 {
     font-family: 'Josefin Slab', sans-serif;
     
     height: 5vh;
+
+    overflow: visible;
 }
 h2{
     font-family: 'Acme', sans-serif;
