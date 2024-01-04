@@ -708,10 +708,20 @@ transition: right 0.5s ease-in-out; /* Tilføjer overgang for breddeændring */
     }
 }
 
-@media screen and (max-width:900px) {
+@media screen and (max-width:915px) {
     h1{
         overflow: visible;
     }
+
+    #billet{
+        width: 3vw;
+        height: 3vw;
+        right: 0vw;
+        }
+        
+        #billet p {
+            display: none;
+        }    
 }
 
 @media screen and (max-width:450px) {
