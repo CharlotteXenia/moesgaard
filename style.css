@@ -331,7 +331,7 @@ footer {
 footer img {
     width: 7.5vw;
     margin: 0 0 5px 5px;
-    position: fixed;
+    position: absolute;
     left: 0;
     bottom: 0;
 }
