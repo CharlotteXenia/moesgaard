@@ -829,16 +829,76 @@ transition: right 0.5s ease-in-out; /* Tilføjer overgang for breddeændring */
         overflow: visible;
     }
 
+    p{
+        font-size: 3.5vh;
+    }
+
     #billet{
         width: 3vw;
         height: 3vw;
         right: 0vw;
         }
         
-        #billet p {
-            display: none;
-        }    
+    #billet p {
+        display: none;
+    }   
+
+/****************Osiris siden*******************/
+    #osirisSlideshow{
+        height: 45vh;
+    }
+
+    #osirisTEXT {
+        justify-content: space-between;
+    }
+
+    #prik1, #prik2, #prik3, #prik4, #prik5 {
+        margin: 0px 2px;
+    }
+
+/****************Mumificering siden*******************/
+    #mumieSlideshow {
+        height: 45vh;
+    }
+
+    #prik1mum, #prik2mum, #prik3mum, #prik4mum, #prik5mum {
+        margin: 0px 2px;
+    }
+
+    #krukker {
+        display: none; /* Fjerner de små krukker */
+    }
+
+/****************Underverden siden*******************/
+#SlideshowUV{
+    height: 36vh;
 }
+
+#prik1UV, #prik2UV, #prik3UV, #prik4UV{
+    margin: 0px 2px;
+}
+
+/****************Gravkammeret siden*******************/
+#gravSlideshow {
+    height: 36vh;
+}
+
+#prik1grav, #prik2grav, #prik3grav, #prik4grav{
+    margin: 0px 2px;
+}
+
+/****************Efterlivet siden*******************/
+#EfterlivSlideshow {
+    height: 45vh;
+}
+
+#prik1Efterliv, #prik2Efterliv, #prik3Efterliv, #prik4Efterliv{
+    margin: 0px 2px;
+}
+}
+
+
+
 
 @media screen and (max-width:450px) {
     #vendSkaerm {
