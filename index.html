@@ -19,7 +19,7 @@
     <header>
         <div id="tilbagePil">
             <img id="venstreIkon" src="media/img/osiris.svg" alt="Gå tilbage til forrige sektion ikon">
-            <img src="media/img/pil_venstre.svg" alt="Gå tilbage til forrige sektion pil til venstre">
+            <img id="venstrePil" src="media/img/pil_venstre.svg" alt="Gå tilbage til forrige sektion pil til venstre">
         </div>
 
         <div class="linjeIHeader"></div>
@@ -30,7 +30,7 @@
 
         <div id="fremadPil">
             <img id="højreIkon" src="media/img/indgang2_scarab.svg" alt="Gå til næste sektion ikon">
-            <img src="media/img/pil_hoejre.svg" alt="Gå til næste sektion pil til højre">
+            <img id="højrePil" src="media/img/pil_hoejre.svg" alt="Gå til næste sektion pil til højre">
         </div>
     </header>
 
@@ -229,9 +229,9 @@
                 </div>
 
                 <div class="UV_right">
-                    <iframe title="vimeo-player" src="https://player.vimeo.com/video/859675413?h=45ad124c1c" width="640"
-                        height="360" allowfullscreen></iframe>
-                    <p class="UV_tekst">Video af: Moesgaard Museum</p>
+                    <iframe title="vimeo-player" src="https://player.vimeo.com/video/859675413?h=45ad124c1c" width="600"
+                        height="340" allowfullscreen></iframe>
+                    <p id="video_tekst">Video af: Moesgaard Museum</p>
                     <div class="UV_cirkel"></div>
                     <img class="UV_fjer" src="media/img/Underverden/fjer.svg" alt="fjer der daler langsomt">
                 </div>
@@ -239,12 +239,12 @@
 
             <!-- Gravkammeret -->
             <div id="gravkammeret">
-                <div id="gravText" class="gravstoerelse">
+                <div id="grav_left">
                     <img src="media/img/Grav.svg" alt="#">
                     <div class="grav_cirkel"></div>
                 </div>
 
-                <div id="" class="">
+                <div id="textGrav">
                     <div id="gravSlideshow">
                         <div id="Slide1grav">
                             <p>Når mumificeringen er gennemført, går kroppens rejse videre til gravkammeret med et
@@ -265,13 +265,12 @@
                         </div>
                     </div>
 
-                    <div id="prik-INDHOLDgrav">
+                    <div id="prikGrav">
                         <span id="prik1grav"></span>
                         <span id="prik2grav"></span>
                         <span id="prik3grav"></span>
                         <span id="prik4grav"></span>
                     </div>
-
                 </div>
             </div>
 
@@ -316,7 +315,7 @@
                     </div>
                 </div>
 
-                <div class="efterlivet_right">
+                <div>
                     <img src="media/img/rushes.png" alt="#">
                 </div>
             </div>

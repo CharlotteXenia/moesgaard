@@ -24,6 +24,11 @@ const højreIkon = document.getElementById("højreIkon");
 //pile i header
 const tilbagePil = document.getElementById("tilbagePil");
 const fremadPil = document.getElementById("fremadPil");
+const venstrePil = document.getElementById("venstrePil");
+const højrePil = document.getElementById("højrePil");
+
+//streger i header
+const linjeIHeader = document.querySelectorAll(".linjeIHeader")
 
 //nav i siden
 const tilOsiris = document.getElementById("tilOsiris");
@@ -123,6 +128,11 @@ function nuSide() {
     tilbagePil.style.opacity = "0";
     højreIkon.src = "media/img/indgang1_mumie.svg";
     body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/osirisBaggrund.jpg")';
+    højrePil.src = "media/img/pil_hoejre.svg";
+    venstrePil.src = "media/img/pil_venstre.svg";
+    altIndhold.style.borderColor = "black";
+    linjeIHeader[0].style.backgroundColor = "black";
+    linjeIHeader[1].style.backgroundColor = "black";
 
     //nav baren i siden markere hvilken side man er på.
     // her er det også nødvendigt at reset de andre prikker, hvis man kommer der fra
@@ -160,6 +170,11 @@ function nuSide() {
     tilbagePil.style.opacity = "1";
     højreIkon.src = "media/img/indgang2_scarab.svg";
     venstreIkon.src = "media/img/osiris.svg";
+    højrePil.src = "media/img/pil_hoejre.svg";
+    venstrePil.src = "media/img/pil_venstre.svg";
+    altIndhold.style.borderColor = "black";
+    linjeIHeader[0].style.backgroundColor = "black";
+    linjeIHeader[1].style.backgroundColor = "black";
 
     body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/mumificeringBaggrund.jpg")';
 
@@ -190,11 +205,16 @@ function nuSide() {
   if (sideNu == 4) {
     underverden.style.display = "flex"
     h1.innerHTML = "Underverdenen";
-    h1.style.color = "white";
+    h1.style.color = "black";
     midtIkon.src = "media/img/indgang2_scarab.svg";
     tilbagePil.style.opacity = "1";
     højreIkon.src = "media/img/indgang3_oeje.svg";
     venstreIkon.src = "media/img/indgang1_mumie.svg";
+    højrePil.src = "media/img/pil_hoejre.svg";
+    venstrePil.src = "media/img/pil_venstre.svg";
+    altIndhold.style.borderColor = "black";
+    linjeIHeader[0].style.backgroundColor = "black";
+    linjeIHeader[1].style.backgroundColor = "black";
 
     body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/underverdenBaggrund.jpg")';
 
@@ -229,26 +249,31 @@ function nuSide() {
     gravkammeret.style.display = "flex"
     h1.innerHTML = "Gravkammeret";
     h1.style.color = "white";
-    midtIkon.src = "media/img/indgang3_oeje.svg";
+    midtIkon.src = "media/img/indgang3_oeje_hvid.svg";
     tilbagePil.style.opacity = "1";
-    højreIkon.src = "media/img/indgang4_kors.svg";
-    venstreIkon.src = "media/img/indgang2_scarab.svg";
+    højreIkon.src = "media/img/indgang4_kors_hvid.svg";
+    venstreIkon.src = "media/img/indgang2_scarab_hvid.svg";
+    højrePil.src = "media/img/pil_hoejre_hvid.svg";
+    venstrePil.src = "media/img/pil_venstre_hvid.svg";
+    altIndhold.style.borderColor = "white";
+    linjeIHeader[0].style.backgroundColor = "white";
+    linjeIHeader[1].style.backgroundColor = "white";
+
 
     body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/gravkammerBaggrund.jpg")';
 
-    underverden.style.animation = "fadeIn 2s ease-in-out forwards";
+    gravkammeret.style.animation = "fadeIn 2s ease-in-out forwards";
 
-    tilOsiris.style.backgroundColor = "#ffffff33"
+    tilOsiris.style.backgroundColor = "#ffffff80" //50% opacity
     tilOsiris.style.scale = "1"
-    tilMumie.style.backgroundColor = "#ffffff33"
+    tilMumie.style.backgroundColor = "#ffffff80"
     tilMumie.style.scale = "1"
-    tilUnderV.style.backgroundColor = "#ffffff33"
+    tilUnderV.style.backgroundColor = "#ffffff80"
     tilUnderV.style.scale = "1"
-    tilGravkammeret.style.backgroundColor = "#ffffff80"
+    tilGravkammeret.style.backgroundColor = "#ffffff8c" 
     tilGravkammeret.style.scale = "1.3"
-    tilEfterliv.style.backgroundColor = "#ffffff33"
+    tilEfterliv.style.backgroundColor = "#ffffff80"
     tilEfterliv.style.scale = "1"
-
 
     //lytter til om man går videre, Denne bliver stående for ikke at kunne klikke så langt
     tilbagePil.addEventListener("click", visUnderverden);
@@ -270,10 +295,15 @@ function nuSide() {
     midtIkon.src = "media/img/indgang4_kors.svg";
     tilbagePil.style.opacity = "1";
     venstreIkon.src = "media/img/indgang3_oeje.svg";
+    højrePil.src = "media/img/pil_hoejre.svg";
+    venstrePil.src = "media/img/pil_venstre.svg";
+    altIndhold.style.borderColor = "black";
+    linjeIHeader[0].style.backgroundColor = "black";
+    linjeIHeader[1].style.backgroundColor = "black";
 
     body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/efterlivBaggrund.jpg")';
 
-    underverden.style.animation = "fadeIn 2s ease-in-out forwards";
+    efterlivet.style.animation = "fadeIn 2s ease-in-out forwards";
 
     tilOsiris.style.backgroundColor = "#ffffff33"
     tilOsiris.style.scale = "1"
@@ -458,7 +488,16 @@ const Slide2grav = document.getElementById("Slide2grav");
 const Slide3grav = document.getElementById("Slide3grav");
 const Slide4grav = document.getElementById("Slide4grav");
 
+//Efterliv
+const prik1Efterliv = document.getElementById("prik1Efterliv");
+const prik2Efterliv = document.getElementById("prik2Efterliv");
+const prik3Efterliv = document.getElementById("prik3Efterliv");
+const prik4Efterliv = document.getElementById("prik4Efterliv");
 
+const Slide1Efterliv = document.getElementById("Slide1Efterliv");
+const Slide2Efterliv = document.getElementById("Slide2Efterliv");
+const Slide3Efterliv = document.getElementById("Slide3Efterliv");
+const Slide4Efterliv = document.getElementById("Slide4Efterliv");
 
 //ARRAY med teksterne OSIRIS
 let tekster = [Slide1, Slide2, Slide3, Slide4, Slide5];
@@ -620,6 +659,100 @@ prik4UV.addEventListener("click", function () {
 });
 
 
+
+//ARRAY med tekster GRAVKAMMERET
+let teksterGrav = [Slide1grav, Slide2grav, Slide3grav, Slide4grav];
+let prikkerGrav = [prik1grav, prik2grav, prik3grav, prik4grav];
+
+teksterGrav[0].style.display = "block";
+
+//Eventlistener'en + funktionen når man trykker på én af de runde knapper
+prik1grav.addEventListener("click", function () {
+  for (let index = 0; index < teksterGrav.length; index++) {
+    teksterGrav[index].style.display = "none";
+    prikkerGrav[index].style.backgroundColor = "#aa865d";
+  }
+
+  teksterGrav[0].style.display = "block";
+  prik1grav.style.backgroundColor = "#ffffff";
+});
+
+prik2grav.addEventListener("click", function () {
+  for (let index = 0; index < teksterGrav.length; index++) {
+    teksterGrav[index].style.display = "none";
+    prikkerGrav[index].style.backgroundColor = "#aa865d";
+  }
+
+  teksterGrav[1].style.display = "block";
+  prik2grav.style.backgroundColor = "#ffffff";
+});
+
+prik3grav.addEventListener("click", function () {
+  for (let index = 0; index < teksterGrav.length; index++) {
+    teksterGrav[index].style.display = "none";
+    prikkerGrav[index].style.backgroundColor = "#aa865d";
+  }
+
+  teksterGrav[2].style.display = "block";
+  prik3grav.style.backgroundColor = "#ffffff";
+});
+
+prik4grav.addEventListener("click", function () {
+  for (let index = 0; index < teksterGrav.length; index++) {
+    teksterGrav[index].style.display = "none";
+    prikkerGrav[index].style.backgroundColor = "#aa865d";
+  }
+
+  teksterGrav[3].style.display = "block";
+  prik4grav.style.backgroundColor = "#ffffff";
+});
+
+//ARRAY med tekster EFTERLIVET
+let teksterEfterliv = [Slide1Efterliv, Slide2Efterliv, Slide3Efterliv, Slide4Efterliv];
+let prikkerEfterliv = [prik1Efterliv, prik2Efterliv, prik3Efterliv, prik4Efterliv];
+
+teksterEfterliv[0].style.display = "block";
+
+//Eventlistener'en + funktionen når man trykker på én af de runde knapper
+prik1Efterliv.addEventListener("click", function () {
+  for (let index = 0; index < teksterEfterliv.length; index++) {
+    teksterEfterliv[index].style.display = "none";
+    prikkerEfterliv[index].style.backgroundColor = "#aa865d";
+  }
+
+  teksterEfterliv[0].style.display = "block";
+  prik1Efterliv.style.backgroundColor = "#ffffff";
+});
+
+prik2Efterliv.addEventListener("click", function () {
+  for (let index = 0; index < teksterEfterliv.length; index++) {
+    teksterEfterliv[index].style.display = "none";
+    prikkerEfterliv[index].style.backgroundColor = "#aa865d";
+  }
+
+  teksterEfterliv[1].style.display = "block";
+  prik2Efterliv.style.backgroundColor = "#ffffff";
+});
+
+prik3Efterliv.addEventListener("click", function () {
+  for (let index = 0; index < teksterEfterliv.length; index++) {
+    teksterEfterliv[index].style.display = "none";
+    prikkerEfterliv[index].style.backgroundColor = "#aa865d";
+  }
+
+  teksterEfterliv[2].style.display = "block";
+  prik3Efterliv.style.backgroundColor = "#ffffff";
+});
+
+prik4Efterliv.addEventListener("click", function () {
+  for (let index = 0; index < teksterEfterliv.length; index++) {
+    teksterEfterliv[index].style.display = "none";
+    prikkerEfterliv[index].style.backgroundColor = "#aa865d";
+  }
+
+  teksterEfterliv[3].style.display = "block";
+  prik4Efterliv.style.backgroundColor = "#ffffff";
+});
 
 //************ PLAYKNAP = MADS & CHARLOTTE  ************//
 // Inkl. tilhørende HTML & CSS kode
