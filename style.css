@@ -567,17 +567,7 @@ footer img {
     position: relative;
 }
 
-.UV_vaagt {
-    width: 40%;
-    animation: fadeIn 2s;
-    position: absolute;
-    left: 0;
-    top: 63.5%;
-}
-
-
 /* Section right */
-
 .UV_tekst {
     color: rgb(0, 0, 0);
 }
@@ -594,7 +584,6 @@ footer img {
 }
 
 iframe{
-    /* border-radius: 25px; */
     width: 100%;
     height: 48%;
     border: none;
@@ -605,71 +594,21 @@ iframe{
     margin-left: 17px;
 }
 
-.UV_cirkel{
-    display: flex;
-    align-self: end;
+.UV_vaagt {
+    width: 30%;
+    /* animation: fadeIn 2s; */
     position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     z-index: -1;
 
-    bottom: 55%;
-
-    height: 15vw;
-    width: 15vw;
-
-    border-radius: 1000px;
-
-    background: rgb(88, 64, 42);
-    background: linear-gradient(35deg, rgba(88, 64, 42, 1) 0%, rgba(125, 78, 30, 1) 29%, rgba(211, 153, 84, 0.39959733893557425) 100%);
-    /* Den er drejet 35deg til at starte med */
-    transform: rotate(180deg);
-    /*Den er nu blevet roteret med 180deg*/
-
-    animation: rotateOnLoad 6s;
-}
-
-@keyframes rotateOnLoad {
-
-    /* Animation Keyfram */
-    0% {
-        transform: rotate(35deg);
-    }
-
-    100% {
-        transform: rotate(180deg);
-    }
-}
-
-.UV_fjer {
-    align-self: flex-end;
-    width: 20%;
-    position: relative;
-    top: 20%;
-    transform: rotate(-30deg);
-    animation: vippe 4s;
-}
-
-@keyframes vippe {
-
-    /* Animation Keyfram */
-    0% {
-        transform: rotate(-10deg);
-    }
-
-    25% {
-        transform: rotate(-30deg);
-    }
-
-    50% {
-        transform: rotate(-10deg);
-    }
-
-    100% {
-        transform: rotate(-30deg);
-    }
+    opacity: 0.2;
 }
 
 /****************** Gravkammeret ******************/
-
 /* HELE TEKST-SLIDE */
 #gravkammeret {
     display: none;
@@ -767,8 +706,7 @@ iframe{
 
     border-radius: 500px;
 
-    background: rgb(88, 64, 42);
-    background: linear-gradient(35deg, rgb(192, 123, 59) 0%, rgba(117, 64, 4, 0.4) 100%);
+    background: linear-gradient(35deg, rgba(228, 164, 104, 0.7) 0%, rgba(56, 31, 3, 0.788) 100%);
     /* Den er drejet 35deg til at starte med */
     transform: rotate(180deg);
     /*Den er nu blevet roteret med 180deg*/
@@ -844,6 +782,11 @@ iframe{
     background-color: white;
 }
 
+#rushes {
+    width: 100%;
+}
+
+/************* BILLET ***********/
 #billet{
 display: flex;
 justify-content: space-evenly;
@@ -862,7 +805,6 @@ right: -5.6vw;
 transition: right 0.5s ease-in-out; /* Tilføjer overgang for breddeændring */
 }
 
-/* BILLET */
 #billet p {
     color: white;
     margin-left: 5px;
