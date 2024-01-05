@@ -893,7 +893,7 @@ transition: right 0.5s ease-in-out; /* Tilføjer overgang for breddeændring */
 
 /****************Efterlivet siden*******************/
 #EfterlivSlideshow {
-    height: 45vh;
+    height: 40vh;
 }
 
 #prik1Efterliv, #prik2Efterliv, #prik3Efterliv, #prik4Efterliv{
