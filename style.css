@@ -706,7 +706,7 @@ iframe{
 
     border-radius: 500px;
 
-    background: linear-gradient(35deg, rgba(228, 164, 104, 0.7) 0%, rgba(56, 31, 3, 0.788) 100%);
+    background: linear-gradient(35deg, rgba(228, 164, 104, 0.5) 0%, rgba(56, 31, 3, 0.788) 100%);
     /* Den er drejet 35deg til at starte med */
     transform: rotate(180deg);
     /*Den er nu blevet roteret med 180deg*/
@@ -780,6 +780,10 @@ iframe{
 #prik3Efterliv:hover,
 #prik4Efterliv:hover {
     background-color: white;
+}
+
+#efterlivet_right {
+    width: 35%;
 }
 
 #rushes {
