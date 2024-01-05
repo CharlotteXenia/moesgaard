@@ -13,6 +13,8 @@ const startIndhold = document.getElementById("start");
 const osiris = document.getElementById("osiris");
 const mumificering = document.getElementById("mumificering");
 const underverden = document.getElementById("underverden");
+const gravkammeret = document.getElementById("gravkammeret");
+const efterlivet = document.getElementById("efterlivet");
 
 //ikoner i header
 const midtIkon = document.getElementById("midtIkon");
@@ -27,6 +29,8 @@ const fremadPil = document.getElementById("fremadPil");
 const tilOsiris = document.getElementById("tilOsiris");
 const tilMumie = document.getElementById("tilMumie");
 const tilUnderV = document.getElementById("tilUnderV");
+const tilGravkammeret = document.getElementById("tilGravkammeret");
+const tilEfterliv = document.getElementById("tilEfterliv");
 
 //bruger querySelector frem for getElementsByTagName for at undgå array. Det er ikke nødvendigt med et array når der kun er en header og en nav
 const header = document.querySelector("header");
@@ -85,14 +89,8 @@ function nuSide() {
     });
   }
 
-
-
-
-
-
-
-    //************ NAVIGATION = JULIE & MADS ************//
-    // Inkl. tilhørende HTML & CSS kode
+  //************ NAVIGATION = JULIE & MADS ************//
+  // Inkl. tilhørende HTML & CSS kode
 
   //osiris siden
   //denne sides kode gentages for de to følgende sider også, da det
@@ -103,7 +101,7 @@ function nuSide() {
     osiris.style.animation = "fadeIn 2s ease-in-out forwards";
 
     //Fordi det er den første skal alt vises sig
-    altIndhold.style.display = "block"; 
+    altIndhold.style.display = "block";
     osiris.style.display = "flex";
     header.style.display = "flex";
     main.style.display = "flex";
@@ -115,6 +113,8 @@ function nuSide() {
     //dette er også en sikkerhed når man skifter mellem siderne
     mumificering.style.display = "none";
     underverden.style.display = "none";
+    gravkammeret.style.display = "none";
+    efterlivet.style.display = "none";
 
     //sikre alle ikoner og indhold passer til osiris
     h1.innerHTML = "Osiris-myten";
@@ -132,7 +132,11 @@ function nuSide() {
     tilMumie.style.scale = "1"
     tilUnderV.style.backgroundColor = "#ffffff33"
     tilUnderV.style.scale = "1"
-    
+    tilGravkammeret.style.backgroundColor = "#ffffff33"
+    tilGravkammeret.style.scale = "1"
+    tilEfterliv.style.backgroundColor = "#ffffff33"
+    tilEfterliv.style.scale = "1"
+
     //lytter til om man går videre og skjuler siden man er på
     //Mumificering viser sig selv efterfølgende, derfor skal den kun skjule sig selv
     fremadPil.addEventListener("click", skjulOsiris);
@@ -143,6 +147,8 @@ function nuSide() {
     fremadPil.removeEventListener("click", skjulMumificering);
     tilbagePil.removeEventListener("click", visMumificering);
     tilbagePil.removeEventListener("click", visOsiris);
+
+    fremadPil.style.opacity = "1"
   }
 
   //Mumificering
@@ -158,14 +164,17 @@ function nuSide() {
     body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/mumificeringBaggrund.jpg")';
 
     mumificering.style.animation = "fadeIn 2s ease-in-out forwards";
-    
+
     tilOsiris.style.backgroundColor = "#ffffff33"
     tilOsiris.style.scale = "1"
     tilMumie.style.backgroundColor = "#ffffff80"
     tilMumie.style.scale = "1.3"
     tilUnderV.style.backgroundColor = "#ffffff33"
     tilUnderV.style.scale = "1"
-
+    tilGravkammeret.style.backgroundColor = "#ffffff33"
+    tilGravkammeret.style.scale = "1"
+    tilEfterliv.style.backgroundColor = "#ffffff33"
+    tilEfterliv.style.scale = "1"
 
     //lytter til om man går videre
     fremadPil.addEventListener("click", skjulMumificering);
@@ -173,7 +182,10 @@ function nuSide() {
     //fjerner forrige
     fremadPil.removeEventListener("click", skjulOsiris);
     tilbagePil.removeEventListener("click", visMumificering);
+
+    fremadPil.style.opacity = "1"
   }
+
   //underverdenen
   if (sideNu == 4) {
     underverden.style.display = "flex"
@@ -187,25 +199,105 @@ function nuSide() {
     body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/underverdenBaggrund.jpg")';
 
     underverden.style.animation = "fadeIn 2s ease-in-out forwards";
-    
+
     tilOsiris.style.backgroundColor = "#ffffff33"
     tilOsiris.style.scale = "1"
     tilMumie.style.backgroundColor = "#ffffff33"
     tilMumie.style.scale = "1"
     tilUnderV.style.backgroundColor = "#ffffff80"
     tilUnderV.style.scale = "1.3"
-
+    tilGravkammeret.style.backgroundColor = "#ffffff33"
+    tilGravkammeret.style.scale = "1"
+    tilEfterliv.style.backgroundColor = "#ffffff33"
+    tilEfterliv.style.scale = "1"
 
     //lytter til om man går videre, Denne bliver stående for ikke at kunne klikke så langt
     tilbagePil.addEventListener("click", visMumificering);
+    fremadPil.addEventListener("click", skjulUnderverden);
+
+    fremadPil.removeEventListener("click", skjulOsiris);
+    fremadPil.removeEventListener("click", skjulMumificering);
+    fremadPil.removeEventListener("click", skjulGravkammeret);
+    tilbagePil.removeEventListener("click", visOsiris);
+    tilbagePil.removeEventListener("click", visUnderverden);
+
+    fremadPil.style.opacity = "1"
+  }
+
+  //Gravkammeret
+  if (sideNu == 5) {
+    gravkammeret.style.display = "flex"
+    h1.innerHTML = "Gravkammeret";
+    h1.style.color = "white";
+    midtIkon.src = "media/img/indgang3_oeje.svg";
+    tilbagePil.style.opacity = "1";
+    højreIkon.src = "media/img/indgang4_kors.svg";
+    venstreIkon.src = "media/img/indgang2_scarab.svg";
+
+    body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/gravkammerBaggrund.jpg")';
+
+    underverden.style.animation = "fadeIn 2s ease-in-out forwards";
+
+    tilOsiris.style.backgroundColor = "#ffffff33"
+    tilOsiris.style.scale = "1"
+    tilMumie.style.backgroundColor = "#ffffff33"
+    tilMumie.style.scale = "1"
+    tilUnderV.style.backgroundColor = "#ffffff33"
+    tilUnderV.style.scale = "1"
+    tilGravkammeret.style.backgroundColor = "#ffffff80"
+    tilGravkammeret.style.scale = "1.3"
+    tilEfterliv.style.backgroundColor = "#ffffff33"
+    tilEfterliv.style.scale = "1"
+
+
+    //lytter til om man går videre, Denne bliver stående for ikke at kunne klikke så langt
+    tilbagePil.addEventListener("click", visUnderverden);
+    fremadPil.addEventListener("click", skjulGravkammeret);
 
     fremadPil.removeEventListener("click", skjulOsiris);
     fremadPil.removeEventListener("click", skjulMumificering);
     tilbagePil.removeEventListener("click", visOsiris);
+    tilbagePil.removeEventListener("click", visGravkammeret)
+
+    fremadPil.style.opacity = "1"
+  }
+
+  //Efterlivet
+  if (sideNu == 6) {
+    efterlivet.style.display = "flex"
+    h1.innerHTML = "Efterlivet";
+    h1.style.color = "black";
+    midtIkon.src = "media/img/indgang4_kors.svg";
+    tilbagePil.style.opacity = "1";
+    venstreIkon.src = "media/img/indgang3_oeje.svg";
+
+    body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/efterlivBaggrund.jpg")';
+
+    underverden.style.animation = "fadeIn 2s ease-in-out forwards";
+
+    tilOsiris.style.backgroundColor = "#ffffff33"
+    tilOsiris.style.scale = "1"
+    tilMumie.style.backgroundColor = "#ffffff33"
+    tilMumie.style.scale = "1"
+    tilUnderV.style.backgroundColor = "#ffffff33"
+    tilUnderV.style.scale = "1"
+    tilGravkammeret.style.backgroundColor = "#ffffff33"
+    tilGravkammeret.style.scale = "1"
+    tilEfterliv.style.backgroundColor = "#ffffff80"
+    tilEfterliv.style.scale = "1.3"
+
+
+    //lytter til om man går videre, Denne bliver stående for ikke at kunne klikke så langt
+    tilbagePil.addEventListener("click", visGravkammeret);
+
+    fremadPil.removeEventListener("click", skjulOsiris);
+    fremadPil.removeEventListener("click", skjulMumificering);
+    tilbagePil.removeEventListener("click", visOsiris);
+
+    fremadPil.style.opacity = "0"
   }
 
 }
-
 //skjuler forsiden og skifter til osiris
 function gemForside() {
   startIndhold.style.display = "none";
@@ -219,57 +311,100 @@ function skjulOsiris() {
 }
 //skjuler mumificering og skifter til underverden
 function skjulMumificering() {
-    mumificering.style.display = "none";
-    sideNu = 4;
+  mumificering.style.display = "none";
+  sideNu = 4;
 }
 
 //skjuler mumificering og skifter til osiris
-function visOsiris() {  
-    mumificering.style.display = "none";
-    sideNu = 2;
+function visOsiris() {
+  mumificering.style.display = "none";
+  sideNu = 2;
 }
 //skjuler underverden og skifter til mumificering
 function visMumificering() {
-    underverden.style.display = "none";
-    sideNu = 3;
+  underverden.style.display = "none";
+  sideNu = 3;
+}
+
+//skjuler underverden og skifter til gravkammer
+function skjulUnderverden() {
+  underverden.style.display = "none";
+  sideNu = 5;
+}
+
+//skjuler gravkammer og skifter til underverden
+function visUnderverden() {
+  gravkammeret.style.display = "none";
+  sideNu = 4;
+}
+
+//skjuler gravkammer og skifter til efterlivet
+function skjulGravkammeret() {
+  gravkammeret.style.display = "none";
+  sideNu = 6;
+}
+
+//skjuler efterlivet og skifter til gravkammer
+function visGravkammeret() {
+  efterlivet.style.display = "none";
+  sideNu = 5;
 }
 
 //NAV barens(prikkernes navigation) funktioner til at skifte
 //alle disse er ens i funktion. De slukker for de andre sider og viser kun den man har trykket på
-function tilOsirisFunk(){
+function tilOsirisFunk() {
+  osiris.style.display = "flex";
   mumificering.style.display = "none";
   underverden.style.display = "none";
-  osiris.style.display = "flex";
+  gravkammeret.style.display = "none";
+  efterlivet.style.display = "none";
   sideNu = 2;
 
 }
-function tilMumieFunk(){
+function tilMumieFunk() {
+  osiris.style.display = "none";
   mumificering.style.display = "flex";
   underverden.style.display = "none";
-  osiris.style.display = "none";
+  gravkammeret.style.display = "none";
+  efterlivet.style.display = "none";
   sideNu = 3;
 }
-function tilUnderVFunk(){
+function tilUnderVFunk() {
+  osiris.style.display = "none";
   mumificering.style.display = "none";
   underverden.style.display = "flex";
-  osiris.style.display = "none";
+  gravkammeret.style.display = "none";
+  efterlivet.style.display = "none";
   sideNu = 4;
 }
 
+function tilGravFunk() {
+  mumificering.style.display = "none";
+  underverden.style.display = "none";
+  osiris.style.display = "none";
+  gravkammeret.style.display = "flex";
+  efterlivet.style.display = "none";
+  sideNu = 5;
+}
+
+function tilEfterlivFunk() {
+  mumificering.style.display = "none";
+  underverden.style.display = "none";
+  osiris.style.display = "none";
+  gravkammeret.style.display = "none";
+  efterlivet.style.display = "flex";
+  sideNu = 6;
+}
+
 //funktionerne bliver kaldt ved tryk på nav baren
-tilOsiris.addEventListener("click",tilOsirisFunk);
-tilMumie.addEventListener("click",tilMumieFunk);
-tilUnderV.addEventListener("click",tilUnderVFunk);
+tilOsiris.addEventListener("click", tilOsirisFunk);
+tilMumie.addEventListener("click", tilMumieFunk);
+tilUnderV.addEventListener("click", tilUnderVFunk);
+tilGravkammeret.addEventListener("click", tilGravFunk)
+tilEfterliv.addEventListener("click", tilEfterlivFunk)
 
-
-
-
-
-  //************ TEKSTKARUSSELLEN = SAFA & JULIE ************//
-  // Inkl. tilhørende HTML & CSS kode
-
-
-
+//************ TEKSTKARUSSELLEN = SAFA & JULIE ************//
+// Inkl. tilhørende HTML & CSS kode
 
 // Idéen er at når man trykker på en knap,
 // så kommer der en ny tekst frem (skifter).
@@ -293,21 +428,35 @@ const prik1mum = document.getElementById("prik1mum");
 const prik2mum = document.getElementById("prik2mum");
 const prik3mum = document.getElementById("prik3mum");
 const prik4mum = document.getElementById("prik4mum");
+const prik5mum = document.getElementById("prik5mum");
 
 const Slide1mum = document.getElementById("Slide1mum");
 const Slide2mum = document.getElementById("Slide2mum");
 const Slide3mum = document.getElementById("Slide3mum");
 const Slide4mum = document.getElementById("Slide4mum");
-
-
+const Slide5mum = document.getElementById("Slide5mum");
 
 //Underverden
 const prik1UV = document.getElementById("prik1UV");
 const prik2UV = document.getElementById("prik2UV");
+const prik3UV = document.getElementById("prik3UV");
+const prik4UV = document.getElementById("prik4UV");
 
 const Slide1UV = document.getElementById("Slide1UV");
 const Slide2UV = document.getElementById("Slide2UV");
+const Slide3UV = document.getElementById("Slide3UV");
+const Slide4UV = document.getElementById("Slide4UV");
 
+//Gravkrammer
+const prik1grav = document.getElementById("prik1grav");
+const prik2grav = document.getElementById("prik2grav");
+const prik3grav = document.getElementById("prik3grav");
+const prik4grav = document.getElementById("prik4grav");
+
+const Slide1grav = document.getElementById("Slide1grav");
+const Slide2grav = document.getElementById("Slide2grav");
+const Slide3grav = document.getElementById("Slide3grav");
+const Slide4grav = document.getElementById("Slide4grav");
 
 
 
@@ -317,17 +466,15 @@ let prikkerO = [prik1, prik2, prik3, prik4, prik5];
 
 tekster[0].style.display = "block";
 
-
 //Eventlistener'en + funktionen når man trykker på én af de runde knapper
 prik1.addEventListener("click", function () {
-
   for (let index = 0; index < tekster.length; index++) {
     tekster[index].style.display = "none";
     prikkerO[index].style.backgroundColor = "#aa865d";
   }
+
   tekster[0].style.display = "block";
   prik1.style.backgroundColor = "#ffffff";
-
 });
 
 prik2.addEventListener("click", function () {
@@ -337,7 +484,6 @@ prik2.addEventListener("click", function () {
   }
 
   tekster[1].style.display = "block";
-
   prik2.style.backgroundColor = "#ffffff";
 });
 
@@ -349,7 +495,6 @@ prik3.addEventListener("click", function () {
 
   tekster[2].style.display = "block";
   prik3.style.backgroundColor = "#ffffff";
-
 });
 
 prik4.addEventListener("click", function () {
@@ -360,7 +505,6 @@ prik4.addEventListener("click", function () {
 
   tekster[3].style.display = "block";
   prik4.style.backgroundColor = "#ffffff";
-
 });
 
 prik5.addEventListener("click", function () {
@@ -368,105 +512,117 @@ prik5.addEventListener("click", function () {
     tekster[index].style.display = "none";
     prikkerO[index].style.backgroundColor = "#aa865d";
   }
+
   tekster[4].style.display = "block";
   prik5.style.backgroundColor = "#ffffff";
-
 });
 
-
-
-
 //ARRAY med teksterne MUMIFICERING
-let tekstermum = [Slide1mum, Slide2mum, Slide3mum, Slide4mum];
-let prikkerM = [prik1mum, prik2mum, prik3mum, prik4mum];
+let tekstermum = [Slide1mum, Slide2mum, Slide3mum, Slide4mum, Slide5mum];
+let prikkerM = [prik1mum, prik2mum, prik3mum, prik4mum, prik5mum];
 tekstermum[0].style.display = "block";
-
 
 prik1mum.addEventListener("click", function () {
   for (let index = 0; index < tekstermum.length; index++) {
     tekstermum[index].style.display = "none";
-  prikkerM[index].style.backgroundColor = "#aa865d";
-
+    prikkerM[index].style.backgroundColor = "#aa865d";
   }
+
   tekstermum[0].style.display = "block";
   prik1mum.style.backgroundColor = "#ffffff";
-
 });
 
 prik2mum.addEventListener("click", function () {
   for (let index = 0; index < tekstermum.length; index++) {
     tekstermum[index].style.display = "none";
-  prikkerM[index].style.backgroundColor = "#aa865d";
-
+    prikkerM[index].style.backgroundColor = "#aa865d";
   }
 
   tekstermum[1].style.display = "block";
   prik2mum.style.backgroundColor = "#ffffff";
-
 });
 
 prik3mum.addEventListener("click", function () {
   for (let index = 0; index < tekstermum.length; index++) {
     tekstermum[index].style.display = "none";
-  prikkerM[index].style.backgroundColor = "#aa865d";
-
+    prikkerM[index].style.backgroundColor = "#aa865d";
   }
 
   tekstermum[2].style.display = "block";
   prik3mum.style.backgroundColor = "#ffffff";
-
 });
 
 prik4mum.addEventListener("click", function () {
   for (let index = 0; index < tekstermum.length; index++) {
     tekstermum[index].style.display = "none";
     prikkerM[index].style.backgroundColor = "#aa865d";
-
   }
 
   tekstermum[3].style.display = "block";
   prik4mum.style.backgroundColor = "#ffffff";
 });
 
+prik5mum.addEventListener("click", function () {
+  for (let index = 0; index < tekstermum.length; index++) {
+    tekstermum[index].style.display = "none";
+    prikkerM[index].style.backgroundColor = "#aa865d";
+  }
 
-
-
-
+  tekstermum[4].style.display = "block";
+  prik5mum.style.backgroundColor = "#ffffff";
+});
 
 //ARRAY med teksterne UNDERVERDEN
-let teksterUV = [Slide1UV, Slide2UV];
-let prikkerUV = [prik1UV, prik2UV];
+let teksterUV = [Slide1UV, Slide2UV, Slide3UV, Slide4UV];
+let prikkerUV = [prik1UV, prik2UV, prik3UV, prik4UV];
 
 teksterUV[0].style.display = "block";
 
 //Eventlistener'en + funktionen når man trykker på én af de runde knapper
 prik1UV.addEventListener("click", function () {
- 
   for (let index = 0; index < teksterUV.length; index++) {
     teksterUV[index].style.display = "none";
     prikkerUV[index].style.backgroundColor = "#aa865d";
-
   }
+
   teksterUV[0].style.display = "block";
   prik1UV.style.backgroundColor = "#ffffff";
-
 });
 
 prik2UV.addEventListener("click", function () {
   for (let index = 0; index < teksterUV.length; index++) {
     teksterUV[index].style.display = "none";
     prikkerUV[index].style.backgroundColor = "#aa865d";
-
   }
 
   teksterUV[1].style.display = "block";
   prik2UV.style.backgroundColor = "#ffffff";
+});
 
+prik3UV.addEventListener("click", function () {
+  for (let index = 0; index < teksterUV.length; index++) {
+    teksterUV[index].style.display = "none";
+    prikkerUV[index].style.backgroundColor = "#aa865d";
+  }
+
+  teksterUV[2].style.display = "block";
+  prik3UV.style.backgroundColor = "#ffffff";
+});
+
+prik4UV.addEventListener("click", function () {
+  for (let index = 0; index < teksterUV.length; index++) {
+    teksterUV[index].style.display = "none";
+    prikkerUV[index].style.backgroundColor = "#aa865d";
+  }
+
+  teksterUV[3].style.display = "block";
+  prik4UV.style.backgroundColor = "#ffffff";
 });
 
 
-  //************ PLAYKNAP = MADS & CHARLOTTE  ************//
-  // Inkl. tilhørende HTML & CSS kode
+
+//************ PLAYKNAP = MADS & CHARLOTTE  ************//
+// Inkl. tilhørende HTML & CSS kode
 
 // Play knappen på Osiris-siden
 const play = document.getElementById("playKnappen");

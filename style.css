@@ -10,8 +10,6 @@
     overflow: hidden; /* Skjuler teksten, der ikke er synlig */
 }
 
-
-
 body {
     background-image: url(media/img/nyeBaggrundsbilleder/osirisBaggrund.jpg);
     background-repeat: no-repeat;
@@ -19,8 +17,6 @@ body {
     height: 100vh;
     z-index: -1;
 }
-
-
 
 h1 {
     display: none;
@@ -31,13 +27,14 @@ h1 {
     
     height: 5vh;
 }
+
 h2{
     font-family: 'Acme', sans-serif;
     font-size: 3vw;
     color: white;
     animation: pulse 2s ease-in-out alternate infinite;
-
 }
+
 p {
     font-family: "museo-sans", sans-serif;
     font-weight: 300;
@@ -70,7 +67,7 @@ header img {
 }
 
 #midtIkon {
-    width: 5%;
+    width: 4.2%;
 }
 
 #tilbagePil,
@@ -228,7 +225,7 @@ nav img:hover {
 
 /* HELE TEKST-SLIDE MUMIFICERING */
 #mumieSlideshow{
-    height: 17vh;
+    height: 13vh;
 }
 /* Slides */
 #Slide1mum,
@@ -261,7 +258,6 @@ nav img:hover {
     border: black 1px solid;
 }
 
-
 #active,
 #prik1mum:hover,
 #prik2mum:hover,
@@ -270,8 +266,6 @@ nav img:hover {
 #prik5mum:hover {
     background-color: white;
 }
-
-
 
 #mumificering {
     display: none;
@@ -295,7 +289,6 @@ nav img:hover {
     position: relative;
     width: 100%;
     z-index: 2;
-
 }
 
 .mumiestoerelse:nth-child(2) {
@@ -325,15 +318,14 @@ width: 3vw;
     height: 20vh;
     background: linear-gradient(109deg, #584C3F 30.31%, rgba(196, 196, 196, 0.00) 95.84%);
     transform: rotate(12.5deg);
-    animation: rotate 2s ease;
-    
+    animation: rotate 2s ease; 
 }
-
 
 /* Footer */
 footer {
     display: none;
 }
+
 footer img {
     width: 7.5vw;
     margin: 0 0 5px 5px;
@@ -499,10 +491,6 @@ footer img {
 /****************** UNDERVERDEN ******************/
 /* Mads */
 
-
-
-
-
 /* HELE TEKST-SLIDE UNDERVERDEN */
 #TEXTUV {
     display: flex;
@@ -517,7 +505,9 @@ footer img {
 }
 /* Slides UNDERVERDEN */
 #Slide1UV,
-#Slide2UV
+#Slide2UV,
+#Slide3UV,
+#Slide4UV
 {
     display: none;
     text-align: center;
@@ -529,7 +519,9 @@ footer img {
 }
 /* STYLING AF SELVE PRIKKERNE - UNDERVERDEN */
 #prik1UV,
-#prik2UV
+#prik2UV,
+#prik3UV,
+#prik4UV
 {
     display: block;
     cursor: pointer;
@@ -545,7 +537,9 @@ footer img {
 
 #active,
 #prik1UV:hover,
-#prik2UV:hover
+#prik2UV:hover,
+#prik3UV:hover,
+#prik4UV:hover
 {
     background-color: white;
 }
