@@ -798,32 +798,32 @@ function pauseVideo() {
 //https://chat.openai.com/share/5857829b-f36d-4539-bd4c-7000b5f9dffb
 //https://chat.openai.com/share/714c934d-888a-4b0b-b1b7-57aa50bd6e13
 
-let lastScrollTime = Date.now();
-const delay = 500;
+// let lastScrollTime = Date.now();
+// const delay = 500;
 
-document.addEventListener('wheel', function (event) {
-  // event.preventDefault();
-  if (sideNu >= 2) {
-    const deltaY = event.deltaY
-    const now = Date.now();
+// document.addEventListener('wheel', function (event) {
+//   // event.preventDefault();
+//   if (sideNu >= 2) {
+//     const deltaY = event.deltaY
+//     const now = Date.now();
 
-    if (now - lastScrollTime > delay) {
-      if (deltaY > 0) {
-        console.log('brugeren scoller ned')
-        sideNu = sideNu + 1;
-        if (sideNu > 6) {
-          sideNu = 6;
-        }
+//     if (now - lastScrollTime > delay) {
+//       if (deltaY > 0) {
+//         console.log('brugeren scoller ned')
+//         sideNu = sideNu + 1;
+//         if (sideNu > 6) {
+//           sideNu = 6;
+//         }
 
-      } else if (deltaY < 0) {
-        console.log('brugeren scroller op')
-        sideNu = sideNu - 1;
-        if (sideNu < 2) {
-          sideNu = 2;
-        }
-      }
+//       } else if (deltaY < 0) {
+//         console.log('brugeren scroller op')
+//         sideNu = sideNu - 1;
+//         if (sideNu < 2) {
+//           sideNu = 2;
+//         }
+//       }
 
-      lastScrollTime = now;
-    }
-  }
-})
+//       lastScrollTime = now;
+//     }
+//   }
+// })
