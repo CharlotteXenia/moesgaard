@@ -4,6 +4,7 @@ const start = document.getElementById("trykHer");
 const venstre = document.getElementById("left");
 const højer = document.getElementById("right");
 const nilen = document.getElementById("nilen");
+const loadingPage = document.getElementById("loadingPage");
 
 //Indhold efter splash
 const altIndhold = document.getElementById("streger");
@@ -79,12 +80,12 @@ function nuSide() {
     });
   }
 
-
   //************ SPLASHSCREEN = CHARLOTTE & SAFA ************//
   // Inkl. tilhørende HTML & CSS kode
 
   // intro skærm
   if (sideNu == 1) {
+    nilen.play ()
     // Venter på man trykker igen
     startIndhold.addEventListener("click", function () {
       //start animationen
@@ -176,6 +177,11 @@ function nuSide() {
     linjeIHeader[0].style.backgroundColor = "black";
     linjeIHeader[1].style.backgroundColor = "black";
 
+    osiris.style.display = "none"
+    underverden.style.display = "none"
+    gravkammeret.style.display = "none"
+    efterlivet.display = "none"
+
     body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/mumificeringBaggrund.jpg")';
 
     mumificering.style.animation = "fadeIn 2s ease-in-out forwards";
@@ -215,6 +221,11 @@ function nuSide() {
     altIndhold.style.borderColor = "black";
     linjeIHeader[0].style.backgroundColor = "black";
     linjeIHeader[1].style.backgroundColor = "black";
+
+    osiris.style.display = "none"
+    mumificering.style.display = "none"
+    gravkammeret.style.display = "none"
+    efterlivet.display = "none"
 
     body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/underverdenBaggrund.jpg")';
 
@@ -259,6 +270,10 @@ function nuSide() {
     linjeIHeader[0].style.backgroundColor = "white";
     linjeIHeader[1].style.backgroundColor = "white";
 
+    osiris.style.display = "none"
+    mumificering.style.display = "none"
+    underverden.style.display = "none"
+    efterlivet.display = "none"
 
     body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/gravkammerBaggrund.jpg")';
 
@@ -270,7 +285,7 @@ function nuSide() {
     tilMumie.style.scale = "1"
     tilUnderV.style.backgroundColor = "#ffffff80"
     tilUnderV.style.scale = "1"
-    tilGravkammeret.style.backgroundColor = "#ffffff8c" 
+    tilGravkammeret.style.backgroundColor = "#ffffff8c"
     tilGravkammeret.style.scale = "1.3"
     tilEfterliv.style.backgroundColor = "#ffffff80"
     tilEfterliv.style.scale = "1"
@@ -300,6 +315,11 @@ function nuSide() {
     altIndhold.style.borderColor = "black";
     linjeIHeader[0].style.backgroundColor = "black";
     linjeIHeader[1].style.backgroundColor = "black";
+
+    osiris.style.display = "none"
+    mumificering.display = "none"
+    underverden.style.display = "none"
+    gravkammeret.style.display = "none"
 
     body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/efterlivBaggrund.jpg")';
 
@@ -389,8 +409,8 @@ function tilOsirisFunk() {
   gravkammeret.style.display = "none";
   efterlivet.style.display = "none";
   sideNu = 2;
-
 }
+
 function tilMumieFunk() {
   osiris.style.display = "none";
   mumificering.style.display = "flex";
@@ -399,6 +419,7 @@ function tilMumieFunk() {
   efterlivet.style.display = "none";
   sideNu = 3;
 }
+
 function tilUnderVFunk() {
   osiris.style.display = "none";
   mumificering.style.display = "none";
@@ -438,7 +459,6 @@ tilEfterliv.addEventListener("click", tilEfterlivFunk)
 
 // Idéen er at når man trykker på en knap,
 // så kommer der en ny tekst frem (skifter).
-
 //Osiris
 const prik1 = document.getElementById("prik1");
 const prik2 = document.getElementById("prik2");
@@ -451,7 +471,6 @@ const Slide2 = document.getElementById("Slide2");
 const Slide3 = document.getElementById("Slide3");
 const Slide4 = document.getElementById("Slide4");
 const Slide5 = document.getElementById("Slide5");
-
 
 //Mumificering
 const prik1mum = document.getElementById("prik1mum");
@@ -658,8 +677,6 @@ prik4UV.addEventListener("click", function () {
   prik4UV.style.backgroundColor = "#ffffff";
 });
 
-
-
 //ARRAY med tekster GRAVKAMMERET
 let teksterGrav = [Slide1grav, Slide2grav, Slide3grav, Slide4grav];
 let prikkerGrav = [prik1grav, prik2grav, prik3grav, prik4grav];
@@ -756,12 +773,10 @@ prik4Efterliv.addEventListener("click", function () {
 
 //************ PLAYKNAP = MADS & CHARLOTTE  ************//
 // Inkl. tilhørende HTML & CSS kode
-
 // Play knappen på Osiris-siden
 const play = document.getElementById("playKnappen");
 const videoDIV = document.getElementById("osirisVIDEO");
 const videoOsiris = document.getElementById("selvevideoOsiris");
-
 
 play.addEventListener("click", afspilVideo);
 
@@ -778,3 +793,37 @@ function pauseVideo() {
 
   play.style.display = "block";
 }
+
+//************ Onscroll - med hjælp fra ChatGPT ************//
+//https://chat.openai.com/share/5857829b-f36d-4539-bd4c-7000b5f9dffb
+//https://chat.openai.com/share/714c934d-888a-4b0b-b1b7-57aa50bd6e13
+
+let lastScrollTime = Date.now();
+const delay = 500;
+
+document.addEventListener('wheel', function (event) {
+  // event.preventDefault();
+  if (sideNu >= 2) {
+    const deltaY = event.deltaY
+    const now = Date.now();
+
+    if (now - lastScrollTime > delay) {
+      if (deltaY > 0) {
+        console.log('brugeren scoller ned')
+        sideNu = sideNu + 1;
+        if (sideNu > 6) {
+          sideNu = 6;
+        }
+
+      } else if (deltaY < 0) {
+        console.log('brugeren scroller op')
+        sideNu = sideNu - 1;
+        if (sideNu < 2) {
+          sideNu = 2;
+        }
+      }
+
+      lastScrollTime = now;
+    }
+  }
+})
