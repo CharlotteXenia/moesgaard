@@ -841,6 +841,13 @@ transition: right 0.5s ease-in-out; /* Tilføjer overgang for breddeændring */
     opacity: 1; /* Viser teksten ved hover */
 }
 
+/* Ticket ikon */
+#billetikon{
+    color: #ffffff;
+    font-size:1.8vw;
+    padding-left:2px;
+}
+
 
 @media screen and (max-width:915px) {
     * {
@@ -875,7 +882,11 @@ transition: right 0.5s ease-in-out; /* Tilføjer overgang for breddeændring */
         right: 0vw;
     }
 
-    
+    /* Ticket ikon */
+    #billetikon{
+        font-size: 2.3vw;
+        padding-left: 0px;
+    }   
 
 /****************Osiris siden*******************/
     #osirisSlideshow{
@@ -934,13 +945,6 @@ transition: right 0.5s ease-in-out; /* Tilføjer overgang for breddeændring */
         height: 6vh;
 }
 
-}
-
-/* Ticket ikon */
-#billetikon{
-    color: #ffffff;
-    font-size:28px;
-    padding-left:2px;
 }
 
 @media screen and (max-width:450px) {
