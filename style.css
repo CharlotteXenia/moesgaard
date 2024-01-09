@@ -936,8 +936,12 @@ transition: right 0.5s ease-in-out; /* Tilføjer overgang for breddeændring */
 
 }
 
-
-
+/* Ticket ikon */
+#billetikon{
+    color: #ffffff;
+    font-size:28px;
+    padding-left:2px;
+}
 
 @media screen and (max-width:450px) {
     #vendSkaerm {

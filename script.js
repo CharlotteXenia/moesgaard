@@ -54,6 +54,8 @@ setInterval(nuSide, 500);
 
 //overgangen mellem siderne (tjekket mellem siderne) er sat i funktion for at kunne opdateres forevigt
 function nuSide() {
+
+  if (window.innerWidth > 450){
   // Splash screen
   // starter på 0
   if (sideNu == 0) {
@@ -346,7 +348,22 @@ function nuSide() {
 
     fremadPil.style.opacity = "0"
   }
+} else {
+    osiris.style.display = "none"
+    mumificering.display = "none"
+    underverden.style.display = "none"
+    gravkammeret.style.display = "none"
+    efterlivet.style.display = "none"
 
+    altIndhold.style.display = "none";
+    header.style.display = "none";
+    main.style.display = "none";
+    h1.style.display = "none";
+    nav.style.display = "none";
+    footer.style.display = "none";
+
+
+}
 }
 //skjuler forsiden og skifter til osiris
 function gemForside() {
