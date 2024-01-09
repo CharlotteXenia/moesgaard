@@ -815,7 +815,7 @@ z-index: 3;
 
 background-color: #C83E30;
 text-decoration: none;
-width: 8vw;
+width: 8.4vw;
 height: 2.5vw;
 top: 11vw;
 right: -6vw;
@@ -845,7 +845,7 @@ transition: right 0.5s ease-in-out; /* Tilføjer overgang for breddeændring */
 #billetikon{
     color: #ffffff;
     font-size:1.8vw;
-    padding-left:2px;
+    padding-right:4px;
 }
 
 
@@ -885,7 +885,7 @@ transition: right 0.5s ease-in-out; /* Tilføjer overgang for breddeændring */
     /* Ticket ikon */
     #billetikon{
         font-size: 2.3vw;
-        padding-left: 0px;
+        padding-right: 0px;
     }   
 
 /****************Osiris siden*******************/
