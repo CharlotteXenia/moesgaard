@@ -8,6 +8,7 @@
     margin: 0;
 
     overflow: hidden; /* Skjuler teksten, der ikke er synlig */
+
 }
 
 body {
@@ -327,13 +328,21 @@ width: 3vw;
 footer {
     display: none;
 
+    position: relative;
+    overflow: visible;
+    
+    left: 0;
+    bottom: 0;
+    
     width: 100%;
-    height: 100%;
+    height: 5vh;
 }
 
 footer a {
+    position: absolute;
+
     margin: 0 0 5px 5px;
-    position: fixed;
+
     left: 0;
     bottom: 0;
 }
@@ -834,6 +843,10 @@ transition: right 0.5s ease-in-out; /* Tilføjer overgang for breddeændring */
 
 
 @media screen and (max-width:915px) {
+    * {
+        overflow: visible;
+    }
+    
     h1{
         overflow: visible;
     }
@@ -851,6 +864,18 @@ transition: right 0.5s ease-in-out; /* Tilføjer overgang for breddeændring */
     #billet p {
         display: none;
     }   
+
+    #billet:hover p {
+        display: none;
+    }
+    
+    #billet:hover{
+        width: 3vw;
+        height: 3vw;
+        right: 0vw;
+    }
+
+    
 
 /****************Osiris siden*******************/
     #osirisSlideshow{
@@ -879,31 +904,36 @@ transition: right 0.5s ease-in-out; /* Tilføjer overgang for breddeændring */
     }
 
 /****************Underverden siden*******************/
-#SlideshowUV{
-    height: 36vh;
-}
+    #SlideshowUV{
+        height: 36vh;
+    }
 
-#prik1UV, #prik2UV, #prik3UV, #prik4UV{
-    margin: 0px 2px;
-}
+    #prik1UV, #prik2UV, #prik3UV, #prik4UV{
+        margin: 0px 2px;
+    }
 
 /****************Gravkammeret siden*******************/
-#gravSlideshow {
-    height: 36vh;
-}
+    #gravSlideshow {
+        height: 36vh;
+    }
 
-#prik1grav, #prik2grav, #prik3grav, #prik4grav{
-    margin: 0px 2px;
-}
+    #prik1grav, #prik2grav, #prik3grav, #prik4grav{
+        margin: 0px 2px;
+    }
 
 /****************Efterlivet siden*******************/
-#EfterlivSlideshow {
-    height: 40vh;
+    #EfterlivSlideshow {
+        height: 40vh;
+    }
+
+    #prik1Efterliv, #prik2Efterliv, #prik3Efterliv, #prik4Efterliv{
+        margin: 0px 2px;
+    }
+
+    footer {
+        height: 6vh;
 }
 
-#prik1Efterliv, #prik2Efterliv, #prik3Efterliv, #prik4Efterliv{
-    margin: 0px 2px;
-}
 }
 
 

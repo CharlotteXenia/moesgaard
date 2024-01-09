@@ -799,7 +799,7 @@ function pauseVideo() {
 //https://chat.openai.com/share/714c934d-888a-4b0b-b1b7-57aa50bd6e13
 
 let lastScrollTime = Date.now();
-const delay = 1000;
+const delay = 500;
 
 document.addEventListener('wheel', function (event) {
   // event.preventDefault();
