@@ -206,8 +206,9 @@ nav img:hover {
     position: absolute;
     top: 75vh;
     z-index: 2;
-    width: 100%;
+    width: 50%;
     margin: auto;
+    left: 25vw;
 }
 
 /****************** MUMIFICERING ******************/
