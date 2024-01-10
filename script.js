@@ -112,15 +112,15 @@ function nuSide() {
       //osiris fader ind
       osiris.style.animation = "fadeIn 2s ease-in-out forwards";
 
-    //Fordi det er den første skal alt vises sig
-    altIndhold.style.display = "block";
-    osiris.style.display = "flex";
-    header.style.display = "flex";
-    main.style.display = "flex";
-    h1.style.display = "block";
-    nav.style.display = "flex";
-    footer.style.display = "block";
-    billet.style.display = "flex";
+      //Fordi det er den første skal alt vises sig
+      altIndhold.style.display = "block";
+      osiris.style.display = "flex";
+      header.style.display = "flex";
+      main.style.display = "flex";
+      h1.style.display = "block";
+      nav.style.display = "flex";
+      footer.style.display = "block";
+      billet.style.display = "flex";
 
       //skal fjernes fordi de ikke før har været slukket og først nu ville være "synlige"
       //dette er også en sikkerhed når man skifter mellem siderne
@@ -398,7 +398,7 @@ function nuSide() {
     nav.style.display = "none";
     footer.style.display = "none";
     billet.style.display = "none";
-}
+  }
 }
 
 //skjuler forsiden og skifter til osiris
@@ -576,7 +576,7 @@ let tekster = [Slide1, Slide2, Slide3, Slide4, Slide5];
 let prikker0 = [prik1, prik2, prik3, prik4, prik5];
 
 tekster[0].style.display = "block";
-prik1.classList.add ("activePrik");
+prik1.classList.add("activePrik");
 
 //Eventlistener'en + funktionen når man trykker på én af de runde knapper
 prik1.addEventListener("click", function () {
@@ -586,7 +586,7 @@ prik1.addEventListener("click", function () {
   }
 
   tekster[0].style.display = "block";
-  prik1.classList.add ("activePrik");
+  prik1.classList.add("activePrik");
 });
 
 prik2.addEventListener("click", function () {
@@ -596,7 +596,7 @@ prik2.addEventListener("click", function () {
   }
 
   tekster[1].style.display = "block";
-  prik2.classList.add ("activePrik");
+  prik2.classList.add("activePrik");
 });
 
 prik3.addEventListener("click", function () {
@@ -606,7 +606,7 @@ prik3.addEventListener("click", function () {
   }
 
   tekster[2].style.display = "block";
-  prik3.classList.add ("activePrik");
+  prik3.classList.add("activePrik");
 });
 
 prik4.addEventListener("click", function () {
@@ -616,7 +616,7 @@ prik4.addEventListener("click", function () {
   }
 
   tekster[3].style.display = "block";
-  prik4.classList.add ("activePrik");
+  prik4.classList.add("activePrik");
 });
 
 prik5.addEventListener("click", function () {
@@ -626,7 +626,7 @@ prik5.addEventListener("click", function () {
   }
 
   tekster[4].style.display = "block";
-  prik5.classList.add ("activePrik");
+  prik5.classList.add("activePrik");
 });
 
 //ARRAY med teksterne MUMIFICERING
@@ -634,7 +634,7 @@ let tekstermum = [Slide1mum, Slide2mum, Slide3mum, Slide4mum, Slide5mum];
 let prikkerM = [prik1mum, prik2mum, prik3mum, prik4mum, prik5mum];
 
 tekstermum[0].style.display = "block";
-prik1mum.classList.add ("activePrik");
+prik1mum.classList.add("activePrik");
 
 prik1mum.addEventListener("click", function () {
   for (let index = 0; index < tekstermum.length; index++) {
@@ -643,7 +643,7 @@ prik1mum.addEventListener("click", function () {
   }
 
   tekstermum[0].style.display = "block";
-  prik1mum.classList.add ("activePrik");
+  prik1mum.classList.add("activePrik");
 });
 
 prik2mum.addEventListener("click", function () {
@@ -653,7 +653,7 @@ prik2mum.addEventListener("click", function () {
   }
 
   tekstermum[1].style.display = "block";
-  prik2mum.classList.add ("activePrik");
+  prik2mum.classList.add("activePrik");
 });
 
 prik3mum.addEventListener("click", function () {
@@ -663,7 +663,7 @@ prik3mum.addEventListener("click", function () {
   }
 
   tekstermum[2].style.display = "block";
-  prik3mum.classList.add ("activePrik");
+  prik3mum.classList.add("activePrik");
 });
 
 prik4mum.addEventListener("click", function () {
@@ -673,7 +673,7 @@ prik4mum.addEventListener("click", function () {
   }
 
   tekstermum[3].style.display = "block";
-  prik4mum.classList.add ("activePrik");
+  prik4mum.classList.add("activePrik");
 });
 
 prik5mum.addEventListener("click", function () {
@@ -683,7 +683,7 @@ prik5mum.addEventListener("click", function () {
   }
 
   tekstermum[4].style.display = "block";
-  prik5mum.classList.add ("activePrik");
+  prik5mum.classList.add("activePrik");
 });
 
 //ARRAY med teksterne UNDERVERDEN
@@ -691,7 +691,7 @@ let teksterUV = [Slide1UV, Slide2UV, Slide3UV, Slide4UV];
 let prikkerUV = [prik1UV, prik2UV, prik3UV, prik4UV];
 
 teksterUV[0].style.display = "block";
-prik1UV.classList.add ("activePrik");
+prik1UV.classList.add("activePrik");
 
 //Eventlistener'en + funktionen når man trykker på én af de runde knapper
 prik1UV.addEventListener("click", function () {
@@ -701,7 +701,7 @@ prik1UV.addEventListener("click", function () {
   }
 
   teksterUV[0].style.display = "block";
-  prik1UV.classList.add ("activePrik");
+  prik1UV.classList.add("activePrik");
 });
 
 prik2UV.addEventListener("click", function () {
@@ -711,7 +711,7 @@ prik2UV.addEventListener("click", function () {
   }
 
   teksterUV[1].style.display = "block";
-  prik2UV.classList.add ("activePrik");
+  prik2UV.classList.add("activePrik");
 });
 
 prik3UV.addEventListener("click", function () {
@@ -721,7 +721,7 @@ prik3UV.addEventListener("click", function () {
   }
 
   teksterUV[2].style.display = "block";
-  prik3UV.classList.add ("activePrik");
+  prik3UV.classList.add("activePrik");
 });
 
 prik4UV.addEventListener("click", function () {
@@ -731,7 +731,7 @@ prik4UV.addEventListener("click", function () {
   }
 
   teksterUV[3].style.display = "block";
-  prik4UV.classList.add ("activePrik");
+  prik4UV.classList.add("activePrik");
 });
 
 //ARRAY med tekster GRAVKAMMERET
@@ -739,7 +739,7 @@ let teksterGrav = [Slide1grav, Slide2grav, Slide3grav, Slide4grav];
 let prikkerGrav = [prik1grav, prik2grav, prik3grav, prik4grav];
 
 teksterGrav[0].style.display = "block";
-prik1grav.classList.add ("activePrik");
+prik1grav.classList.add("activePrik");
 
 //Eventlistener'en + funktionen når man trykker på én af de runde knapper
 prik1grav.addEventListener("click", function () {
@@ -749,7 +749,7 @@ prik1grav.addEventListener("click", function () {
   }
 
   teksterGrav[0].style.display = "block";
-  prik1grav.classList.add ("activePrik");
+  prik1grav.classList.add("activePrik");
 });
 
 prik2grav.addEventListener("click", function () {
@@ -759,7 +759,7 @@ prik2grav.addEventListener("click", function () {
   }
 
   teksterGrav[1].style.display = "block";
-  prik2grav.classList.add ("activePrik");
+  prik2grav.classList.add("activePrik");
 });
 
 prik3grav.addEventListener("click", function () {
@@ -769,7 +769,7 @@ prik3grav.addEventListener("click", function () {
   }
 
   teksterGrav[2].style.display = "block";
-  prik3grav.classList.add ("activePrik");
+  prik3grav.classList.add("activePrik");
 });
 
 prik4grav.addEventListener("click", function () {
@@ -779,7 +779,7 @@ prik4grav.addEventListener("click", function () {
   }
 
   teksterGrav[3].style.display = "block";
-  prik4grav.classList.add ("activePrik");
+  prik4grav.classList.add("activePrik");
 });
 
 //ARRAY med tekster EFTERLIVET
@@ -787,7 +787,7 @@ let teksterEfterliv = [Slide1Efterliv, Slide2Efterliv, Slide3Efterliv, Slide4Eft
 let prikkerEfterliv = [prik1Efterliv, prik2Efterliv, prik3Efterliv, prik4Efterliv];
 
 teksterEfterliv[0].style.display = "block";
-prik1Efterliv.classList.add ("activePrik");
+prik1Efterliv.classList.add("activePrik");
 
 //Eventlistener'en + funktionen når man trykker på én af de runde knapper
 prik1Efterliv.addEventListener("click", function () {
@@ -797,7 +797,7 @@ prik1Efterliv.addEventListener("click", function () {
   }
 
   teksterEfterliv[0].style.display = "block";
-  prik1Efterliv.classList.add ("activePrik");
+  prik1Efterliv.classList.add("activePrik");
 });
 
 prik2Efterliv.addEventListener("click", function () {
@@ -807,7 +807,7 @@ prik2Efterliv.addEventListener("click", function () {
   }
 
   teksterEfterliv[1].style.display = "block";
-  prik2Efterliv.classList.add ("activePrik");
+  prik2Efterliv.classList.add("activePrik");
 });
 
 prik3Efterliv.addEventListener("click", function () {
@@ -817,7 +817,7 @@ prik3Efterliv.addEventListener("click", function () {
   }
 
   teksterEfterliv[2].style.display = "block";
-  prik3Efterliv.classList.add ("activePrik");
+  prik3Efterliv.classList.add("activePrik");
 });
 
 prik4Efterliv.addEventListener("click", function () {
@@ -827,7 +827,7 @@ prik4Efterliv.addEventListener("click", function () {
   }
 
   teksterEfterliv[3].style.display = "block";
-  prik4Efterliv.classList.add ("activePrik");
+  prik4Efterliv.classList.add("activePrik");
 });
 
 //************ PLAYKNAP = MADS & CHARLOTTE  ************//
@@ -886,3 +886,36 @@ document.addEventListener('wheel', function (event) {
     }
   }
 })
+
+// Swipe på mobil //
+let touchStartX = 0;
+let touchEndX = 0;
+
+const swipeThreshold = 50;
+
+main.addEventListener('touchstart', function (event) {
+  touchStartX = event.changedTouches[0].screenX;
+});
+
+main.addEventListener('touchend', function (event) {
+  touchEndX = event.changedTouches[0].screenX;
+  handleSwipe();
+});
+
+function handleSwipe() {
+  const deltaX = touchEndX - touchStartX;
+
+  if (Math.abs(deltaX) > swipeThreshold && sideNu >= 2) {
+    if (deltaX > 0) {
+      sideNu = sideNu - 1;
+      if (sideNu < 2) {
+        sideNu = 2;
+      }
+    } else if (deltaX < 0) {
+      sideNu = sideNu + 1;
+      if (sideNu > 6) {
+        sideNu = 6;
+      }
+    }
+  }
+}
