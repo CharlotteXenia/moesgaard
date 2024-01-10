@@ -890,6 +890,7 @@ document.addEventListener('wheel', function (event) {
 })
 
 // Swipe på mobil //
+// Hjælp fra ChatGPT - https://chat.openai.com/c/17a44f20-95c0-4569-a82b-32711b9ddcc2
 let touchStartX = 0;
 let touchEndX = 0;
 
