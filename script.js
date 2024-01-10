@@ -49,7 +49,6 @@ const footer = document.querySelector("footer");
 //billet knap
 const billet = document.getElementById("billet");
 
-
 // Variabel der holder øje med hvilken side man er på
 let sideNu = 0;
 
@@ -88,7 +87,6 @@ function nuSide() {
 
     //************ SPLASHSCREEN = CHARLOTTE & SAFA ************//
     // Inkl. tilhørende HTML & CSS kode
-
     // intro skærm
     if (sideNu == 1) {
       nilen.play()
@@ -103,7 +101,6 @@ function nuSide() {
 
     //************ NAVIGATION = JULIE & MADS ************//
     // Inkl. tilhørende HTML & CSS kode
-
     //osiris siden
     //denne sides kode gentages for de to følgende sider også, da det
     // er det samme der sker, den skifter kun indholdet
@@ -356,7 +353,6 @@ function nuSide() {
       nav.style.display = "flex";
       footer.style.display = "block";
 
-
       body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/efterlivBaggrund.jpg")';
 
       efterlivet.style.animation = "fadeIn 2s ease-in-out forwards";
@@ -371,7 +367,6 @@ function nuSide() {
       tilGravkammeret.style.scale = "1";
       tilEfterliv.style.backgroundColor = "#ffffff80";
       tilEfterliv.style.scale = "1.3";
-
 
       //lytter til om man går videre, Denne bliver stående for ikke at kunne klikke så langt
       tilbagePil.addEventListener("click", visGravkammeret);
@@ -509,7 +504,6 @@ tilEfterliv.addEventListener("click", tilEfterlivFunk);
 
 //************ TEKSTKARUSSELLEN = SAFA & JULIE ************//
 // Inkl. tilhørende HTML & CSS kode
-
 // Idéen er at når man trykker på en knap,
 // så kommer der en ny tekst frem (skifter).
 //Osiris
@@ -841,7 +835,6 @@ play.addEventListener("click", afspilVideo);
 
 function afspilVideo() {
   videoOsiris.play();
-
   play.style.display = "none";
 }
 
@@ -849,7 +842,6 @@ videoOsiris.addEventListener("click", pauseVideo);
 
 function pauseVideo() {
   videoOsiris.pause();
-
   play.style.display = "block";
 }
 
