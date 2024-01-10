@@ -46,6 +46,10 @@ const body = document.querySelector("body");
 const nav = document.querySelector("nav");
 const footer = document.querySelector("footer");
 
+//billet knap
+const billet = document.getElementById("billet")
+
+
 // Variabel der holder øje med hvilken side man er på
 let sideNu = 0;
 
@@ -116,6 +120,7 @@ function nuSide() {
     h1.style.display = "block";
     nav.style.display = "flex";
     footer.style.display = "block";
+    billet.style.display = "block";
 
     //skal fjernes fordi de ikke før har været slukket og først nu ville være "synlige"
     //dette er også en sikkerhed når man skifter mellem siderne
@@ -178,6 +183,7 @@ function nuSide() {
     altIndhold.style.borderColor = "black";
     linjeIHeader[0].style.backgroundColor = "black";
     linjeIHeader[1].style.backgroundColor = "black";
+    billet.style.display = "block";
 
     osiris.style.display = "none"
     underverden.style.display = "none"
@@ -230,6 +236,7 @@ function nuSide() {
     altIndhold.style.borderColor = "black";
     linjeIHeader[0].style.backgroundColor = "black";
     linjeIHeader[1].style.backgroundColor = "black";
+    billet.style.display = "block";
 
     osiris.style.display = "none"
     mumificering.style.display = "none"
@@ -285,6 +292,7 @@ function nuSide() {
     altIndhold.style.borderColor = "white";
     linjeIHeader[0].style.backgroundColor = "white";
     linjeIHeader[1].style.backgroundColor = "white";
+    billet.style.display = "block";
 
     osiris.style.display = "none"
     mumificering.style.display = "none"
@@ -339,6 +347,7 @@ function nuSide() {
     altIndhold.style.borderColor = "black";
     linjeIHeader[0].style.backgroundColor = "black";
     linjeIHeader[1].style.backgroundColor = "black";
+    billet.style.display = "block";
 
     osiris.style.display = "none"
     mumificering.display = "none"
@@ -391,6 +400,7 @@ function nuSide() {
     h1.style.display = "none";
     nav.style.display = "none";
     footer.style.display = "none";
+    billet.style.display = "none";
 
 
 }

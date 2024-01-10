@@ -821,6 +821,8 @@ top: 11vw;
 right: -6vw;
 
 transition: right 0.5s ease-in-out; /* Tilføjer overgang for breddeændring */
+
+display: none;
 }
 
 #billet p {
