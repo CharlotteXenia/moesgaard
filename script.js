@@ -187,7 +187,7 @@ function nuSide() {
       osiris.style.display = "none";
       underverden.style.display = "none";
       gravkammeret.style.display = "none";
-      efterlivet.display = "none";
+      efterlivet.style.display = "none";
 
       altIndhold.style.display = "block";
       header.style.display = "flex";
@@ -239,7 +239,7 @@ function nuSide() {
       osiris.style.display = "none";
       mumificering.style.display = "none";
       gravkammeret.style.display = "none";
-      efterlivet.display = "none";
+      efterlivet.style.display = "none";
 
       altIndhold.style.display = "block";
       header.style.display = "flex";
@@ -294,7 +294,7 @@ function nuSide() {
       osiris.style.display = "none";
       mumificering.style.display = "none";
       underverden.style.display = "none";
-      efterlivet.display = "none";
+      efterlivet.style.display = "none";
 
       altIndhold.style.display = "block";
       header.style.display = "flex";
@@ -345,7 +345,7 @@ function nuSide() {
       linjeIHeader[1].style.backgroundColor = "black";
 
       osiris.style.display = "none";
-      mumificering.display = "none";
+      mumificering.style.display = "none";
       underverden.style.display = "none";
       gravkammeret.style.display = "none";
 
