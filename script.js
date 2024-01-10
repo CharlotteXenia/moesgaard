@@ -47,7 +47,7 @@ const nav = document.querySelector("nav");
 const footer = document.querySelector("footer");
 
 //billet knap
-const billet = document.getElementById("billet")
+const billet = document.getElementById("billet");
 
 
 // Variabel der holder øje med hvilken side man er på
