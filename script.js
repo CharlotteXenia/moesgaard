@@ -120,7 +120,7 @@ function nuSide() {
     h1.style.display = "block";
     nav.style.display = "flex";
     footer.style.display = "block";
-    billet.style.display = "block";
+    billet.style.display = "flex";
 
     //skal fjernes fordi de ikke før har været slukket og først nu ville være "synlige"
     //dette er også en sikkerhed når man skifter mellem siderne
@@ -183,7 +183,7 @@ function nuSide() {
     altIndhold.style.borderColor = "black";
     linjeIHeader[0].style.backgroundColor = "black";
     linjeIHeader[1].style.backgroundColor = "black";
-    billet.style.display = "block";
+    billet.style.display = "flex";
 
     osiris.style.display = "none"
     underverden.style.display = "none"
@@ -236,7 +236,7 @@ function nuSide() {
     altIndhold.style.borderColor = "black";
     linjeIHeader[0].style.backgroundColor = "black";
     linjeIHeader[1].style.backgroundColor = "black";
-    billet.style.display = "block";
+    billet.style.display = "flex";
 
     osiris.style.display = "none"
     mumificering.style.display = "none"
@@ -292,7 +292,7 @@ function nuSide() {
     altIndhold.style.borderColor = "white";
     linjeIHeader[0].style.backgroundColor = "white";
     linjeIHeader[1].style.backgroundColor = "white";
-    billet.style.display = "block";
+    billet.style.display = "flex";
 
     osiris.style.display = "none"
     mumificering.style.display = "none"
@@ -347,7 +347,7 @@ function nuSide() {
     altIndhold.style.borderColor = "black";
     linjeIHeader[0].style.backgroundColor = "black";
     linjeIHeader[1].style.backgroundColor = "black";
-    billet.style.display = "block";
+    billet.style.display = "flex";
 
     osiris.style.display = "none"
     mumificering.display = "none"
