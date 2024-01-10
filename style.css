@@ -210,12 +210,7 @@ nav img:hover {
     margin: auto;
 }
 
-
-
-
-
 /****************** MUMIFICERING ******************/
-
 #mumieTEXT {
     display: flex;
     flex-direction: column;
@@ -267,7 +262,7 @@ nav img:hover {
 #prik3mum:hover,
 #prik4mum:hover,
 #prik5mum:hover {
-    background-color: white;
+    background-color: #624724;
 }
 
 #mumificering {
@@ -499,7 +494,7 @@ footer img {
 #prik3:hover,
 #prik4:hover,
 #prik5:hover {
-    background-color: white;
+    background-color: #624724;
 }
 
 
@@ -557,7 +552,7 @@ footer img {
 #prik3UV:hover,
 #prik4UV:hover
 {
-    background-color: white;
+    background-color: #624724;
 }
 
 #underverden {
@@ -703,7 +698,7 @@ iframe{
 #prik2grav:hover,
 #prik3grav:hover,
 #prik4grav:hover {
-    background-color: white;
+    background-color: #624724;
 }
 
 .grav_cirkel {
@@ -792,7 +787,7 @@ iframe{
 #prik2Efterliv:hover,
 #prik3Efterliv:hover,
 #prik4Efterliv:hover {
-    background-color: white;
+    background-color: #624724;
 }
 
 #efterlivet_right {
@@ -849,6 +844,11 @@ display: none;
     padding-right:4px;
 }
 
+
+/* Hover */
+.activePrik {
+    background-color: #624724 !important; /* !important sikrer, at denne stil prioriteres */
+}
 
 @media screen and (max-width:915px) {
     * {

@@ -573,117 +573,117 @@ const Slide4Efterliv = document.getElementById("Slide4Efterliv");
 
 //ARRAY med teksterne OSIRIS
 let tekster = [Slide1, Slide2, Slide3, Slide4, Slide5];
-let prikkerO = [prik1, prik2, prik3, prik4, prik5];
+let prikker0 = [prik1, prik2, prik3, prik4, prik5];
 
 tekster[0].style.display = "block";
-prik1.style.backgroundColor = "#624724";
+prik1.classList.add ("activePrik");
 
 //Eventlistener'en + funktionen når man trykker på én af de runde knapper
 prik1.addEventListener("click", function () {
   for (let index = 0; index < tekster.length; index++) {
     tekster[index].style.display = "none";
-    prikkerO[index].style.backgroundColor = "#c09a6e";
+    prikker0[index].classList.remove("activePrik");
   }
 
   tekster[0].style.display = "block";
-  prik1.style.backgroundColor = "#624724";
+  prik1.classList.add ("activePrik");
 });
 
 prik2.addEventListener("click", function () {
   for (let index = 0; index < tekster.length; index++) {
     tekster[index].style.display = "none";
-    prikkerO[index].style.backgroundColor = "#c09a6e";
+    prikker0[index].classList.remove("activePrik");
   }
 
   tekster[1].style.display = "block";
-  prik2.style.backgroundColor = "#624724";
+  prik2.classList.add ("activePrik");
 });
 
 prik3.addEventListener("click", function () {
   for (let index = 0; index < tekster.length; index++) {
     tekster[index].style.display = "none";
-    prikkerO[index].style.backgroundColor = "#c09a6e";
+    prikker0[index].classList.remove("activePrik");
   }
 
   tekster[2].style.display = "block";
-  prik3.style.backgroundColor = "#624724";
+  prik3.classList.add ("activePrik");
 });
 
 prik4.addEventListener("click", function () {
   for (let index = 0; index < tekster.length; index++) {
     tekster[index].style.display = "none";
-    prikkerO[index].style.backgroundColor = "#c09a6e";
+    prikker0[index].classList.remove("activePrik");
   }
 
   tekster[3].style.display = "block";
-  prik4.style.backgroundColor = "#624724";
+  prik4.classList.add ("activePrik");
 });
 
 prik5.addEventListener("click", function () {
   for (let index = 0; index < tekster.length; index++) {
     tekster[index].style.display = "none";
-    prikkerO[index].style.backgroundColor = "#c09a6e";
+    prikker0[index].classList.remove("activePrik");
   }
 
   tekster[4].style.display = "block";
-  prik5.style.backgroundColor = "#624724";
+  prik5.classList.add ("activePrik");
 });
 
 //ARRAY med teksterne MUMIFICERING
 let tekstermum = [Slide1mum, Slide2mum, Slide3mum, Slide4mum, Slide5mum];
 let prikkerM = [prik1mum, prik2mum, prik3mum, prik4mum, prik5mum];
-tekstermum[0].style.display = "block";
 
-prik1mum.style.backgroundColor = "#624724";
+tekstermum[0].style.display = "block";
+prik1mum.classList.add ("activePrik");
 
 prik1mum.addEventListener("click", function () {
   for (let index = 0; index < tekstermum.length; index++) {
     tekstermum[index].style.display = "none";
-    prikkerM[index].style.backgroundColor = "#c09a6e";
+    prikkerM[index].classList.remove("activePrik");
   }
 
   tekstermum[0].style.display = "block";
-  prik1mum.style.backgroundColor = "#624724";
+  prik1mum.classList.add ("activePrik");
 });
 
 prik2mum.addEventListener("click", function () {
   for (let index = 0; index < tekstermum.length; index++) {
     tekstermum[index].style.display = "none";
-    prikkerM[index].style.backgroundColor = "#c09a6e";
+    prikkerM[index].classList.remove("activePrik");
   }
 
   tekstermum[1].style.display = "block";
-  prik2mum.style.backgroundColor = "#624724";
+  prik2mum.classList.add ("activePrik");
 });
 
 prik3mum.addEventListener("click", function () {
   for (let index = 0; index < tekstermum.length; index++) {
     tekstermum[index].style.display = "none";
-    prikkerM[index].style.backgroundColor = "#c09a6e";
+    prikkerM[index].classList.remove("activePrik");
   }
 
   tekstermum[2].style.display = "block";
-  prik3mum.style.backgroundColor = "#624724";
+  prik3mum.classList.add ("activePrik");
 });
 
 prik4mum.addEventListener("click", function () {
   for (let index = 0; index < tekstermum.length; index++) {
     tekstermum[index].style.display = "none";
-    prikkerM[index].style.backgroundColor = "#c09a6e";
+    prikkerM[index].classList.remove("activePrik");
   }
 
   tekstermum[3].style.display = "block";
-  prik4mum.style.backgroundColor = "#624724";
+  prik4mum.classList.add ("activePrik");
 });
 
 prik5mum.addEventListener("click", function () {
   for (let index = 0; index < tekstermum.length; index++) {
     tekstermum[index].style.display = "none";
-    prikkerM[index].style.backgroundColor = "#c09a6e";
+    prikkerM[index].classList.remove("activePrik");
   }
 
   tekstermum[4].style.display = "block";
-  prik5mum.style.backgroundColor = "#624724";
+  prik5mum.classList.add ("activePrik");
 });
 
 //ARRAY med teksterne UNDERVERDEN
@@ -691,48 +691,47 @@ let teksterUV = [Slide1UV, Slide2UV, Slide3UV, Slide4UV];
 let prikkerUV = [prik1UV, prik2UV, prik3UV, prik4UV];
 
 teksterUV[0].style.display = "block";
-
-prik1UV.style.backgroundColor = "#624724";
+prik1UV.classList.add ("activePrik");
 
 //Eventlistener'en + funktionen når man trykker på én af de runde knapper
 prik1UV.addEventListener("click", function () {
   for (let index = 0; index < teksterUV.length; index++) {
     teksterUV[index].style.display = "none";
-    prikkerUV[index].style.backgroundColor = "#c09a6e";
+    prikkerUV[index].classList.remove("activePrik");
   }
 
   teksterUV[0].style.display = "block";
-  prik1UV.style.backgroundColor = "#624724";
+  prik1UV.classList.add ("activePrik");
 });
 
 prik2UV.addEventListener("click", function () {
   for (let index = 0; index < teksterUV.length; index++) {
     teksterUV[index].style.display = "none";
-    prikkerUV[index].style.backgroundColor = "#c09a6e";
+    prikkerUV[index].classList.remove("activePrik");
   }
 
   teksterUV[1].style.display = "block";
-  prik2UV.style.backgroundColor = "#624724";
+  prik2UV.classList.add ("activePrik");
 });
 
 prik3UV.addEventListener("click", function () {
   for (let index = 0; index < teksterUV.length; index++) {
     teksterUV[index].style.display = "none";
-    prikkerUV[index].style.backgroundColor = "#c09a6e";
+    prikkerUV[index].classList.remove("activePrik");
   }
 
   teksterUV[2].style.display = "block";
-  prik3UV.style.backgroundColor = "#624724";
+  prik3UV.classList.add ("activePrik");
 });
 
 prik4UV.addEventListener("click", function () {
   for (let index = 0; index < teksterUV.length; index++) {
     teksterUV[index].style.display = "none";
-    prikkerUV[index].style.backgroundColor = "#c09a6e";
+    prikkerUV[index].classList.remove("activePrik");
   }
 
   teksterUV[3].style.display = "block";
-  prik4UV.style.backgroundColor = "#624724";
+  prik4UV.classList.add ("activePrik");
 });
 
 //ARRAY med tekster GRAVKAMMERET
@@ -740,48 +739,47 @@ let teksterGrav = [Slide1grav, Slide2grav, Slide3grav, Slide4grav];
 let prikkerGrav = [prik1grav, prik2grav, prik3grav, prik4grav];
 
 teksterGrav[0].style.display = "block";
-
-prik1grav.style.backgroundColor = "#624724";
+prik1grav.classList.add ("activePrik");
 
 //Eventlistener'en + funktionen når man trykker på én af de runde knapper
 prik1grav.addEventListener("click", function () {
   for (let index = 0; index < teksterGrav.length; index++) {
     teksterGrav[index].style.display = "none";
-    prikkerGrav[index].style.backgroundColor = "#c09a6e";
+    prikkerGrav[index].classList.remove("activePrik");
   }
 
   teksterGrav[0].style.display = "block";
-  prik1grav.style.backgroundColor = "#624724";
+  prik1grav.classList.add ("activePrik");
 });
 
 prik2grav.addEventListener("click", function () {
   for (let index = 0; index < teksterGrav.length; index++) {
     teksterGrav[index].style.display = "none";
-    prikkerGrav[index].style.backgroundColor = "#c09a6e";
+    prikkerGrav[index].classList.remove("activePrik");
   }
 
   teksterGrav[1].style.display = "block";
-  prik2grav.style.backgroundColor = "#624724";
+  prik2grav.classList.add ("activePrik");
 });
 
 prik3grav.addEventListener("click", function () {
   for (let index = 0; index < teksterGrav.length; index++) {
     teksterGrav[index].style.display = "none";
-    prikkerGrav[index].style.backgroundColor = "#c09a6e";
+    prikkerGrav[index].classList.remove("activePrik");
   }
 
   teksterGrav[2].style.display = "block";
-  prik3grav.style.backgroundColor = "#624724";
+  prik3grav.classList.add ("activePrik");
 });
 
 prik4grav.addEventListener("click", function () {
   for (let index = 0; index < teksterGrav.length; index++) {
     teksterGrav[index].style.display = "none";
-    prikkerGrav[index].style.backgroundColor = "#c09a6e";
+    prikkerGrav[index].classList.remove("activePrik");
   }
 
   teksterGrav[3].style.display = "block";
-  prik4grav.style.backgroundColor = "#624724";
+  prik4grav.classList.add ("activePrik");
 });
 
 //ARRAY med tekster EFTERLIVET
@@ -789,48 +787,47 @@ let teksterEfterliv = [Slide1Efterliv, Slide2Efterliv, Slide3Efterliv, Slide4Eft
 let prikkerEfterliv = [prik1Efterliv, prik2Efterliv, prik3Efterliv, prik4Efterliv];
 
 teksterEfterliv[0].style.display = "block";
-
-prik1Efterliv.style.backgroundColor = "#624724";
+prik1Efterliv.classList.add ("activePrik");
 
 //Eventlistener'en + funktionen når man trykker på én af de runde knapper
 prik1Efterliv.addEventListener("click", function () {
   for (let index = 0; index < teksterEfterliv.length; index++) {
     teksterEfterliv[index].style.display = "none";
-    prikkerEfterliv[index].style.backgroundColor = "#c09a6e";
+    prikkerEfterliv[index].classList.remove("activePrik");
   }
 
   teksterEfterliv[0].style.display = "block";
-  prik1Efterliv.style.backgroundColor = "#624724";
+  prik1Efterliv.classList.add ("activePrik");
 });
 
 prik2Efterliv.addEventListener("click", function () {
   for (let index = 0; index < teksterEfterliv.length; index++) {
     teksterEfterliv[index].style.display = "none";
-    prikkerEfterliv[index].style.backgroundColor = "#c09a6e";
+    prikkerEfterliv[index].classList.remove("activePrik");
   }
 
   teksterEfterliv[1].style.display = "block";
-  prik2Efterliv.style.backgroundColor = "#624724";
+  prik2Efterliv.classList.add ("activePrik");
 });
 
 prik3Efterliv.addEventListener("click", function () {
   for (let index = 0; index < teksterEfterliv.length; index++) {
     teksterEfterliv[index].style.display = "none";
-    prikkerEfterliv[index].style.backgroundColor = "#c09a6e";
+    prikkerEfterliv[index].classList.remove("activePrik");
   }
 
   teksterEfterliv[2].style.display = "block";
-  prik3Efterliv.style.backgroundColor = "#624724";
+  prik3Efterliv.classList.add ("activePrik");
 });
 
 prik4Efterliv.addEventListener("click", function () {
   for (let index = 0; index < teksterEfterliv.length; index++) {
     teksterEfterliv[index].style.display = "none";
-    prikkerEfterliv[index].style.backgroundColor = "#c09a6e";
+    prikkerEfterliv[index].classList.remove("activePrik");
   }
 
   teksterEfterliv[3].style.display = "block";
-  prik4Efterliv.style.backgroundColor = "#624724";
+  prik4Efterliv.classList.add ("activePrik");
 });
 
 //************ PLAYKNAP = MADS & CHARLOTTE  ************//
