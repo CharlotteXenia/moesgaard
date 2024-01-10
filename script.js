@@ -184,6 +184,13 @@ function nuSide() {
     gravkammeret.style.display = "none"
     efterlivet.display = "none"
 
+    altIndhold.style.display = "block";
+    header.style.display = "flex";
+    main.style.display = "flex";
+    h1.style.display = "block";
+    nav.style.display = "flex";
+    footer.style.display = "block";
+
     body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/mumificeringBaggrund.jpg")';
 
     mumificering.style.animation = "fadeIn 2s ease-in-out forwards";
@@ -228,6 +235,13 @@ function nuSide() {
     mumificering.style.display = "none"
     gravkammeret.style.display = "none"
     efterlivet.display = "none"
+
+    altIndhold.style.display = "block";
+    header.style.display = "flex";
+    main.style.display = "flex";
+    h1.style.display = "block";
+    nav.style.display = "flex";
+    footer.style.display = "block";
 
     body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/underverdenBaggrund.jpg")';
 
@@ -277,6 +291,14 @@ function nuSide() {
     underverden.style.display = "none"
     efterlivet.display = "none"
 
+
+    altIndhold.style.display = "block";
+    header.style.display = "flex";
+    main.style.display = "flex";
+    h1.style.display = "block";
+    nav.style.display = "flex";
+    footer.style.display = "block";
+
     body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/gravkammerBaggrund.jpg")';
 
     gravkammeret.style.animation = "fadeIn 2s ease-in-out forwards";
@@ -322,6 +344,14 @@ function nuSide() {
     mumificering.display = "none"
     underverden.style.display = "none"
     gravkammeret.style.display = "none"
+
+    altIndhold.style.display = "block";
+    header.style.display = "flex";
+    main.style.display = "flex";
+    h1.style.display = "block";
+    nav.style.display = "flex";
+    footer.style.display = "block";
+
 
     body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/efterlivBaggrund.jpg")';
 
