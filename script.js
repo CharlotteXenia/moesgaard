@@ -46,6 +46,10 @@ const body = document.querySelector("body");
 const nav = document.querySelector("nav");
 const footer = document.querySelector("footer");
 
+//billet knap
+const billet = document.getElementById("billet");
+
+
 // Variabel der holder øje med hvilken side man er på
 let sideNu = 0;
 
@@ -108,14 +112,15 @@ function nuSide() {
       //osiris fader ind
       osiris.style.animation = "fadeIn 2s ease-in-out forwards";
 
-      //Fordi det er den første skal alt vises sig
-      altIndhold.style.display = "block";
-      osiris.style.display = "flex";
-      header.style.display = "flex";
-      main.style.display = "flex";
-      h1.style.display = "block";
-      nav.style.display = "flex";
-      footer.style.display = "block";
+    //Fordi det er den første skal alt vises sig
+    altIndhold.style.display = "block";
+    osiris.style.display = "flex";
+    header.style.display = "flex";
+    main.style.display = "flex";
+    h1.style.display = "block";
+    nav.style.display = "flex";
+    footer.style.display = "block";
+    billet.style.display = "flex";
 
       //skal fjernes fordi de ikke før har været slukket og først nu ville være "synlige"
       //dette er også en sikkerhed når man skifter mellem siderne
@@ -392,7 +397,8 @@ function nuSide() {
     h1.style.display = "none";
     nav.style.display = "none";
     footer.style.display = "none";
-  }
+    billet.style.display = "none";
+}
 }
 
 //skjuler forsiden og skifter til osiris
