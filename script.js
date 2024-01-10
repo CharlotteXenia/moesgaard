@@ -55,300 +55,302 @@ setInterval(nuSide, 500);
 //overgangen mellem siderne (tjekket mellem siderne) er sat i funktion for at kunne opdateres forevigt
 function nuSide() {
 
-  if (window.innerWidth > 450){
-  // Splash screen
-  // starter på 0
-  if (sideNu == 0) {
+  if (window.innerWidth > 450) {
+    // Splash screen
+    // starter på 0
+    if (sideNu == 0) {
 
-    //skjuler alt normalt indhold
-    altIndhold.style.display = "none";
-    header.style.display = "none";
-    main.style.display = "none";
-    h1.style.display = "none";
+      //skjuler alt normalt indhold
+      altIndhold.style.display = "none";
+      header.style.display = "none";
+      main.style.display = "none";
+      h1.style.display = "none";
 
-    // venter på at man trykker
-    startIndhold.addEventListener("click", function () {
+      // venter på at man trykker
+      startIndhold.addEventListener("click", function () {
 
-      // Animation på dørene
-      venstre.style.animation = "slideOut 2s ease-in-out forwards";
-      højer.style.animation = "slideOut 2s ease-in-out forwards";
+        // Animation på dørene
+        venstre.style.animation = "slideOut 2s ease-in-out forwards";
+        højer.style.animation = "slideOut 2s ease-in-out forwards";
 
-      // TrykHer knappen forsvinder + Nilen-billedet kommer frem.
-      start.style.display = "none";
-      nilen.style.display = "block";
+        // TrykHer knappen forsvinder + Nilen-billedet kommer frem.
+        start.style.display = "none";
+        nilen.style.display = "block";
 
-      //skifter til intro siden
-      sideNu = 1;
-    });
-  }
+        //skifter til intro siden
+        sideNu = 1;
+      });
+    }
 
-  //************ SPLASHSCREEN = CHARLOTTE & SAFA ************//
-  // Inkl. tilhørende HTML & CSS kode
+    //************ SPLASHSCREEN = CHARLOTTE & SAFA ************//
+    // Inkl. tilhørende HTML & CSS kode
 
-  // intro skærm
-  if (sideNu == 1) {
-    nilen.play ()
-    // Venter på man trykker igen
-    startIndhold.addEventListener("click", function () {
-      //start animationen
-      startIndhold.style.animation = "fadeOut 2s ease-in-out forwards";
-      //vent 2 sekunder på at fjerne forsiden og skifte til næste
-      setTimeout(gemForside, 2000);
-    });
-  }
+    // intro skærm
+    if (sideNu == 1) {
+      nilen.play()
+      // Venter på man trykker igen
+      startIndhold.addEventListener("click", function () {
+        //start animationen
+        startIndhold.style.animation = "fadeOut 2s ease-in-out forwards";
+        //vent 2 sekunder på at fjerne forsiden og skifte til næste
+        setTimeout(gemForside, 2000);
+      });
+    }
 
-  //************ NAVIGATION = JULIE & MADS ************//
-  // Inkl. tilhørende HTML & CSS kode
+    //************ NAVIGATION = JULIE & MADS ************//
+    // Inkl. tilhørende HTML & CSS kode
 
-  //osiris siden
-  //denne sides kode gentages for de to følgende sider også, da det
-  // er det samme der sker, den skifter kun indholdet
-  // derfor har dette lagt grobund for de andre
-  if (sideNu == 2) {
-    //osiris fader ind
-    osiris.style.animation = "fadeIn 2s ease-in-out forwards";
+    //osiris siden
+    //denne sides kode gentages for de to følgende sider også, da det
+    // er det samme der sker, den skifter kun indholdet
+    // derfor har dette lagt grobund for de andre
+    if (sideNu == 2) {
+      //osiris fader ind
+      osiris.style.animation = "fadeIn 2s ease-in-out forwards";
 
-    //Fordi det er den første skal alt vises sig
-    altIndhold.style.display = "block";
-    osiris.style.display = "flex";
-    header.style.display = "flex";
-    main.style.display = "flex";
-    h1.style.display = "block";
-    nav.style.display = "flex";
-    footer.style.display = "block";
+      //Fordi det er den første skal alt vises sig
+      altIndhold.style.display = "block";
+      osiris.style.display = "flex";
+      header.style.display = "flex";
+      main.style.display = "flex";
+      h1.style.display = "block";
+      nav.style.display = "flex";
+      footer.style.display = "block";
 
-    //skal fjernes fordi de ikke før har været slukket og først nu ville være "synlige"
-    //dette er også en sikkerhed når man skifter mellem siderne
-    mumificering.style.display = "none";
-    underverden.style.display = "none";
-    gravkammeret.style.display = "none";
-    efterlivet.style.display = "none";
+      //skal fjernes fordi de ikke før har været slukket og først nu ville være "synlige"
+      //dette er også en sikkerhed når man skifter mellem siderne
+      mumificering.style.display = "none";
+      underverden.style.display = "none";
+      gravkammeret.style.display = "none";
+      efterlivet.style.display = "none";
 
-    //sikre alle ikoner og indhold passer til osiris
-    h1.innerHTML = "Osiris-myten";
-    h1.style.color = "black";
-    midtIkon.src = "media/img/osiris.svg";
-    tilbagePil.style.opacity = "0";
-    højreIkon.src = "media/img/indgang1_mumie.svg";
-    body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/osirisBaggrund.jpg")';
-    højrePil.src = "media/img/pil_hoejre.svg";
-    venstrePil.src = "media/img/pil_venstre.svg";
-    altIndhold.style.borderColor = "black";
-    linjeIHeader[0].style.backgroundColor = "black";
-    linjeIHeader[1].style.backgroundColor = "black";
+      //sikre alle ikoner og indhold passer til osiris
+      h1.innerHTML = "Osiris-myten";
+      h1.style.color = "black";
+      midtIkon.src = "media/img/osiris.svg";
+      tilbagePil.style.opacity = "0";
+      højreIkon.src = "media/img/indgang1_mumie.svg";
+      body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/osirisBaggrund.jpg")';
+      højrePil.src = "media/img/pil_hoejre.svg";
+      venstrePil.src = "media/img/pil_venstre.svg";
+      altIndhold.style.borderColor = "black";
+      linjeIHeader[0].style.backgroundColor = "black";
+      linjeIHeader[1].style.backgroundColor = "black";
 
-    //nav baren i siden markere hvilken side man er på.
-    // her er det også nødvendigt at reset de andre prikker, hvis man kommer der fra
-    tilOsiris.style.backgroundColor = "#ffffff80"
-    tilOsiris.style.scale = "1.3"
-    tilMumie.style.backgroundColor = "#ffffff33"
-    tilMumie.style.scale = "1"
-    tilUnderV.style.backgroundColor = "#ffffff33"
-    tilUnderV.style.scale = "1"
-    tilGravkammeret.style.backgroundColor = "#ffffff33"
-    tilGravkammeret.style.scale = "1"
-    tilEfterliv.style.backgroundColor = "#ffffff33"
-    tilEfterliv.style.scale = "1"
+      //nav baren i siden markere hvilken side man er på.
+      // her er det også nødvendigt at reset de andre prikker, hvis man kommer der fra
+      tilOsiris.style.backgroundColor = "#ffffff80"
+      tilOsiris.style.scale = "1.3"
+      tilMumie.style.backgroundColor = "#ffffff33"
+      tilMumie.style.scale = "1"
+      tilUnderV.style.backgroundColor = "#ffffff33"
+      tilUnderV.style.scale = "1"
+      tilGravkammeret.style.backgroundColor = "#ffffff33"
+      tilGravkammeret.style.scale = "1"
+      tilEfterliv.style.backgroundColor = "#ffffff33"
+      tilEfterliv.style.scale = "1"
 
-    //lytter til om man går videre og skjuler siden man er på
-    //Mumificering viser sig selv efterfølgende, derfor skal den kun skjule sig selv
-    fremadPil.addEventListener("click", skjulOsiris);
+      //lytter til om man går videre og skjuler siden man er på
+      //Mumificering viser sig selv efterfølgende, derfor skal den kun skjule sig selv
+      fremadPil.addEventListener("click", skjulOsiris);
 
-    //Når man skifter mellem siderne bliver der tilføjet flere eventlisterner på samme div
-    // dette giver problemer fordi at flere ting vil vises af gangen
-    //derfor er det nødvendigt at fjerne de andre eventlistenere igen.
-    fremadPil.removeEventListener("click", skjulMumificering);
-    tilbagePil.removeEventListener("click", visMumificering);
-    tilbagePil.removeEventListener("click", visOsiris);
+      //Når man skifter mellem siderne bliver der tilføjet flere eventlisterner på samme div
+      // dette giver problemer fordi at flere ting vil vises af gangen
+      //derfor er det nødvendigt at fjerne de andre eventlistenere igen.
+      fremadPil.removeEventListener("click", skjulMumificering);
+      tilbagePil.removeEventListener("click", visMumificering);
+      tilbagePil.removeEventListener("click", visOsiris);
 
-    fremadPil.style.opacity = "1"
-  }
+      fremadPil.style.opacity = "1"
+    }
 
-  //Mumificering
-  if (sideNu == 3) {
-    mumificering.style.display = "flex"
-    h1.innerHTML = "Mumificering";
-    h1.style.color = "black";
-    midtIkon.src = "media/img/indgang1_mumie.svg";
-    tilbagePil.style.opacity = "1";
-    højreIkon.src = "media/img/indgang2_scarab.svg";
-    venstreIkon.src = "media/img/osiris.svg";
-    højrePil.src = "media/img/pil_hoejre.svg";
-    venstrePil.src = "media/img/pil_venstre.svg";
-    altIndhold.style.borderColor = "black";
-    linjeIHeader[0].style.backgroundColor = "black";
-    linjeIHeader[1].style.backgroundColor = "black";
+    //Mumificering
+    if (sideNu == 3) {
+      mumificering.style.display = "flex"
+      h1.innerHTML = "Mumificering";
+      h1.style.color = "black";
+      midtIkon.src = "media/img/indgang1_mumie.svg";
+      tilbagePil.style.opacity = "1";
+      højreIkon.src = "media/img/indgang2_scarab.svg";
+      venstreIkon.src = "media/img/osiris.svg";
+      højrePil.src = "media/img/pil_hoejre.svg";
+      venstrePil.src = "media/img/pil_venstre.svg";
+      altIndhold.style.borderColor = "black";
+      linjeIHeader[0].style.backgroundColor = "black";
+      linjeIHeader[1].style.backgroundColor = "black";
 
-    osiris.style.display = "none"
-    underverden.style.display = "none"
-    gravkammeret.style.display = "none"
-    efterlivet.display = "none"
+      osiris.style.display = "none"
+      underverden.style.display = "none"
+      gravkammeret.style.display = "none"
+      efterlivet.display = "none"
 
-    body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/mumificeringBaggrund.jpg")';
+      body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/mumificeringBaggrund.jpg")';
 
-    mumificering.style.animation = "fadeIn 2s ease-in-out forwards";
+      mumificering.style.animation = "fadeIn 2s ease-in-out forwards";
 
-    tilOsiris.style.backgroundColor = "#ffffff33"
-    tilOsiris.style.scale = "1"
-    tilMumie.style.backgroundColor = "#ffffff80"
-    tilMumie.style.scale = "1.3"
-    tilUnderV.style.backgroundColor = "#ffffff33"
-    tilUnderV.style.scale = "1"
-    tilGravkammeret.style.backgroundColor = "#ffffff33"
-    tilGravkammeret.style.scale = "1"
-    tilEfterliv.style.backgroundColor = "#ffffff33"
-    tilEfterliv.style.scale = "1"
+      tilOsiris.style.backgroundColor = "#ffffff33"
+      tilOsiris.style.scale = "1"
+      tilMumie.style.backgroundColor = "#ffffff80"
+      tilMumie.style.scale = "1.3"
+      tilUnderV.style.backgroundColor = "#ffffff33"
+      tilUnderV.style.scale = "1"
+      tilGravkammeret.style.backgroundColor = "#ffffff33"
+      tilGravkammeret.style.scale = "1"
+      tilEfterliv.style.backgroundColor = "#ffffff33"
+      tilEfterliv.style.scale = "1"
 
-    //lytter til om man går videre
-    fremadPil.addEventListener("click", skjulMumificering);
-    tilbagePil.addEventListener("click", visOsiris);
-    //fjerner forrige
-    fremadPil.removeEventListener("click", skjulOsiris);
-    tilbagePil.removeEventListener("click", visMumificering);
+      //lytter til om man går videre
+      fremadPil.addEventListener("click", skjulMumificering);
+      tilbagePil.addEventListener("click", visOsiris);
+      //fjerner forrige
+      fremadPil.removeEventListener("click", skjulOsiris);
+      tilbagePil.removeEventListener("click", visMumificering);
 
-    fremadPil.style.opacity = "1"
-  }
+      fremadPil.style.opacity = "1"
+    }
 
-  //underverdenen
-  if (sideNu == 4) {
-    underverden.style.display = "flex"
-    h1.innerHTML = "Underverdenen";
-    h1.style.color = "black";
-    midtIkon.src = "media/img/indgang2_scarab.svg";
-    tilbagePil.style.opacity = "1";
-    højreIkon.src = "media/img/indgang3_oeje.svg";
-    venstreIkon.src = "media/img/indgang1_mumie.svg";
-    højrePil.src = "media/img/pil_hoejre.svg";
-    venstrePil.src = "media/img/pil_venstre.svg";
-    altIndhold.style.borderColor = "black";
-    linjeIHeader[0].style.backgroundColor = "black";
-    linjeIHeader[1].style.backgroundColor = "black";
+    //underverdenen
+    if (sideNu == 4) {
+      underverden.style.display = "flex"
+      h1.innerHTML = "Underverdenen";
+      h1.style.color = "black";
+      midtIkon.src = "media/img/indgang2_scarab.svg";
+      tilbagePil.style.opacity = "1";
+      højreIkon.src = "media/img/indgang3_oeje.svg";
+      venstreIkon.src = "media/img/indgang1_mumie.svg";
+      højrePil.src = "media/img/pil_hoejre.svg";
+      venstrePil.src = "media/img/pil_venstre.svg";
+      altIndhold.style.borderColor = "black";
+      linjeIHeader[0].style.backgroundColor = "black";
+      linjeIHeader[1].style.backgroundColor = "black";
 
-    osiris.style.display = "none"
-    mumificering.style.display = "none"
-    gravkammeret.style.display = "none"
-    efterlivet.display = "none"
+      osiris.style.display = "none"
+      mumificering.style.display = "none"
+      gravkammeret.style.display = "none"
+      efterlivet.display = "none"
 
-    body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/underverdenBaggrund.jpg")';
+      body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/underverdenBaggrund.jpg")';
 
-    underverden.style.animation = "fadeIn 2s ease-in-out forwards";
+      underverden.style.animation = "fadeIn 2s ease-in-out forwards";
 
-    tilOsiris.style.backgroundColor = "#ffffff33"
-    tilOsiris.style.scale = "1"
-    tilMumie.style.backgroundColor = "#ffffff33"
-    tilMumie.style.scale = "1"
-    tilUnderV.style.backgroundColor = "#ffffff80"
-    tilUnderV.style.scale = "1.3"
-    tilGravkammeret.style.backgroundColor = "#ffffff33"
-    tilGravkammeret.style.scale = "1"
-    tilEfterliv.style.backgroundColor = "#ffffff33"
-    tilEfterliv.style.scale = "1"
+      tilOsiris.style.backgroundColor = "#ffffff33"
+      tilOsiris.style.scale = "1"
+      tilMumie.style.backgroundColor = "#ffffff33"
+      tilMumie.style.scale = "1"
+      tilUnderV.style.backgroundColor = "#ffffff80"
+      tilUnderV.style.scale = "1.3"
+      tilGravkammeret.style.backgroundColor = "#ffffff33"
+      tilGravkammeret.style.scale = "1"
+      tilEfterliv.style.backgroundColor = "#ffffff33"
+      tilEfterliv.style.scale = "1"
 
-    //lytter til om man går videre, Denne bliver stående for ikke at kunne klikke så langt
-    tilbagePil.addEventListener("click", visMumificering);
-    fremadPil.addEventListener("click", skjulUnderverden);
+      //lytter til om man går videre, Denne bliver stående for ikke at kunne klikke så langt
+      tilbagePil.addEventListener("click", visMumificering);
+      fremadPil.addEventListener("click", skjulUnderverden);
 
-    fremadPil.removeEventListener("click", skjulOsiris);
-    fremadPil.removeEventListener("click", skjulMumificering);
-    fremadPil.removeEventListener("click", skjulGravkammeret);
-    tilbagePil.removeEventListener("click", visOsiris);
-    tilbagePil.removeEventListener("click", visUnderverden);
+      fremadPil.removeEventListener("click", skjulOsiris);
+      fremadPil.removeEventListener("click", skjulMumificering);
+      fremadPil.removeEventListener("click", skjulGravkammeret);
+      tilbagePil.removeEventListener("click", visOsiris);
+      tilbagePil.removeEventListener("click", visUnderverden);
 
-    fremadPil.style.opacity = "1"
-  }
+      fremadPil.style.opacity = "1"
+    }
 
-  //Gravkammeret
-  if (sideNu == 5) {
-    gravkammeret.style.display = "flex"
-    h1.innerHTML = "Gravkammeret";
-    h1.style.color = "white";
-    midtIkon.src = "media/img/indgang3_oeje_hvid.svg";
-    tilbagePil.style.opacity = "1";
-    højreIkon.src = "media/img/indgang4_kors_hvid.svg";
-    venstreIkon.src = "media/img/indgang2_scarab_hvid.svg";
-    højrePil.src = "media/img/pil_hoejre_hvid.svg";
-    venstrePil.src = "media/img/pil_venstre_hvid.svg";
-    altIndhold.style.borderColor = "white";
-    linjeIHeader[0].style.backgroundColor = "white";
-    linjeIHeader[1].style.backgroundColor = "white";
+    //Gravkammeret
+    if (sideNu == 5) {
+      gravkammeret.style.display = "flex"
+      h1.innerHTML = "Gravkammeret";
+      h1.style.color = "white";
+      midtIkon.src = "media/img/indgang3_oeje_hvid.svg";
+      tilbagePil.style.opacity = "1";
+      højreIkon.src = "media/img/indgang4_kors_hvid.svg";
+      venstreIkon.src = "media/img/indgang2_scarab_hvid.svg";
+      højrePil.src = "media/img/pil_hoejre_hvid.svg";
+      venstrePil.src = "media/img/pil_venstre_hvid.svg";
+      altIndhold.style.borderColor = "white";
+      linjeIHeader[0].style.backgroundColor = "white";
+      linjeIHeader[1].style.backgroundColor = "white";
 
-    osiris.style.display = "none"
-    mumificering.style.display = "none"
-    underverden.style.display = "none"
-    efterlivet.display = "none"
+      osiris.style.display = "none"
+      mumificering.style.display = "none"
+      underverden.style.display = "none"
+      efterlivet.display = "none"
 
-    body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/gravkammerBaggrund.jpg")';
+      body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/gravkammerBaggrund.jpg")';
 
-    gravkammeret.style.animation = "fadeIn 2s ease-in-out forwards";
+      gravkammeret.style.animation = "fadeIn 2s ease-in-out forwards";
 
-    tilOsiris.style.backgroundColor = "#ffffff80" //50% opacity
-    tilOsiris.style.scale = "1"
-    tilMumie.style.backgroundColor = "#ffffff80"
-    tilMumie.style.scale = "1"
-    tilUnderV.style.backgroundColor = "#ffffff80"
-    tilUnderV.style.scale = "1"
-    tilGravkammeret.style.backgroundColor = "#ffffff8c"
-    tilGravkammeret.style.scale = "1.3"
-    tilEfterliv.style.backgroundColor = "#ffffff80"
-    tilEfterliv.style.scale = "1"
+      tilOsiris.style.backgroundColor = "#ffffff80" //50% opacity
+      tilOsiris.style.scale = "1"
+      tilMumie.style.backgroundColor = "#ffffff80"
+      tilMumie.style.scale = "1"
+      tilUnderV.style.backgroundColor = "#ffffff80"
+      tilUnderV.style.scale = "1"
+      tilGravkammeret.style.backgroundColor = "#ffffff8c"
+      tilGravkammeret.style.scale = "1.3"
+      tilEfterliv.style.backgroundColor = "#ffffff80"
+      tilEfterliv.style.scale = "1"
 
-    //lytter til om man går videre, Denne bliver stående for ikke at kunne klikke så langt
-    tilbagePil.addEventListener("click", visUnderverden);
-    fremadPil.addEventListener("click", skjulGravkammeret);
+      //lytter til om man går videre, Denne bliver stående for ikke at kunne klikke så langt
+      tilbagePil.addEventListener("click", visUnderverden);
+      fremadPil.addEventListener("click", skjulGravkammeret);
 
-    fremadPil.removeEventListener("click", skjulOsiris);
-    fremadPil.removeEventListener("click", skjulMumificering);
-    tilbagePil.removeEventListener("click", visOsiris);
-    tilbagePil.removeEventListener("click", visGravkammeret)
+      fremadPil.removeEventListener("click", skjulOsiris);
+      fremadPil.removeEventListener("click", skjulMumificering);
+      tilbagePil.removeEventListener("click", visOsiris);
+      tilbagePil.removeEventListener("click", visGravkammeret)
 
-    fremadPil.style.opacity = "1"
-  }
+      fremadPil.style.opacity = "1"
+    }
 
-  //Efterlivet
-  if (sideNu == 6) {
-    efterlivet.style.display = "flex"
-    h1.innerHTML = "Efterlivet";
-    h1.style.color = "black";
-    midtIkon.src = "media/img/indgang4_kors.svg";
-    tilbagePil.style.opacity = "1";
-    venstreIkon.src = "media/img/indgang3_oeje.svg";
-    højrePil.src = "media/img/pil_hoejre.svg";
-    venstrePil.src = "media/img/pil_venstre.svg";
-    altIndhold.style.borderColor = "black";
-    linjeIHeader[0].style.backgroundColor = "black";
-    linjeIHeader[1].style.backgroundColor = "black";
+    //Efterlivet
+    if (sideNu == 6) {
+      efterlivet.style.display = "flex"
+      h1.innerHTML = "Efterlivet";
+      h1.style.color = "black";
+      midtIkon.src = "media/img/indgang4_kors.svg";
+      tilbagePil.style.opacity = "1";
+      venstreIkon.src = "media/img/indgang3_oeje.svg";
+      højrePil.src = "media/img/pil_hoejre.svg";
+      venstrePil.src = "media/img/pil_venstre.svg";
+      altIndhold.style.borderColor = "black";
+      linjeIHeader[0].style.backgroundColor = "black";
+      linjeIHeader[1].style.backgroundColor = "black";
 
-    osiris.style.display = "none"
-    mumificering.display = "none"
-    underverden.style.display = "none"
-    gravkammeret.style.display = "none"
+      osiris.style.display = "none"
+      mumificering.display = "none"
+      underverden.style.display = "none"
+      gravkammeret.style.display = "none"
 
-    body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/efterlivBaggrund.jpg")';
+      body.style.backgroundImage = 'url("media/img/nyeBaggrundsbilleder/efterlivBaggrund.jpg")';
 
-    efterlivet.style.animation = "fadeIn 2s ease-in-out forwards";
+      efterlivet.style.animation = "fadeIn 2s ease-in-out forwards";
 
-    tilOsiris.style.backgroundColor = "#ffffff33"
-    tilOsiris.style.scale = "1"
-    tilMumie.style.backgroundColor = "#ffffff33"
-    tilMumie.style.scale = "1"
-    tilUnderV.style.backgroundColor = "#ffffff33"
-    tilUnderV.style.scale = "1"
-    tilGravkammeret.style.backgroundColor = "#ffffff33"
-    tilGravkammeret.style.scale = "1"
-    tilEfterliv.style.backgroundColor = "#ffffff80"
-    tilEfterliv.style.scale = "1.3"
+      tilOsiris.style.backgroundColor = "#ffffff33"
+      tilOsiris.style.scale = "1"
+      tilMumie.style.backgroundColor = "#ffffff33"
+      tilMumie.style.scale = "1"
+      tilUnderV.style.backgroundColor = "#ffffff33"
+      tilUnderV.style.scale = "1"
+      tilGravkammeret.style.backgroundColor = "#ffffff33"
+      tilGravkammeret.style.scale = "1"
+      tilEfterliv.style.backgroundColor = "#ffffff80"
+      tilEfterliv.style.scale = "1.3"
 
 
-    //lytter til om man går videre, Denne bliver stående for ikke at kunne klikke så langt
-    tilbagePil.addEventListener("click", visGravkammeret);
+      //lytter til om man går videre, Denne bliver stående for ikke at kunne klikke så langt
+      tilbagePil.addEventListener("click", visGravkammeret);
 
-    fremadPil.removeEventListener("click", skjulOsiris);
-    fremadPil.removeEventListener("click", skjulMumificering);
-    tilbagePil.removeEventListener("click", visOsiris);
+      fremadPil.removeEventListener("click", skjulOsiris);
+      fremadPil.removeEventListener("click", skjulMumificering);
+      tilbagePil.removeEventListener("click", visOsiris);
 
-    fremadPil.style.opacity = "0"
-  }
-} else {
+      fremadPil.style.opacity = "0"
+    }
+
+    //************ Flip-fix ************//  
+  } else {
     osiris.style.display = "none"
     mumificering.display = "none"
     underverden.style.display = "none"
@@ -361,10 +363,9 @@ function nuSide() {
     h1.style.display = "none";
     nav.style.display = "none";
     footer.style.display = "none";
-
-
+  }
 }
-}
+
 //skjuler forsiden og skifter til osiris
 function gemForside() {
   startIndhold.style.display = "none";
