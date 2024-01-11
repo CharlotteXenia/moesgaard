@@ -1016,20 +1016,19 @@ function handleSwipe() {
 
   if (Math.abs(deltaX) > swipeThreshold) {
     if (deltaX > 0) {
-      console.log('Brugeren swipede til højre');
-    } else if (deltaX < 0)
-      console.log('swipe til høje')
-  } else {
-    if (sideNu >= 2) {
-      if (deltaX > 0) {
-        sideNu = sideNu - 1;
-        if (sideNu < 2) {
-          sideNu = 2;
-        }
-      } else if (deltaX < 0) {
-        sideNu = sideNu + 1;
-        if (sideNu > 6) {
-          sideNu = 6;
+    } else if (deltaX < 0) {
+    } else {
+      if (sideNu >= 2) {
+        if (deltaX > 0) {
+          sideNu = sideNu - 1;
+          if (sideNu < 2) {
+            sideNu = 2;
+          }
+        } else if (deltaX < 0) {
+          sideNu = sideNu + 1;
+          if (sideNu > 6) {
+            sideNu = 6;
+          }
         }
       }
     }
