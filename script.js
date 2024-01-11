@@ -924,69 +924,111 @@ document.addEventListener('wheel', function (event) {
 // }
 
 // Swipe på mobil (main, op/ned) //
-let touchStartY = 0;
-let touchEndY = 0;
+// let touchStartY = 0;
+// let touchEndY = 0;
 
-const swipeThreshold = 50;
+// const swipeThreshold = 50;
 
-main.addEventListener('touchstart', function (event) {
-  touchStartY = event.changedTouches[0].screenY;
-});
+// main.addEventListener('touchstart', function (event) {
+//   touchStartY = event.changedTouches[0].screenY;
+// });
 
-main.addEventListener('touchend', function (event) {
-  touchEndY = event.changedTouches[0].screenY;
-  handleSwipe();
-});
+// main.addEventListener('touchend', function (event) {
+//   touchEndY = event.changedTouches[0].screenY;
+//   handleSwipe();
+// });
 
-function handleSwipe() {
-  const deltaY = touchEndY - touchStartY;
+// function handleSwipe() {
+//   const deltaY = touchEndY - touchStartY;
 
-  if (Math.abs(deltaY) > swipeThreshold && sideNu >= 2) {
-    if (deltaY > 0) {
-      sideNu = sideNu - 1;
-      if (sideNu < 2) {
-        sideNu = 2;
-      }
-    } else if (deltaY < 0) {
-      sideNu = sideNu + 1;
-      if (sideNu > 6) {
-        sideNu = 6;
-      }
-    }
-  }
-}
+//   if (Math.abs(deltaY) > swipeThreshold && sideNu >= 2) {
+//     if (deltaY > 0) {
+//       sideNu = sideNu - 1;
+//       if (sideNu < 2) {
+//         sideNu = 2;
+//       }
+//     } else if (deltaY < 0) {
+//       sideNu = sideNu + 1;
+//       if (sideNu > 6) {
+//         sideNu = 6;
+//       }
+//     }
+//   }
+// }
 
 // Swipe på mobil (tekst, højre/venste) //
 // OSIRIS
+
+// Test1
+// const osirisText = document.getElementById("osirisTEXT");
+
+// let touchStartX = 0;
+// let touchEndX = 0;
+
+// const swipeOsiris = 50;
+
+// osirisText.addEventListener('touchstart', function (event) {
+//   touchStartX = event.changedTouches[0].screenX;
+// });
+
+// OsirisText.addEventListener('touchend', function (event) {
+//   touchEndX = event.changedTouches[0].screenX;
+//   handleSwipe();
+// });
+
+// function handleSwipe() {
+//   const deltaX = touchEndX - touchStartX;
+
+//   if (Math.abs(deltaX) > swipeThreshold && tekster >= 0) {
+//     if (deltaX > 0) {
+//       tekster = tekster - 1;
+//       if (tekster < 2) {
+//         tekster = 2;
+//       }
+//     } else if (deltaX < 0) {
+//       tekster = tekster + 1;
+//       if (tekster > 4) {
+//         tekster = 4;
+//       }
+//     }
+//   }
+// }
+
+// Test2
 const osirisText = document.getElementById("osirisTEXT");
 
 let touchStartX = 0;
 let touchEndX = 0;
 
-const swipeOsiris = 50;
+const swipeThreshold = 50;
 
-osirisText.addEventListener('touchstart', function (event) {
-  touchStartX = event.changedTouches[0].screenX;
-});
+document.addEventListener('touchstart', function (event) {
+  touchStartX = event.touches[0].clientX;
+})
 
-OsirisText.addEventListener('touchend', function (event) {
-  touchEndX = event.changedTouches[0].screenX;
+document.addEventListener('touchend', function (event) {
+  touchStartX = event.touches[0].clientX;
   handleSwipe();
-});
+})
 
 function handleSwipe() {
   const deltaX = touchEndX - touchStartX;
 
-  if (Math.abs(deltaX) > swipeThreshold && tekster >= 0) {
+  if (Math.abs(deltaX) > swipeThreshold) {
     if (deltaX > 0) {
-      tekster = tekster - 1;
-      if (tekster < 2) {
-        tekster = 2;
-      }
-    } else if (deltaX < 0) {
-      tekster = tekster + 1;
-      if (tekster > 4) {
-        tekster = 4;
+    } else if (deltaX < 0)
+  } else {
+    if (sideNu >= 2) {
+      if (deltaX > 0) {
+        sideNu = sideNu - 1;
+        if (sideNu < 2) {
+          sideNu = 2;
+        }
+      } else if (deltaX < 0){
+        sideNu = sideNu + 1;
+        if (sideNu > 6) {
+          sideNu = 6;
+        }
       }
     }
   }
