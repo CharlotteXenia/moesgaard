@@ -164,6 +164,8 @@ main {
     color: white; 
     border-radius: 10px;
 
+    cursor: pointer;
+
     transition: 1s all ease;
 }
 
