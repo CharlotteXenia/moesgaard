@@ -49,6 +49,10 @@ const footer = document.querySelector("footer");
 //billet knap
 const billet = document.getElementById("billet");
 
+//modal
+const modal = document.getElementById("modal");
+const modalKnap = document.getElementById("modalKnap");
+
 // Variabel der holder øje med hvilken side man er på
 let sideNu = 0;
 
@@ -108,8 +112,9 @@ function nuSide() {
     if (sideNu == 2) {
       //osiris fader ind
       osiris.style.animation = "fadeIn 2s ease-in-out forwards";
-
+      
       //Fordi det er den første skal alt vises sig
+      modal.style.display = "flex";
       altIndhold.style.display = "block";
       osiris.style.display = "flex";
       header.style.display = "flex";
@@ -995,5 +1000,9 @@ function handleSwipe() {
 //   }
 // }
 
-// Test2
+//modal 
+modalKnap.addEventListener("click", function(){
+  
+  modal.style.display= "none";
+});
 
