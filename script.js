@@ -891,37 +891,38 @@ document.addEventListener('wheel', function (event) {
 
 // Swipe på mobil (main, højre/venste) //
 // Hjælp fra ChatGPT - https://chat.openai.com/c/17a44f20-95c0-4569-a82b-32711b9ddcc2
-// let touchStartX = 0;
-// let touchEndX = 0;
+let touchStartX = 0;
+let touchEndX = 0;
 
-// const swipeThreshold = 50;
+const swipeThreshold = 50;
 
-// main.addEventListener('touchstart', function (event) {
-//   touchStartX = event.changedTouches[0].screenX;
-// });
+main.addEventListener('touchstart', function (event) {
+  touchStartX = event.changedTouches[0].screenX;
+});
 
-// main.addEventListener('touchend', function (event) {
-//   touchEndX = event.changedTouches[0].screenX;
-//   handleSwipe();
-// });
+main.addEventListener('touchend', function (event) {
+  touchEndX = event.changedTouches[0].screenX;
+  handleSwipe();
+});
 
-// function handleSwipe() {
-//   const deltaX = touchEndX - touchStartX;
+function handleSwipe() {
+  const deltaX = touchEndX - touchStartX;
 
-//   if (Math.abs(deltaX) > swipeThreshold && sideNu >= 2) {
-//     if (deltaX > 0) {
-//       sideNu = sideNu - 1;
-//       if (sideNu < 2) {
-//         sideNu = 2;
-//       }
-//     } else if (deltaX < 0) {
-//       sideNu = sideNu + 1;
-//       if (sideNu > 6) {
-//         sideNu = 6;
-//       }
-//     }
-//   }
-// }
+  if (Math.abs(deltaX) > swipeThreshold && sideNu >= 2) {
+    if (deltaX > 0) {
+      sideNu = sideNu - 1;
+      if (sideNu < 2) {
+        sideNu = 2;
+      }
+      
+    } else if (deltaX < 0) {
+      sideNu = sideNu + 1;
+      if (sideNu > 6) {
+        sideNu = 6;
+      }
+    }
+  }
+}
 
 // Swipe på mobil (main, op/ned) //
 // let touchStartY = 0;
@@ -995,42 +996,4 @@ document.addEventListener('wheel', function (event) {
 // }
 
 // Test2
-const osirisText = document.getElementById("osirisTEXT");
 
-let touchStartX = 0;
-let touchEndX = 0;
-
-const swipeThreshold = 50;
-
-document.addEventListener('touchstart', function (event) {
-  touchStartX = event.touches[0].clientX;
-})
-
-document.addEventListener('touchend', function (event) {
-  touchStartX = event.touches[0].clientX;
-  handleSwipe();
-})
-
-function handleSwipe() {
-  const deltaX = touchEndX - touchStartX;
-
-  if (Math.abs(deltaX) > swipeThreshold) {
-    if (deltaX > 0) {
-    } else if (deltaX < 0) {
-    } else {
-      if (sideNu >= 2) {
-        if (deltaX > 0) {
-          sideNu = sideNu - 1;
-          if (sideNu < 2) {
-            sideNu = 2;
-          }
-        } else if (deltaX < 0) {
-          sideNu = sideNu + 1;
-          if (sideNu > 6) {
-            sideNu = 6;
-          }
-        }
-      }
-    }
-  }
-}
