@@ -115,9 +115,10 @@ function nuSide() {
       osiris.style.animation = "fadeIn 2s ease-in-out forwards";
       
       //Fordi det er den første skal alt vises sig
-      if (modalVaek == false){
+      if (modalVaek == false && window.innerWidth>915){ 
         modal.style.display = "flex";
       }
+      
 
 
       altIndhold.style.display = "block";

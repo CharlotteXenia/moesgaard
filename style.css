@@ -972,6 +972,28 @@ iframe {
         font-size: 3.5vh;
     }
 
+    #modal{
+        top: 7.5%;
+        left: 12.5%;
+        
+        height: 85%;
+        width: 75%;
+    }
+
+    #modalMain {
+        justify-content: space-between;
+    }
+
+    .modalBilledeOgSide img {
+        margin-bottom: 0;
+    }
+
+    #modalKnap{
+        width: 15vw;
+
+        padding: 5px;
+    }
+
     #billet {
         width: 3vw;
         height: 3vw;
