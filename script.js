@@ -52,6 +52,7 @@ const billet = document.getElementById("billet");
 //modal
 const modal = document.getElementById("modal");
 const modalKnap = document.getElementById("modalKnap");
+let modalVaek = false
 
 // Variabel der holder øje med hvilken side man er på
 let sideNu = 0;
@@ -114,7 +115,11 @@ function nuSide() {
       osiris.style.animation = "fadeIn 2s ease-in-out forwards";
       
       //Fordi det er den første skal alt vises sig
-      modal.style.display = "flex";
+      if (modalVaek == false){
+        modal.style.display = "flex";
+      }
+
+
       altIndhold.style.display = "block";
       osiris.style.display = "flex";
       header.style.display = "flex";
@@ -1002,7 +1007,8 @@ function handleSwipe() {
 
 //modal 
 modalKnap.addEventListener("click", function(){
-  
+  modalVaek = true;
   modal.style.display= "none";
+  
 });
 
