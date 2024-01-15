@@ -932,7 +932,6 @@ const swipeThreshold = 50;
 
 // Tilføjer en eventlistener som kigger på når man starter med at trykke
 main.addEventListener('touchstart', function (event) {
-
   // Gemmer X-værdien for det første punkt på skærmen du rører ved
   touchStartX = event.changedTouches[0].screenX;
 });
@@ -941,7 +940,7 @@ main.addEventListener('touchstart', function (event) {
 main.addEventListener('touchend', function (event) {
   touchEndX = event.changedTouches[0].screenX;
 
-  // Kalder funktionen der får skiftet til at ske
+  // Kalder funktionen der får skiftet til at ske når skærmen slippes
   handleSwipe();
 });
 
@@ -957,12 +956,14 @@ function handleSwipe() {
   if (Math.abs(deltaX) > swipeThreshold && sideNu >= 2) {
 
     // det samme som scroll men + / - er omvendt, da man swiper negativt for at komme videre
+    // positiv = tilbage
     if (deltaX > 0) {
       sideNu = sideNu - 1;
       if (sideNu < 2) {
         sideNu = 2;
       }
       
+      // negtiv = frem
     } else if (deltaX < 0) {
       sideNu = sideNu + 1;
       if (sideNu > 6) {
