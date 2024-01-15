@@ -922,24 +922,41 @@ document.addEventListener('wheel', function (event) {
 
 // Swipe på mobil (main, højre/venste) //
 // Hjælp fra ChatGPT - https://chat.openai.com/c/17a44f20-95c0-4569-a82b-32711b9ddcc2
+
+// Klargøre variabler
 let touchStartX = 0;
 let touchEndX = 0;
 
+// Minimums afstanden som swipet skal have
 const swipeThreshold = 50;
 
+// Tilføjer en eventlistener som kigger på når man starter med at trykke
 main.addEventListener('touchstart', function (event) {
+
+  // Gemmer X-værdien for det første punkt på skærmen du rører ved
   touchStartX = event.changedTouches[0].screenX;
 });
 
+// Samme som før men med touch end
 main.addEventListener('touchend', function (event) {
   touchEndX = event.changedTouches[0].screenX;
+
+  // Kalder funktionen der får skiftet til at ske
   handleSwipe();
 });
 
+// funktionen bliver oprettet
 function handleSwipe() {
+
+  // Finder forskellen på trykket og slippet fra skærmen
   const deltaX = touchEndX - touchStartX;
 
+  //    absolute
+  // Math.abs() sørger for altid for at det er et positivt helt tal
+  //Tjekker om swipet er "langt nok" til at registere og man er forbi/på osiris
   if (Math.abs(deltaX) > swipeThreshold && sideNu >= 2) {
+
+    // det samme som scroll men + / - er omvendt, da man swiper negativt for at komme videre
     if (deltaX > 0) {
       sideNu = sideNu - 1;
       if (sideNu < 2) {
