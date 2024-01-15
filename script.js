@@ -119,8 +119,6 @@ function nuSide() {
         modal.style.display = "flex";
       }
       
-
-
       altIndhold.style.display = "block";
       osiris.style.display = "flex";
       header.style.display = "flex";
@@ -870,31 +868,53 @@ function pauseVideo() {
 //https://chat.openai.com/share/5857829b-f36d-4539-bd4c-7000b5f9dffb
 //https://chat.openai.com/share/714c934d-888a-4b0b-b1b7-57aa50bd6e13
 
+// Henter dato/tidspunkt lige nu
 let lastScrollTime = Date.now();
-const delay = 1000;
 
+//bestemmer delayet for hvornår man kan swipe igen
+const delay = 1000; // 1 sek
+
+//lytter til om man ruller på mus/mousepad (scroller)
 document.addEventListener('wheel', function (event) {
-  // event.preventDefault();
+
+  // Tjekker man er på eller videre fra osiris siden
   if (sideNu >= 2) {
+
+    // gemmer hvilken "retning" man har scrollet (+ / -)
     const deltaY = event.deltaY
+
+    // gemmer den nuværendene tid (+ tid fra load/ sidste scroll)
     const now = Date.now();
 
+    // sammenligner tiderne og tjekker om der er gået længere tid end delayet
     if (now - lastScrollTime > delay) {
+
+      // hvis scroll er positiv
       if (deltaY > 0) {
+        
+        //Skift til næste side
         console.log('brugeren scoller ned')
         sideNu = sideNu + 1;
+
+        // sikre at man ikke kan scrolle forbi sidste side
         if (sideNu > 6) {
           sideNu = 6;
         }
 
+        // Hvis scroll er negativ
       } else if (deltaY < 0) {
+
+        // gå tilbage til forrige side
         console.log('brugeren scroller op')
         sideNu = sideNu - 1;
+
+        // sikre at man ikke kan scrolle for langt tilbage
         if (sideNu < 2) {
           sideNu = 2;
         }
       }
 
+      //nulstiller sidste scrolltidspunkt
       lastScrollTime = now;
     }
   }
@@ -1010,6 +1030,4 @@ function handleSwipe() {
 modalKnap.addEventListener("click", function(){
   modalVaek = true;
   modal.style.display= "none";
-  
 });
-
