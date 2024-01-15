@@ -952,7 +952,7 @@ function handleSwipe() {
   const deltaX = touchEndX - touchStartX;
 
   //    absolute
-  // Math.abs() sørger for altid for at det er et positivt helt tal
+  // Math.abs() sørger for altid for at det er et positivt tal
   //Tjekker om swipet er "langt nok" til at registere og man er forbi/på osiris
   if (Math.abs(deltaX) > swipeThreshold && sideNu >= 2) {
 
